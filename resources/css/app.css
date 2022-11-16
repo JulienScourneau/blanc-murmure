@@ -1,11 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
 
+/* Home */
+.card {
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
 /* Animation mobile menu */
 #navigation {
-    background-color: aqua;
-    position: absolute;
+    background-color: white;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -16,13 +22,29 @@
 }
 #menu li {
     padding-top: 20px;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    color: #313131;
+    font-size: 24px;
+    line-height: 29px;
 }
-#menu li:hover {
-    text-decoration: line-through;
+#menu li a:hover {
+    text-decoration: underline;
 }
 #navbar__mobile__menu {
     position: fixed;
     right: 0;
     margin-right: 25px;
     z-index: 99;
+}
+#navigation button {
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 24px;
+}
+#navigation button:hover {
+    background-color: white;
+    border: 1px solid #92cdb9;
+    color: #92cdb9;
 }
