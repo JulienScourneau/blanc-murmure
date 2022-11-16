@@ -1,4 +1,2 @@
 import "./bootstrap";
-import "./addeventlistener";
-
-listener();
+import "./listener";
