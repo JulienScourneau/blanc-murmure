@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\StageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,23 +16,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/', [Controller::class, 'index'])->name('home');
 
-Route::get('/en ce moment', function () {
-    return view('news');
-})->name('news');
+Route::get('/en-ce-moment', [StageController::class, 'index'])->name('news');
 
-Route::get('/construire un projet', function () {
+Route::get('/construire-un-projet', function () {
     return view('collaborater');
 })->name('collaborater');
 
-Route::get('/nos projet', function () {
-    return view('project');
-})->name('project');
+Route::get('/nos-projets', [ProjectController::class, 'index'])->name('project');
 
-Route::get('/A propos', function () {
+Route::get('/à-propos', function () {
     return view('about');
 })->name('about');
 
