@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.links:hover {
+    text-decoration: line-through;
+}
+#navbar__project {
+    color: red;
+}
+
+#navbar__deroulant {
+    display: none;
+}
