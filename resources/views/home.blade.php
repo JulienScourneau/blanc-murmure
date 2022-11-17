@@ -40,4 +40,5 @@
         </div>
     </article>
     @include('components.agenda')
+    @include('components.footer')
 @endsection

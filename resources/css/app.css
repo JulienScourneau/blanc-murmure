@@ -1,7 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
+
+* {
+    font-family: 'Quicksand', sans-serif;
+}
 
 /* Home */
 .card {
@@ -22,7 +25,6 @@
 }
 #menu li {
     padding-top: 20px;
-    font-family: "Inter", sans-serif;
     font-weight: 300;
     color: #313131;
     font-size: 24px;
@@ -38,7 +40,6 @@
     z-index: 99;
 }
 #navigation button {
-    font-family: "Inter", sans-serif;
     font-weight: 900;
     font-size: 20px;
     line-height: 24px;
@@ -47,4 +48,33 @@
     background-color: white;
     border: 1px solid #92cdb9;
     color: #92cdb9;
+}
+
+/* contact */
+.contact__crew {
+position: relative;
+}
+.contact__illustration {
+    position: absolute;
+    right: -10%;
+    top: 2.9%;
+
+    z-index: -1;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.contact__illustration__border {
+    width: 150px;
+    height: 20px;
+    align-self: flex-end;
+
+    border-top: 4px solid #92cdb9;
+    border-bottom: 4px solid #92cdb9;
+    border-left: 4px solid #92cdb9;
+}
+.contact__illustration__background {
+    width: 220px;
+    height: 150px;
 }

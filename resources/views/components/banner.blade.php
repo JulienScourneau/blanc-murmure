@@ -1,4 +1,4 @@
-<h1 class="uppercase text-center font-black text-1xl">
+<h1 class="uppercase text-center font-black text-2xl mt-6 mb-4">
     Envie de faire <span class="text-green-300 underline">un stage</span> Créatif ? Voici le prochain !
 </h1>
 <section class="card w-11/12 rounded-br-3xl shadow items-center">
