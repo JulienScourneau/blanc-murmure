@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AttendeesController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\StageController;
@@ -33,3 +34,5 @@ Route::get('/à-propos', function () {
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
+
+Route::get('/inscription',[AttendeesController::class,'index'])->name('inscription');

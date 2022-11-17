@@ -6,6 +6,11 @@ use App\Models\Attendees;
 
 class AttendeesController extends Controller
 {
+    public function index()
+    {
+        return view('attendees.form');
+    }
+
     public function show()
     {
         return view('');
