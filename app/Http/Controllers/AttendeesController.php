@@ -18,17 +18,23 @@ class AttendeesController extends Controller
 
     public function store()
     {
-        Attendees::create(request()->validate([
-            'first_name' => ['required'],
+
+
+        $attributes = request()->validate([
             'last_name' => ['required'],
+            'first_name' => ['required'],
             'email' => ['required', 'email'],
+            'date_birth' => ['required','date'],
             'stage_id' => ['required'],
             'address' => ['required'],
             'postal_code' => ['required'],
             'city' => ['required'],
             'phone_number' => ['required'],
             'right_to_image' => ['required'],
-        ]));
+        ]);
+
+//        dd(request()->all());
+        Attendees::create($attributes);
         return redirect('/');
     }
 }

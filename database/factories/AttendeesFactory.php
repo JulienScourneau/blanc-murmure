@@ -28,7 +28,7 @@ class AttendeesFactory extends Factory
             'postal_code' => $this->faker->postcode,
             'city' => $this->faker->city,
             'phone_number' => $this->faker->phoneNumber,
-            'right_to_image' => $this->faker->boolean,
+            'right_to_image' => "Oui/Non",
             'stage_id' =>Stage::factory(),
         ];
     }

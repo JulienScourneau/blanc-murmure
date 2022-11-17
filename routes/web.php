@@ -36,3 +36,4 @@ Route::get('/contact', function () {
 })->name('contact');
 
 Route::get('/inscription',[AttendeesController::class,'index'])->name('inscription');
+Route::post('/inscription',[AttendeesController::class,'store'])->name('inscription');
