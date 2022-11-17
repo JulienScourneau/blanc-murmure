@@ -1,6 +1,6 @@
-@extends('Layouts.app')
+@extends('layouts.app')
 
 @section('content')
-<h1>Project</h1>
+    <h1>Project</h1>
     <h2>{{$projects}}</h2>
 @endsection
