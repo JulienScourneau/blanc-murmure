@@ -25,7 +25,7 @@ return new class extends Migration {
             $table->string('postal_code');
             $table->string('city');
             $table->string('phone_number');
-            $table->boolean('right_to_image');
+            $table->string('right_to_image');
             $table->timestamps();
         });
     }
