@@ -6,6 +6,18 @@ module.exports = {
         "./resources/**/*.vue",
     ],
     theme: {
+        colors: {
+            greenDuck: "#40826D",
+            green: "#92CDB9",
+            white: "#ffffff",
+            primaryText: "#313131",
+            placeHolderText: "#616161",
+            secondaryText: "#919191",
+            disableText: "#C2C2C2",
+            separator: "#E4E4E4",
+            incativeElement: "#ECECEC",
+            placeHolder: "#F5F5F7",
+        },
         extend: {},
     },
     plugins: [],

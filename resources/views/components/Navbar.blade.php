@@ -10,6 +10,6 @@
           <li><a href="{{ Route ('about')}}">A propos</a></li>
           <li><a href="{{ Route ('contact')}}">Contact</a></li>
         </ul>
-        <a href="{{ Route('inscription') }}" class="bg-green-300 text-white text-center rounded-3xl w-52 py-4 mt-9">Choisir un stage</a>
+        <a href="{{ Route('inscription') }}" class="bg-green text-white font-black text-center text-xl rounded-3xl w-52 py-4 mt-9">Choisir un stage</a>
     </nav>
 </section>

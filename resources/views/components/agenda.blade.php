@@ -1,6 +1,6 @@
-<hr class="mt-12"/>
-<h2 class="font-black text-3xl py-2.5 text-green-300">Agenda</h2>
-<hr class="mb-6 w-28 shadow"/>
+<hr class="mt-12 text-separator"/>
+<h2 class="font-black text-3xl py-2.5 text-green">Agenda</h2>
+<hr class="mb-6 w-28 shadow text-separator"/>
 
 @foreach($agenda as $event)
     <div class="card shadow w-11/12 flex">
@@ -23,3 +23,4 @@
 {{--        <p class="text-sm font-normal leading-tight py-0.5">Ils découvriront différentes techniques lors de cette nouvelle saison. Dessin, peinture, volume, stopmotion...</p>--}}
 {{--    </div>--}}
 {{--</div>--}}
+
