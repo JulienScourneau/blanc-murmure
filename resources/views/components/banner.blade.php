@@ -4,13 +4,12 @@
 <section class="card w-11/12 rounded-br-3xl shadow items-center">
     <img src="assets/Fresque.png" alt="">
     <div class="p-2.5">
-        <h2 class="uppercase text-right font-black text-2xl leading-7">FRESQUE MONUMENTALE</h2>
+        <h2 class="uppercase text-right font-black text-2xl leading-7">{{$stage->title}}</h2>
         <h5 class="text-right text-xs">En collaboration avec Le Collectif Innombrable</h5>
         <div>
             <p class="text-base font-bold">Quoi ?</p>
             <p class="text-base font-normal">
-                Graines de Géants
-                Donne naissance aux géants protecteurs de la Terre dans ce stage grandeur nature !
+                {{$stage->description}}
             </p>
             <p class="text-base font-bold">Quand ?</p>
             <p class="text-base font-normal">
