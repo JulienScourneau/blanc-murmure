@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\CategoryProject>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\ProjectCategory>
  */
-class CategoryProjectFactory extends Factory
+class ProjectCategoryFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +17,7 @@ class CategoryProjectFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'title' => $this->faker->sentence(2)
         ];
     }
 }

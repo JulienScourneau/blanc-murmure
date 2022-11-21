@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('components.banner')
+    @include('components.banner', ['stage'=>$stage])
     <hr class="mt-12 text-separator"/>
     <h2 class="font-black text-3xl py-2.5 text-green">Nos activités</h2>
     <hr class="mb-6 w-48 shadow text-separator"/>
@@ -39,5 +39,6 @@
             <p class="font-normal text-xs underline text-right pr-5 text-disableText">En savoir plus ></p>
         </div>
     </article>
-    @include('components.agenda')
+    @include('components.agenda',['agenda',$agenda])
+    @include('components.footer')
 @endsection

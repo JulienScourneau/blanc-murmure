@@ -2,12 +2,13 @@
 
 namespace Database\Factories;
 
+use App\Models\EventCategory;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Stage>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Event>
  */
-class StageFactory extends Factory
+class EventFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,14 +18,13 @@ class StageFactory extends Factory
     public function definition()
     {
         return [
-            'title' => $this->faker->sentence(3),
+            'title' => $this->faker->unique()->name,
             'subtitle' => $this->faker->sentence(4),
-            'description' => $this->faker->sentence(12),
-            'age' => 'A partir de * à *',
+            'description' => $this->faker->sentence(6),
             'begin_at' => $this->faker->date(),
             'end_at' => $this->faker->date(),
-            'thumbnail'=> $this->faker->imageUrl,
-            'price'=> $this->faker->numberBetween(40,150),
+            'category_id' => EventCategory::factory(),
+            'thumbnail' => $this->faker->imageUrl,
         ];
     }
 }

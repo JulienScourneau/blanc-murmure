@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\ProjectCategory;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,12 @@ class ProjectFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'title' => $this->faker->sentence(3),
+            'subtitle' => $this->faker->sentence(6),
+            'partenaireship' => $this->faker->sentence(6),
+            'description' => $this->faker->sentence(6),
+            'date' => $this->faker->sentence(6),
+            'project_category_id' => ProjectCategory::factory(),
         ];
     }
 }

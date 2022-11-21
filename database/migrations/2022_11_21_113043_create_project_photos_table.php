@@ -12,14 +12,11 @@ return new class extends Migration {
      */
     public function up()
     {
-        Schema::create('projects', function (Blueprint $table) {
+        Schema::create('project_photos', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('subtitle')->nullable();
-            $table->string('partnership')->nullable();
-            $table->string('description')->nullable();
-            $table->string('date')->nullable();
-            $table->foreignId('project_category_id');
+            $table->foreignId('project_id')->constrained()->cascadeOnDelete();
+            $table->string('path');
+            $table->string('alt')->nullable();
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ return new class extends Migration {
      */
     public function down()
     {
-        Schema::dropIfExists('projects');
+        Schema::dropIfExists('project_photos');
     }
 };

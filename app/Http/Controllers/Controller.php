@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Event;
+use App\Models\Stage;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -13,9 +15,24 @@ class Controller extends BaseController
 
     public function index()
     {
-        return view('home',[
-            "stage"=>"Stage",
-            "agenda"=>"Agenda",
+
+        return view('home', [
+            "stage" => Stage::oldest('begin_at')->first(),
+            "agenda" => $this->getAgendaList(),
         ]);
+    }
+
+    protected function getAgendaList()
+    {
+        $stages = Stage::all()->toArray();
+        $events = Event::all()->toArray();
+
+        $result = array_merge($stages, $events);
+
+        usort($result, function ($a, $b) {
+            return $a['begin_at'] > $b['begin_at'];
+        });
+        return $result;
+
     }
 }

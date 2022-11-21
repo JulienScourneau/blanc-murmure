@@ -16,12 +16,12 @@ return new class extends Migration
         Schema::create('stages', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('subtitle');
+            $table->string('subtitle')->nullable();
             $table->string('description');
             $table->string('age');
             $table->timestamp('begin_at');
             $table->timestamp('end_at');
-            $table->string('thumbnail');
+            $table->string('thumbnail')->nullable();
             $table->string('price');
             $table->timestamps();
         });
