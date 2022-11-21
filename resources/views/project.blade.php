@@ -2,5 +2,9 @@
 
 @section('content')
     <h1>Project</h1>
-    <h2>{{$projects}}</h2>
+
+    @foreach($projects as $project)
+        <h2>{{$project->category}}</h2>
+    @endforeach
+
 @endsection

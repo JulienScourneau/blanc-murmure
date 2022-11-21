@@ -8,7 +8,7 @@
             <x-input name="first_name" label="prénom"/>
             <x-input name="email" type="email" label="adresse email"/>
             <div>
-                <label for="stage">Stage</label>
+                <label for="stage_id">Stage</label>
                 <select name="stage_id" id="stage_id">
 
                     <option value="1">Test</option>

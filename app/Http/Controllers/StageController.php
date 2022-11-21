@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Stage;
 
 class StageController extends Controller
 {
     public function index()
     {
-        return view('news',[
-            'stage'=>'Stage'
+        return view('news', [
+            'stage' => Stage::all()
         ]);
     }
 }
