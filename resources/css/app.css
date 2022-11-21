@@ -114,3 +114,34 @@ footer section {
     width: 25px;
     height: 25px;
 }
+
+/* Form */
+.field {
+    position: relative;
+    margin-bottom: 15px;
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+}
+.field label {
+    display: flex;
+    width: 65%;
+    margin: 0 auto;
+}
+.field input,
+textarea {
+    width: 80%;
+    line-height: 40px;
+    padding: 6px;
+    padding-left: 16px;
+    box-sizing: border-box;
+    font-size: 24px;
+    color: #616161;
+    border: 2px solid #f5f5f7;
+    border-radius: 40px;
+}
+.field input:focus,
+textarea:focus {
+    outline: 0;
+    border-color: #40826d;
+}

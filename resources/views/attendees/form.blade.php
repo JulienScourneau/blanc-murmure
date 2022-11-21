@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="max-w-lg mx-auto p-4 rounded-xl border border-gray-500">
+    <div class="max-w-lg mx-auto p-4">
         <form method="POST" action="{{ route('inscription') }}" class="text-center">
             @csrf
-            <x-input name="last_name" label="nom"/>
-            <x-input name="first_name" label="prénom"/>
-            <x-input name="email" type="email" label="adresse email"/>
+            <x-input name="last_name" label="Nom"/>
+            <x-input name="first_name" label="Prénom"/>
+            <x-input name="email" type="email" label="Adresse email"/>
             <div>
                 <label for="stage_id">Stage</label>
                 <select name="stage_id" id="stage_id">
@@ -32,7 +32,7 @@
             <x-input name="phone_number" label="Téléphone"/>
             <x-radio-button/>
 
-            <button  type="submit">
+            <button class="bg-green text-white font-black text-center text-xl rounded-3xl w-10/12 py-4 mt-9" type="submit">
                 {{ucwords("s'inscrire")}}
             </button>
         </form>
