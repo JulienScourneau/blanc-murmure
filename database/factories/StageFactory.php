@@ -23,7 +23,7 @@ class StageFactory extends Factory
             'age' => 'A partir de * à *',
             'begin_at' => $this->faker->date(),
             'end_at' => $this->faker->date(),
-            'thumbnail'=> 'https://picsum.photos/600/400',
+            'thumbnail'=> $this->faker->imageUrl,
             'price'=> $this->faker->numberBetween(40,150),
         ];
     }

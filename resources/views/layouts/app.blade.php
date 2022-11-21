@@ -19,12 +19,5 @@
 @include('components.Navbar')
 @yield('content')
 </body>
-<<<<<<< HEAD
-<footer>
-    {{-- @include('components.footer') --}}
-</footer>
-</html>
-=======
 @include('components.footer')
 </html>
->>>>>>> 60b46d2e1f2e13c02f87d205dda59930fbe02cd6

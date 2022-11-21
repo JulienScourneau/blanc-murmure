@@ -24,7 +24,7 @@ class EventFactory extends Factory
             'begin_at' => $this->faker->date(),
             'end_at' => $this->faker->date(),
             'category_id' => EventCategory::factory(),
-            'thumbnail' => 'https://picsum.photos/600/400',
+            'thumbnail' => $this->faker->imageUrl,
         ];
     }
 }

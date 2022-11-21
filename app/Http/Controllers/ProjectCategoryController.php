@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class IllustrationController extends Controller
+class ProjectCategoryController extends Controller
 {
     //
 }

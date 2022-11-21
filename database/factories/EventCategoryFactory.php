@@ -18,7 +18,6 @@ class EventCategoryFactory extends Factory
     {
         return [
             'title' => fake()->unique()->name(),
-
         ];
     }
 }

@@ -12,11 +12,11 @@ return new class extends Migration {
      */
     public function up()
     {
-        Schema::create('sculptures', function (Blueprint $table) {
-            $table->string('title')->primary();
-            $table->string('subtitle')->nullable();
-            $table->string('partnership')->nullable();
-            $table->string('participant')->nullable();
+        Schema::create('project_photos', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('project_id')->constrained()->cascadeOnDelete();
+            $table->string('path');
+            $table->string('alt')->nullable();
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ return new class extends Migration {
      */
     public function down()
     {
-        Schema::dropIfExists('sculptures');
+        Schema::dropIfExists('project_photos');
     }
 };

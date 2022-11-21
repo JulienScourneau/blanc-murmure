@@ -39,10 +39,6 @@
             <p class="font-normal text-xs underline text-right pr-5 text-disableText">En savoir plus ></p>
         </div>
     </article>
-    <<<<<<< HEAD
     @include('components.agenda',['agenda',$agenda])
     @include('components.footer')
-    =======
-    @include('components.agenda')
-    >>>>>>> 60b46d2e1f2e13c02f87d205dda59930fbe02cd6
 @endsection
