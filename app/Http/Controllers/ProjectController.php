@@ -10,6 +10,7 @@ class ProjectController extends Controller
     {
         return view('project', [
             'projects' => Project::all()
+
         ]);
     }
 }

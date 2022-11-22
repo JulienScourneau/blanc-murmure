@@ -6,9 +6,9 @@ use App\Models\Project;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\ProjectPhoto>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Photo>
  */
-class ProjectPhotoFactory extends Factory
+class PhotoFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,7 +18,6 @@ class ProjectPhotoFactory extends Factory
     public function definition()
     {
         return [
-            'project_id' => Project::factory(),
             'path' => $this->faker->imageUrl,
             'alt' => $this->faker->sentence(3),
         ];

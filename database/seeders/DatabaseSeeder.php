@@ -6,6 +6,8 @@ namespace Database\Seeders;
 use App\Models\Attendees;
 use App\Models\Catalog;
 use App\Models\Event;
+use App\Models\PhotoProject;
+use App\Models\Project;
 use App\Models\ProjectCategory;
 use App\Models\ProjectPhoto;
 use App\Models\Video;
@@ -28,7 +30,8 @@ class DatabaseSeeder extends Seeder
         ]);
         Attendees::factory(5)->create();
         Event::factory(5)->create();
-        ProjectPhoto::factory(5)->create();
+        Project::factory(5)->create();
+        PhotoProject::factory(10)->create();
         Catalog::factory(3)->create();
         Video::factory(5)->create();
     }

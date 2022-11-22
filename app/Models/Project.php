@@ -11,11 +11,11 @@ class Project extends Model
 
     public function photos()
     {
-        return $this->hasMany(ProjectPhoto::class);
+        return $this->belongsToMany(Photo::class,'photo_projects','projects_id', 'photos_id');
     }
 
     public function category()
     {
-        return $this->belongsTo(ProjectCategory::class);
+        return $this->belongsTo(ProjectCategory::class,'project_category_id');
     }
 }
