@@ -1,5 +1,5 @@
 <section class="navbar flex items-center p-2.5 bg-green">
-    <img class="h-24" src="assets/blanc-murmure-logo.png" alt="">
+    <img class="w-48" src="assets/blanc-murmure-logo.png" alt="">
     <img id="navbar__mobile__menu" class="h-10" src="assets/icons/menu.svg" alt="">
     <nav id="navigation" class="flex flex-col" style="display:none">
         <ul id="menu">
