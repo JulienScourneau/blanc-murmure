@@ -10,6 +10,8 @@ use App\Models\PhotoProject;
 use App\Models\Project;
 use App\Models\ProjectCategory;
 use App\Models\ProjectPhoto;
+use App\Models\UrbanSpace;
+use App\Models\UrbanSpaceProject;
 use App\Models\Video;
 use Illuminate\Database\Seeder;
 
@@ -34,5 +36,8 @@ class DatabaseSeeder extends Seeder
         PhotoProject::factory(10)->create();
         Catalog::factory(3)->create();
         Video::factory(5)->create();
+
+        UrbanSpace::factory(6)->create();
+        UrbanSpaceProject::factory(3)->create();
     }
 }

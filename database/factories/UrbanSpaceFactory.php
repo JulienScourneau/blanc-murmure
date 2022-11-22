@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\UrbanSpaceProject;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,13 @@ class UrbanSpaceFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'title' => $this->faker->sentence(2),
+            'location' => $this->faker->streetAddress,
+            'description' => $this->faker->sentence(6),
+            'participant' => $this->faker->name() . ' ' . $this->faker->name(),
+            'author' => $this->faker->name(),
+            'partnership' => $this->faker->name(),
+            'urban_space_project_id' => $this->faker->numberBetween(1, 3),
         ];
     }
 }
