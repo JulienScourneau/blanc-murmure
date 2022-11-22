@@ -12,6 +12,9 @@
     margin: 0 auto;
     margin-bottom: 20px;
 }
+.home__section article {
+    height: 431px;
+}
 /* Animation mobile menu */
 #navigation {
     background-color: white;
