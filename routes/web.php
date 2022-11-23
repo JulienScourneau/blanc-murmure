@@ -26,6 +26,11 @@ Route::get('/construire-un-projet', function () {
 })->name('collaborater');
 
 Route::get('/nos-projets', [ProjectController::class, 'index'])->name('project');
+Route::get('/nos-projets/sculpture',[])->name('sculpture');
+Route::get('/nos-projets/illustration',)->name('illustration');
+Route::get('/nos-projets/espace-urbain',)->name('espace-urbain');
+Route::get('/nos-projets/video',)->name('video');
+Route::get('/nos-projets/catalogue',)->name('catalogue');
 
 Route::get('/à-propos', function () {
     return view('about');
@@ -35,5 +40,6 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
-Route::get('/inscription',[AttendeesController::class,'index'])->name('inscription');
-Route::post('/inscription',[AttendeesController::class,'store'])->name('inscription');
+
+Route::get('/inscription', [AttendeesController::class, 'index'])->name('inscription');
+Route::post('/inscription', [AttendeesController::class, 'store'])->name('inscription');

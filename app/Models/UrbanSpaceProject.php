@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class UrbanSpaceProject extends Model
 {
     use HasFactory;
+
+    public function urbanSpace()
+    {
+        return $this->hasMany(UrbanSpace::class);
+    }
 }
