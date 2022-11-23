@@ -11,11 +11,6 @@ class AttendeesController extends Controller
         return view('attendees.form');
     }
 
-    public function show()
-    {
-        return view('');
-    }
-
     public function store()
     {
         $attributes = request()->validate([
