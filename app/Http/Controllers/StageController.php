@@ -9,7 +9,7 @@ class StageController extends Controller
     public function index()
     {
         return view('news', [
-            'stage' => Stage::all()
+            'stages' => Stage::all()
         ]);
     }
 }

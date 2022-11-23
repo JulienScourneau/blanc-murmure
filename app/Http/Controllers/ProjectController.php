@@ -11,6 +11,7 @@ class ProjectController extends Controller
 {
     public function index()
     {
+        //TODO: Add a limit for each project
         return view('project', [
             'projects' => Project::with('category','photos')->get(),
             'urbanSpaces' => UrbanSpaceProject::all(),
