@@ -13,7 +13,7 @@
             </li>
             <ul id="menuDeroulant" class="ml-10 pt-0" style="display: none">
                 <li><a class="text-base" href="{{ Route ('project')}}">Tous les projets</a></li>
-                <li><a class="text-base" href="/nos-projets/video">Film d'animation - vidéo</a></li>
+                <li><a class="text-base" href="{{ Route ('video') }}">Film d'animation - vidéo</a></li>
                 <li><a class="text-base" href="{{ Route ('sculpture')}}">Sculpture</a></li>
                 <li><a class="text-base" href="{{ Route ('illustration')}}">Illustration</a></li>
                 <li><a class="text-base" href="{{ Route ('urbanSpace')}}">Espace urbain</a></li>
