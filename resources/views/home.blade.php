@@ -41,5 +41,5 @@
         </div>
     </article>
     </section>
-    @include('components.agenda',['agenda',$agenda])
+    @include('components.agenda',['agendas',$agendas])
 @endsection
