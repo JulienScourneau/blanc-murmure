@@ -18,8 +18,23 @@
                         Nos ateliers se présentent comme autant de petits laboratoires de recherche pour que chaque technique, chaque thème se développent au gré des démêlés.
                     </p>
                 </p>
-                <button>Inscrivez-vous !</button>
+                <div class="flex justify-center">
+                    <button class="bg-orange text-white font-black text-center text-xl rounded-full w-48 py-4 mt-7">Inscrivez-vous !</button>
+                </div>
             </div>
         </div>
     </section>
+    <section class="mt-10">
+        <div class="bg-greenDuck p-2.5 text-white mb-2.5">
+            <h2 class="Title text-2xl font-black">Les stages et ateliers</h2>
+            <p>
+                <span class="font-black">Nous programmons des stages durant les <span class="text-2xl">vacances</span> scolaires.</span>
+                <p>
+                    Les enfants sont immergés durant une semaine dans le monde de la création. Les contraintes positives et ludiques permettent de structurer l’atelier en vue de favoriser l’imaginaire.
+                </p>
+            </p>
+        </div>
+        @include('components.card')
+    </section>
 @endsection
+<span></span>
