@@ -10,10 +10,26 @@ export function listener() {
     let menuDeroulant = document.getElementById("menuDeroulant");
     let project = document.getElementById("project");
     project.addEventListener("click", (event) => {
-        console.log(menuDeroulant.classList);
         menuDeroulant.style.display !== "none"
             ? (menuDeroulant.style.display = "none")
             : (menuDeroulant.style.display = "block");
     });
+
+    // let collaborater__text =
+    //     document.getElementsByClassName("collaborater__text");
+    // let collaborater__img =
+    //     document.getElementsByClassName("collaborater__img");
+
+    // for (const img of collaborater__img) {
+    //     img.addEventListener("click", (event) => {
+    //         console.log(event.target);
+    //     });
+    // }
+    // collaborater__img.addEventListener("click", (event) => {
+    //     console.log("aze");
+    //     collaborater__text.style.display !== "none"
+    //         ? (collaborater__text.style.display = "none")
+    //         : (collaborater__text.style.display = "block");
+    // });
 }
 listener();
