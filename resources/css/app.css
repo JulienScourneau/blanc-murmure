@@ -4,7 +4,9 @@
 
 * {
     font-family: "Quicksand", sans-serif;
-    color: #313131;
+}
+.Title {
+    font-family: "inter", sans-serif;
 }
 
 /* Home */
