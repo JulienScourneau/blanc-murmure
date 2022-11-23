@@ -1,5 +1,25 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Look at our News !</h1>
+    <section class="shadow">
+        <img src="assets/stage/mercredi_1.png" alt="">
+        <div>
+            <div class="flex w-1/2">
+                <img src="assets/stage/mercredi_2.png" alt="">
+                <img src="assets/stage/mercredi_3.png" alt="">
+            </div>
+            <div class="p-2.5">
+                <h2 class="Title text-orange text-2xl font-black">Mecredi s'éveille</h2>
+                <p class="font-normal">
+                    <span class="Title text-base font-semibold">L’atelier se déroule de 
+                    <span class="Title text-orange text-2xl font-black">fin septembre à début juin</span> à raison d’une fois par semaine.</span>
+                    <p>
+                        Nous veillons à ce que le fond et la forme s’épousent dans un projet commun.
+                        Nos ateliers se présentent comme autant de petits laboratoires de recherche pour que chaque technique, chaque thème se développent au gré des démêlés.
+                    </p>
+                </p>
+                <button>Inscrivez-vous !</button>
+            </div>
+        </div>
+    </section>
 @endsection
