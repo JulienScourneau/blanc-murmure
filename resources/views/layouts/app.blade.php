@@ -15,7 +15,7 @@
 </head>
 
 <body>
-@include('components.Navbar')
+@include('components.navbar')
 @yield('content')
 </body>
 @include('components.footer')
