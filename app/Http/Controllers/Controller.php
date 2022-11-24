@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Event;
-use App\Models\Stage;
+use App\Models\Internship;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -17,14 +17,14 @@ class Controller extends BaseController
     {
 
         return view('home', [
-            "stage" => Stage::oldest('begin_at')->first(),
+            "stage" => Internship::oldest('begin_at')->first(),
             "agendas" => $this->getAgendaList(),
         ]);
     }
 
     protected function getAgendaList()
     {
-        $stages = Stage::all()->toArray();
+        $stages = Internship::all()->toArray();
         $events = Event::all()->toArray();
 
         $result = array_merge($stages, $events);

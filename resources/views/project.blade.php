@@ -9,7 +9,9 @@
         <div class="flex">
             @foreach($projects as $project)
 
+                {{-- TODO: Check if empty --}}
                 @if($project->category->title == 'Sculpture')
+                    {{-- TODO: Check if empty photo --}}
                     <img src="{{$project->photos[0]->path}}" height="100" width="100" alt="">
                     <p>{{$project->title}}</p>
                 @endif
@@ -21,7 +23,7 @@
         <div class="flex">
             @foreach($projects as $project)
                 @if($project->category->title == 'Illustration')
-
+                    {{-- TODO: Check if empty photo --}}
                     <img src="{{$project->photos[0]->path}}" height="100" width="100" alt="">
                     <p>{{$project->title}}</p>
 

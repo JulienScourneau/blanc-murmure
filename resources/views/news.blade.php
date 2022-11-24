@@ -14,11 +14,12 @@
                 <p class="font-normal">
                     <span class="Title text-base font-semibold">L’atelier se déroule de
                     <span class="Title text-orange text-2xl font-black">fin septembre à début juin</span> à raison d’une fois par semaine.</span>
+
+                </p>
                 <p>
                     Nous veillons à ce que le fond et la forme s’épousent dans un projet commun.
                     Nos ateliers se présentent comme autant de petits laboratoires de recherche pour que chaque
                     technique, chaque thème se développent au gré des démêlés.
-                </p>
                 </p>
                 <div class="flex justify-center">
                     <button class="bg-orange text-white font-black text-center text-xl rounded-full w-48 py-4 mt-7">
@@ -40,7 +41,7 @@
             </p>
         </div>
         @foreach($stages as $stage)
-            @include('components.stage-card',[$stage])
+            @include('components.internship-card',[$stage])
         @endforeach
     </section>
 @endsection

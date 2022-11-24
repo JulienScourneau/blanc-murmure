@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Attendees;
+use App\Models\Internship;
 
 class AttendeesController extends Controller
 {
     public function index()
     {
-        return view('attendees.form');
+        return view('attendees.form',[
+            'internships'=>Internship::all(),
+        ]);
     }
 
     public function store()

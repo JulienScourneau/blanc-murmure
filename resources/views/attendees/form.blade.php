@@ -26,15 +26,14 @@
             <div class="flex flex-col mx-auto w-10/12">
                 <label class="text-primaryText flex self-start pl-8" for="stage_id">Stage</label>
                 <select class="rounded-full border-2 border-placeHolder p-5" name="stage_id" id="stage_id">
-
-                    <option value="1">Test</option>
-                    {{--                @foreach(App\Models\Category::all() as $category)--}}
-                    {{--                    <option--}}
-                    {{--                        value="{{$category->id}}"--}}
-                    {{--                        {{old('category_id') == $category->id ? 'selected' : ''}}--}}
-                    {{--                    >{{ucwords($category->name)}}--}}
-                    {{--                    </option>--}}
-                    {{--                @endforeach--}}
+                    <option value=""></option>
+                    @foreach($internships as $internship)
+                        <option
+                            value="{{$internship->id}}"
+                            {{old('category_id') == $internship->id ? 'selected' : ''}}
+                        >{{ucwords($internship->title)}}
+                        </option>
+                    @endforeach
                 </select>
                 <x-error name="stage"/>
 

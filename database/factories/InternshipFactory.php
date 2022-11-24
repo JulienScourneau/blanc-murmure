@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Stage>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Internship>
  */
-class StageFactory extends Factory
+class InternshipFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -25,6 +25,8 @@ class StageFactory extends Factory
             'end_at' => $this->faker->date(),
             'thumbnail'=> $this->faker->imageUrl,
             'price'=> $this->faker->numberBetween(40,150),
+            'begin_hour'=> $this->faker->time('H:s'),
+            'end_hour'=> $this->faker->time('H:s'),
         ];
     }
 }

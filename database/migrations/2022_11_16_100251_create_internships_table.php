@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('stages', function (Blueprint $table) {
+        Schema::create('internships', function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->string('subtitle')->nullable();
@@ -23,6 +23,8 @@ return new class extends Migration
             $table->timestamp('end_at');
             $table->string('thumbnail')->nullable();
             $table->string('price');
+            $table->time('begin_hour');
+            $table->time('end_hour');
             $table->timestamps();
         });
     }
