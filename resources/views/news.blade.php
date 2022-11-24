@@ -40,8 +40,8 @@
             </p>
             </p>
         </div>
-        @foreach($stages as $stage)
-            @include('components.internship-card',[$stage])
+        @foreach($internships as $internship)
+            @include('components.internship-card',[$internship])
         @endforeach
     </section>
 @endsection

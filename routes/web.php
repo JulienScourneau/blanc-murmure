@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\IllustrationController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\SculptureController;
-use App\Http\Controllers\StageController;
+use App\Http\Controllers\InternshipController;
 use App\Http\Controllers\UrbanSpaceController;
 use App\Http\Controllers\VideoController;
 use Illuminate\Support\Facades\Route;
@@ -24,7 +24,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [Controller::class, 'index'])->name('home');
 
-Route::get('/en-ce-moment', [StageController::class, 'index'])->name('news');
+Route::get('/en-ce-moment', [InternshipController::class, 'index'])->name('news');
 
 Route::get('/construire-un-projet', function () {
     return view('collaborater');
