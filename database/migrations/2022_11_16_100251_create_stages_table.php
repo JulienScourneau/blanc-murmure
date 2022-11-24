@@ -23,6 +23,8 @@ return new class extends Migration
             $table->timestamp('end_at');
             $table->string('thumbnail')->nullable();
             $table->string('price');
+            $table->time('begin_hour');
+            $table->time('end_hour');
             $table->timestamps();
         });
     }

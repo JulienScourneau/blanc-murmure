@@ -25,6 +25,8 @@ class StageFactory extends Factory
             'end_at' => $this->faker->date(),
             'thumbnail'=> $this->faker->imageUrl,
             'price'=> $this->faker->numberBetween(40,150),
+            'begin_hour'=> $this->faker->time('H:s'),
+            'end_hour'=> $this->faker->time('H:s'),
         ];
     }
 }

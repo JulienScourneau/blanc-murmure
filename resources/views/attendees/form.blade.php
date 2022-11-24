@@ -30,6 +30,7 @@
             <x-input name="postal_code" label="Code postal"/>
             <x-input name="city" label="Ville"/>
             <x-input name="phone_number" label="Téléphone"/>
+            <x-input type="time" name="time" label="Téléphone"/>
             <x-radio-button/>
 
             <button class="bg-green text-white font-black text-center text-xl rounded-3xl w-10/12 py-4 mt-9" type="submit">
