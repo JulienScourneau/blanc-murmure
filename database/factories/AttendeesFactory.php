@@ -2,7 +2,7 @@
 
 namespace Database\Factories;
 
-use App\Models\Stage;
+use App\Models\Internship;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -29,7 +29,7 @@ class AttendeesFactory extends Factory
             'city' => $this->faker->city,
             'phone_number' => $this->faker->phoneNumber,
             'right_to_image' => "Oui/Non",
-            'stage_id' =>Stage::factory(),
+            'stage_id' =>Internship::factory(),
         ];
     }
 }

@@ -41,7 +41,7 @@
             </p>
         </div>
         @foreach($stages as $stage)
-            @include('components.stage-card',[$stage])
+            @include('components.internship-card',[$stage])
         @endforeach
     </section>
 @endsection

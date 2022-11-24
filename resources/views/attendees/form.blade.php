@@ -10,15 +10,14 @@
             <div>
                 <label for="stage_id">Stage</label>
                 <select name="stage_id" id="stage_id">
-
-                    <option value="1">Test</option>
-                    {{--                @foreach(App\Models\Category::all() as $category)--}}
-                    {{--                    <option--}}
-                    {{--                        value="{{$category->id}}"--}}
-                    {{--                        {{old('category_id') == $category->id ? 'selected' : ''}}--}}
-                    {{--                    >{{ucwords($category->name)}}--}}
-                    {{--                    </option>--}}
-                    {{--                @endforeach--}}
+                    <option value=""></option>
+                    @foreach($internships as $internship)
+                        <option
+                            value="{{$internship->id}}"
+                            {{old('category_id') == $internship->id ? 'selected' : ''}}
+                        >{{ucwords($internship->title)}}
+                        </option>
+                    @endforeach
                 </select>
                 <x-error name="stage"/>
 
@@ -32,7 +31,8 @@
             <x-input name="phone_number" label="Téléphone"/>
             <x-radio-button/>
 
-            <button class="bg-green text-white font-black text-center text-xl rounded-3xl w-10/12 py-4 mt-9" type="submit">
+            <button class="bg-green text-white font-black text-center text-xl rounded-3xl w-10/12 py-4 mt-9"
+                    type="submit">
                 {{ucwords("s'inscrire")}}
             </button>
         </form>

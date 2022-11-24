@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Stage;
+use App\Models\Internship;
 
 class StageController extends Controller
 {
     public function index()
     {
         return view('news', [
-            'stages' => Stage::all()
+            'stages' => Internship::all()
         ]);
     }
 }
