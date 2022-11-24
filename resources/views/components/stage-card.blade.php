@@ -17,7 +17,7 @@
             <div class="pb-1">
                 <h4 class="Title text-lg font-bold">Quand ?</h4>
 
-                <p>Du {{date('d',strtotime($stage->begin_at))}} au {{Carbon\Carbon::parse($stage->end_at)->format('d F Y')}}
+                <p>Du {{date('d',strtotime($stage->begin_at))}} au {{Carbon\Carbon::parse($stage->end_at)->translatedFormat('d F Y')}}
                     de 09h00 à 16h00</p>
             </div>
             <div class="pb-1">
