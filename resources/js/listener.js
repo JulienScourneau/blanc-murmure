@@ -15,21 +15,16 @@ export function listener() {
             : (menuDeroulant.style.display = "block");
     });
 
-    // let collaborater__text =
-    //     document.getElementsByClassName("collaborater__text");
-    // let collaborater__img =
-    //     document.getElementsByClassName("collaborater__img");
+    let collaborater__box =
+        document.getElementsByClassName("collaborater__box");
 
-    // for (const img of collaborater__img) {
-    //     img.addEventListener("click", (event) => {
-    //         console.log(event.target);
-    //     });
-    // }
-    // collaborater__img.addEventListener("click", (event) => {
-    //     console.log("aze");
-    //     collaborater__text.style.display !== "none"
-    //         ? (collaborater__text.style.display = "none")
-    //         : (collaborater__text.style.display = "block");
-    // });
+    for (const box of collaborater__box) {
+        box.addEventListener("click", (event) => {
+            let text = box.children[1];
+            text.style.display !== "none"
+                ? (text.style.display = "none")
+                : (text.style.display = "block");
+        });
+    }
 }
 listener();

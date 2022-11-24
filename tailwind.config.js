@@ -12,6 +12,7 @@ module.exports = {
             orange: "#E88746",
             darkOrange: "#CE7E48",
             white: "#ffffff",
+            black: "#000000",
             primaryText: "#313131",
             placeHolderText: "#616161",
             secondaryText: "#919191",

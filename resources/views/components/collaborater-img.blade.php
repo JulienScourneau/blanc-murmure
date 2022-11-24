@@ -1,13 +1,7 @@
-@props(['src'])
-<div class="relative">
+@props(['src', 'text'])
+<div class="collaborater__box relative">
     <img class="collaborater__img w-full pt-3" src={{$src}} alt="">
-    <div class="collaborater__text absolute top-2 bg-orange w-full" style="display: none">
-        <p>
-            Atelier «Mémoire émaillée» organisé dans
-            le cadre de «Tomber Volontiers dans
-            le Panneau» en partenariat avec
-            la bibliothèque communale de Quaregnon. Réalisé par des enfants et des adultes,
-            avec l’intervention d’Isabelle Baldacchino, auteure 2015
-        </p>
+    <div class="collaborater__text absolute top-3 bg-orange w-full bg-opacity-75 p-2.5" style="display: none">
+        <p>{{$text}}</p>
     </div>
 </div>
