@@ -11,12 +11,12 @@ class ProjectController extends Controller
 {
     public function index()
     {
-        //TODO: Add a limit for each project
         return view('project', [
-            'projects' => Project::with('category','photos')->get(),
-            'urbanSpaces' => UrbanSpaceProject::all(),
-            'catalogs' => Catalog::all(),
-            'videos' => Video::all(),
+            'sculptures' => Project::with('photos')->where('project_category_id', '=', 1)->limit(5)->get(),
+            'illustrations' => Project::with('photos')->where('project_category_id', '=', 2)->limit(5)->get(),
+            'urbanSpaces' => UrbanSpaceProject::limit(5)->get(),
+            'catalogs' => Catalog::limit(5)->get(),
+            'videos' => Video::limit(5)->get(),
         ]);
     }
 }
