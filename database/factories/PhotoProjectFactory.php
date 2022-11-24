@@ -18,7 +18,7 @@ class PhotoProjectFactory extends Factory
     public function definition()
     {
         return [
-            'projects_id' => $this->faker->numberBetween(1, 5),
+            'projects_id' => $this->faker->numberBetween(1, 10),
             'photos_id' => Photo::factory()
         ];
     }

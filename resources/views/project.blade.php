@@ -7,27 +7,22 @@
 
         <h2 class="font-semibold text-lg">Sculpture</h2>
         <div class="flex">
-            @foreach($projects as $project)
+            @foreach($sculptures as $sculpture)
 
                 {{-- TODO: Check if empty --}}
-                @if($project->category->title == 'Sculpture')
-                    {{-- TODO: Check if empty photo --}}
-                    <img src="{{$project->photos[0]->path}}" height="100" width="100" alt="">
-                    <p>{{$project->title}}</p>
-                @endif
+                {{-- TODO: Check if empty photo --}}
+                <img src="{{$sculpture->photos[0]->path}}" height="100" width="100" alt="">
+                <p>{{$sculpture->title}}</p>
             @endforeach
         </div>
 
 
         <h2 class="font-semibold text-lg">Illustration</h2>
         <div class="flex">
-            @foreach($projects as $project)
-                @if($project->category->title == 'Illustration')
-                    {{-- TODO: Check if empty photo --}}
-                    <img src="{{$project->photos[0]->path}}" height="100" width="100" alt="">
-                    <p>{{$project->title}}</p>
-
-                @endif
+            @foreach($illustrations as $illustration)
+                {{-- TODO: Check if empty photo --}}
+                <img src="{{$illustration->photos[0]->path}}" height="100" width="100" alt="">
+                <p>{{$illustration->title}}</p>
             @endforeach
         </div>
 

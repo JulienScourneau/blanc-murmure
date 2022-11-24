@@ -32,8 +32,8 @@ class DatabaseSeeder extends Seeder
         ]);
         Attendees::factory(5)->create();
         Event::factory(5)->create();
-        Project::factory(5)->create();
-        PhotoProject::factory(10)->create();
+        Project::factory(10)->create();
+        PhotoProject::factory(40)->create();
         Catalog::factory(3)->create();
         Video::factory(5)->create();
 
