@@ -17,7 +17,7 @@ class Controller extends BaseController
     {
 
         return view('home', [
-            "stage" => Internship::oldest('begin_at')->first(),
+            "internship" => Internship::oldest('begin_at')->first(),
             "agendas" => $this->getAgendaList(),
         ]);
     }

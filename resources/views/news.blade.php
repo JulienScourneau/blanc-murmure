@@ -40,9 +40,15 @@
             </p>
             </p>
         </div>
-        @foreach($internships as $internship)
-            @include('components.internship-card',[$internship])
-        @endforeach
+        @if($internships->count())
+            @foreach($internships as $internship)
+                @include('components.internship-card',[$internship])
+            @endforeach
+        @else
+            <div class="max-w-7xl">
+                <p class="text-center">Aucun stage pour le moment</p>
+            </div>
+        @endif
     </section>
 @endsection
 <span></span>
