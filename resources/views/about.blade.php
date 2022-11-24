@@ -27,27 +27,27 @@
         </p>
     </article>
 
-    <section class="contact__crew flex flex-col w-10/12 card">
+    <section class="contact__crew flex flex-col w-10/12 mx-auto">
         <h2 class="uppercase font-black text-2xl mt-10 mb-12 text-green">Notre équipe</h2>
         <div class="contact__illustration__top">
-            <div class="contact__illustration__top__border rounded-l-3xl h-5 mb-4"></div>
-            <div class="contact__illustration__top__background bg-green h-20 rounded-l-3xl"></div>
+            <div class="contact__illustration__top__border rounded-l-full h-5 mb-4"></div>
+            <div class="contact__illustration__top__background bg-green h-20 rounded-l-full"></div>
         </div>
         <div class="mb-10">
-            <img src="assets/eugenio.png" alt="">
+            <img class="w-full mx-auto" src="assets/eugenio.png" alt="">
             <p>Eugénio Furino - plasticien illustrateur</p>
         </div>
         <div class="mb-10">
             <p>Muriel Loth - coordinatrice vidéaste</p>
-            <img src="assets/muriel.png" alt="">
+            <img class="w-full mx-auto" src="assets/muriel.png" alt="">
         </div>
         <div>
-            <img src="assets/boris.png" alt="">
+            <img class="w-full mx-auto" src="assets/boris.png" alt="">
             <p>Boris Grégoire - plasticien sculpteur</p>
         </div>
         <div class="contact__illustration__bottom">
-            <div class="contact__illustration__bottom__background bg-green h-20 rounded-r-3xl"></div>
-            <div class="contact__illustration__bottom__border rounded-r-3xl h-5 mt-4"></div>
+            <div class="contact__illustration__bottom__background bg-green h-20 rounded-r-full"></div>
+            <div class="contact__illustration__bottom__border rounded-r-full h-5 mt-4"></div>
         </div>
     </section>
 
