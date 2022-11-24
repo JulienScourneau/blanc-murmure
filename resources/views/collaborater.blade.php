@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<article class="shadow-lg w-11/12 card p-5 text-white bg-greenDuck" style="margin-top: 30px">
+<article class="shadow-lg w-11/12 mx-auto p-5 text-white bg-greenDuck" style="margin-top: 30px">
     <h2 class="text-2xl mb-10 Title font-black">Écoles</h2>
     <p>
          Nous poussons régulièrement la porte des écoles primaires et secondaires pour mettre en place
@@ -16,7 +16,7 @@
          <x-collaborater-img src="assets/collaborater/school_3.png" text="3 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti libero exercitationem animi eaque laudantium, blanditiis quae adipisci iusto. Odit ex vitae quod expedita laborum, atque placeat quisquam debitis assumenda deleniti." />
      </div>
  </article>
- <article class="shadow-lg w-11/12 card p-5 text-white bg-greenDuck">
+ <article class="shadow-lg w-11/12 mx-auto p-5 text-white bg-greenDuck">
     <h2 class="text-2xl mb-10 Title font-black">Les partenaires et résidences d’artistes</h2>
     <p>
         Laurent Duvinage, illustrateur, nous parle de son expérience lors du projet « Tomber Volontiers dans le Panneau » 2015 :
@@ -30,7 +30,7 @@
          <x-collaborater-img src="assets/collaborater/school_3.png" text="3 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti libero exercitationem animi eaque laudantium, blanditiis quae adipisci iusto. Odit ex vitae quod expedita laborum, atque placeat quisquam debitis assumenda deleniti." />
      </div>
  </article>
- <article class="shadow-lg w-11/12 card p-5 text-white bg-greenDuck">
+ <article class="shadow-lg w-11/12 mx-auto p-5 text-white bg-greenDuck">
     <h2 class="text-2xl mb-10 Title font-black">Les partenaires sociaux</h2>
     <p>
         Favoriser l’épanouissement culturel et social de chacun.
@@ -42,7 +42,7 @@ L’atelier vise un niveau artistique de qualité, qui dépasse le stade du lois
          <x-collaborater-img src="assets/collaborater/school_3.png" text="3 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti libero exercitationem animi eaque laudantium, blanditiis quae adipisci iusto. Odit ex vitae quod expedita laborum, atque placeat quisquam debitis assumenda deleniti." />
      </div>
  </article>
- <article class="shadow-lg w-11/12 card p-5 text-white bg-greenDuck">
+ <article class="shadow-lg w-11/12 mx-auto p-5 text-white bg-greenDuck">
     <h2 class="text-2xl mb-10 Title font-black">Les institutions culturelles</h2>
     <p>
         Spécialisés dans les arts plastiques et l’Espace Urbain participatif, nos compétences s’étendent sur divers domaines et ce depuis 1998. Blanc Murmure coordonne des ateliers, des expositions, des projets socio-artistiques et des éditions dans une perspective d’échange, de valorisation individuelle, collective et d’expression artistique.
