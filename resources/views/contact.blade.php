@@ -16,11 +16,11 @@
     <div class="py-2.5">
         <label class="flex self-start pl-20" for="">Vous venez pour :</label>
         <div class="flex w-10/12 mx-auto">
-           <div class="border-2 border-placeHolder rounded-full w-10/12 p-2.5">
+           <div class="border-2 border-placeHolder rounded-full w-10/12 text-center self-center p-5">
                 <input type="radio" value="oui" id="yes" name="right_to_image">
                 <label for="remember_me">Un stage</label>
             </div>
-            <div class="border-2 border-placeHolder rounded-full w-10/12 p-2.5 ml-1">
+            <div class="border-2 border-placeHolder rounded-full w-10/12 ml-1 text-center self-center p-2.5">
                 <input type="radio" value="non" id="no" name="right_to_image">
                 <label for="remember_me">Une collaboration</label>
             </div>
