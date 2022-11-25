@@ -5,7 +5,8 @@
     @if(isset($internship))
         @include('components.banner', ['internship'=>$internship])
     @else
-        {{--TODO: Add banner for event?--}}
+        {{-- TODO: Add banner for event? --}}
+        {{-- TODO: Always need to show something --}}
         <p>Nothing to show</p>
     @endif
     <!-- <hr class="mt-12 text-separator"/>
@@ -19,6 +20,7 @@
                 <p class="text-base font-normal text-white">
                     Découvrez les stages et les ateliers du moment et à venir.
                 </p>
+                {{-- TODO: Add link --}}
                 <p class="font-normal text-xs underline text-right pr-5 text-white">En savoir plus ></p>
             </div>
         </article>
@@ -32,11 +34,12 @@
                     en intégrant le public dans une dynamique de projet tout en favorisant l’épanouissement culturel et
                     social de chacun.
                 </p>
+                {{-- TODO: Add link --}}
                 <p class="font-normal text-xs underline text-right pr-5 text-white">En savoir plus ></p>
             </div>
         </article>
         <article class="card rounded-2xl items-center border-2 border-white">
-            <img class="rounded-t-2xl" class="w-full" src="assets/project.png" alt="">
+            <img class="rounded-t-2xl w-full" src="assets/project.png" alt="">
             <div class="p-2.5">
                 <h2 class="Title uppercase font-black text-2xl leading-7 text-white">Découvrir les projets</h2>
                 <p class="text-base font-normal text-white">
@@ -44,6 +47,7 @@
                     différentes techniques artistiques dans lesquelles chacun peut devenir créateur
                     et acteur de son projet.
                 </p>
+                {{-- TODO: Add link --}}
                 <p class="font-normal text-xs underline text-right pr-5 text-white">En savoir plus ></p>
             </div>
         </article>
