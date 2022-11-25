@@ -7,10 +7,7 @@
         <div class="flex">
             @if($sculptures->count())
                 @foreach($sculptures as $sculpture)
-                    @if($sculpture->photos->count())
-                        <img src="{{$sculpture->photos[0]->path}}" height="100" width="100" alt="">
-                    @endif
-                    <p>{{$sculpture->title}}</p>
+                    <x-project-card :project="$sculpture"/>
                 @endforeach
             @else
                 <p>Nothing to show</p>
