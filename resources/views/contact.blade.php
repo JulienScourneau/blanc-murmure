@@ -6,11 +6,11 @@
 
     <form action="">
         <div class="w-10/12 mx-auto py-2.5">
-            <label class="text-primaryText flex self-start pl-10" for="nom">Nom</label>
+            <label class="text-primaryText flex self-start pl-10 my-2" for="nom">Nom</label>
             <input class="w-full rounded-full border-2 border-placeHolder p-5" type="text" id="nom">
         </div>
         <div class="w-10/12 mx-auto py-2.5">
-            <label class="text-primaryText flex self-start pl-10" for="mail">Email</label>
+            <label class="text-primaryText flex self-start pl-10 my-2" for="mail">Email</label>
             <input class="w-full rounded-full border-2 border-placeHolder p-5" type="text" id="mail">
         </div>
         <div class="w-10/12 mx-auto py-2.5  ">
@@ -28,7 +28,7 @@
             <x-error name="right_to_image"/>
         </div>
         <div class="w-10/12 mx-auto py-2.5">
-            <label class="text-primaryText flex self-start pl-10" for="message">Your message</label>
+            <label class="text-primaryText flex self-start pl-10 my-2" for="message">Your message</label>
             <textarea class="w-full rounded-3xl border-2 border-placeHolder p-5 resize-none h-48" type="text" id="message"></textarea>
         </div>
         <div class="w-10/12 mx-auto">
