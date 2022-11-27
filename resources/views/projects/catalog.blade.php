@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
-    <p>catalog</p>
+<h2>Catalogue</h2>
+<x-project-card-catalogue />
 @endsection
