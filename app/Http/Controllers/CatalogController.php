@@ -9,7 +9,7 @@ class CatalogController extends Controller
     public function index()
     {
         return view('projects.catalog', [
-            'projects' => Catalog::all()
+            'catalogs' => Catalog::all()
         ]);
     }
 }
