@@ -18,7 +18,7 @@ class PhotoUrbanspaceFactory extends Factory
     public function definition()
     {
         return [
-            'urban_space_id' => $this->faker->numberBetween(1,10),
+            'urban_spaces_id' => $this->faker->numberBetween(1,6),
             'photos_id' => Photo::factory()
         ];
     }
