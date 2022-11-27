@@ -38,19 +38,20 @@
 .highlightBlack::after {
   position: absolute;
   z-index: -1;
-  bottom: 0px;
+  bottom: -2px;
   left: 50%;
   transform: translateX(-50%);
   content: "";
   width: 100%;
   height: 0px;
   background-color: #e88746;
+  border-radius: 40px;
   transition: all 250ms;
 }
 .highlightBlack:hover {
   color: white;
 }
 .highlightBlack:hover::after {
-  height: 105%;
-  width: 105%;
+  height: 110%;
+  width: 110%;
 }
