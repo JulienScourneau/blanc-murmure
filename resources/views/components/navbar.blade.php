@@ -31,18 +31,18 @@
     <div class="hidden xl:flex w-full justify-center items-center">
         <div class="w-10/12 flex justify-center">
             <nav class="flex justify-around w-10/12 2xl:w-6/12 pt-1">
-                <a class="highlightBlack" href="{{ Route ('home')}}">Accueil</a>
-                <a class="highlightBlack" href="{{ Route ('news')}}">En ce moment</a>
+                <a class="{{ (request()->is('/')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('home')}}">Accueil</a>
+                <a class="{{ (request()->is('en-ce-moment')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('news')}}">En ce moment</a>
                 <li class="highlightBlack">
                     <p>Nos projets</p>
                     <img class="pl-2.5 w-3/12" src="{{asset('assets/icons/chevron-down.svg')}}" alt="">
                 </li>
-                <a class="highlightBlack" href="{{ Route ('collaborater')}}">Envie de travailler avec nous ?</a>
-                <a class="highlightBlack" href="{{ Route ('about')}}">A propos</a>
-                <a class="highlightBlack" href="{{ Route ('contact')}}">Contact</a>
+                <a class="{{ (request()->is('construire-un-projet')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('collaborater')}}">Envie de travailler avec nous ?</a>
+                <a class="{{ (request()->is('à-propos')) ? 'uppercase text-white' : 'highlightBlack' }}"" href="{{ Route ('about')}}">A propos</a>
+                <a class="{{ (request()->is('contact')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('contact')}}">Contact</a>
             </nav>
         </div>
         <a href="{{ Route('inscription') }}"
-        class="bg-orange text-white Title font-black text-center text-xl rounded-full w-52 py-4 hover:bg-white hover:text-orange">Choisir un stage</a>
+        class="bg-orange text-white Title font-black text-center text-xl rounded-full w-52 py-4 border-2 border-orange hover:bg-white hover:text-orange">Choisir un stage</a>
     </div>
 </section>

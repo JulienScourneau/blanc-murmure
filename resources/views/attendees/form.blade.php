@@ -50,7 +50,7 @@
             <x-input name="phone_number" label="Téléphone"/>
             <x-radio-button/>
 
-            <button class="bg-green text-white font-black text-center text-xl rounded-full w-10/12 py-4 mt-9"
+            <button class="bg-green text-white font-black text-center text-xl rounded-full w-10/12 py-4 mt-9 border-2 hover:bg-white hover:text-green"
                     type="submit">
                 {{ucwords("s'inscrire")}}
             </button>
