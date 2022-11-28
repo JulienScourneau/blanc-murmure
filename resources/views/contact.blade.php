@@ -4,10 +4,12 @@
     <h2 class="uppercase text-center font-black text-2xl mt-6 mb-4">Des questions ?</h2>
     
     
-    <form action="">
-    <div class="w-10/12 mx-auto py-2.5">
-        <label class="text-primaryText flex self-start pl-10" for="nom">Nom</label>
-        <input class="w-full rounded-full border-2 border-placeHolder p-5" type="text"  id="nom" >
+    <form action="" class="form">
+    <div class="form-wrapper">
+        <div class="form-group">
+            <label class="form-label" for="nom">Nom</label>
+            <input id="first" class="form-input" type="text"  id="nom" >
+        </div>
     </div>
     <div class="w-10/12 mx-auto py-2.5">
         <label class="text-primaryText flex self-start pl-10" for="mail">Email</label>
