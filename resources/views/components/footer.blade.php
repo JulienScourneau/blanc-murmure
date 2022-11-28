@@ -9,7 +9,7 @@
             <hr class="mt-5 mb-2.5 text-white"/>
             <h2 class="Title uppercase text-orange text-2xl leading-7 font-black w-10/12 self-center">Restez au courant
                 de notre actualité !</h2>
-            <input class="border-placeHolder border-2 p-1.5 pl-4 rounded-3xl my-5 w-10/12 self-center" type="text"
+            <input class="FooterInput border-placeHolder border-2 p-1.5 pl-4 rounded-3xl my-5 w-10/12 self-center" type="text"
                    placeholder="Email">
             <button
                 class="rounded-3xl p-1.5 bg-incativeElement text-placeHolder text-2xl font-bold w-10/12 self-center">

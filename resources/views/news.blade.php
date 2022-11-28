@@ -2,15 +2,15 @@
 
 @section('content')
 
-    <section class="shadow">
+    <section class="shadow lg:flex mx-auto my-10">
         <img src="assets/stage/mercredi_1.png" alt="">
         <div>
             <div class="flex w-1/2">
-                <img src="assets/stage/mercredi_2.png" alt="">
+                <img class="mx-2" src="assets/stage/mercredi_2.png" alt="">
                 <img src="assets/stage/mercredi_3.png" alt="">
             </div>
             <div class="p-2.5">
-                <h2 class="Title text-orange text-2xl font-black">Mecredi s'éveille</h2>
+                <h2 class="Title text-orange text-2xl font-black py-5">Mecredi s'éveille</h2>
                 <p class="font-normal">
                     <span class="Title text-base font-semibold">L’atelier se déroule de
                     <span class="Title text-orange text-2xl font-black">fin septembre à début juin</span> à raison d’une fois par semaine.</span>
@@ -21,11 +21,13 @@
                     Nos ateliers se présentent comme autant de petits laboratoires de recherche pour que chaque
                     technique, chaque thème se développent au gré des démêlés.
                 </p>
-                <div class="flex justify-center">
-                    <button class="bg-orange text-white font-black text-center text-xl rounded-full w-48 py-4 mt-7">
+            </div>
+            <div class="flex justify-center lg:justify-end items-end h-2/6 pr-5 pb-12">
+                <button class="bg-orange text-white font-black text-center text-xl rounded-full w-48 py-4 mt-7 border-2 hover:bg-white hover:text-orange">
+                    <a href="{{ Route('inscription') }}">
                         Inscrivez-vous !
-                    </button>
-                </div>
+                    </a>
+                </button>
             </div>
         </div>
     </section>
@@ -40,15 +42,17 @@
             </p>
             </p>
         </div>
-        @if($internships->count())
-            @foreach($internships as $internship)
-                @include('components.internship-card',[$internship])
-            @endforeach
-        @else
-            <div class="max-w-7xl">
-                <p class="text-center">Aucun stage pour le moment</p>
-            </div>
-        @endif
+        <div class="xl: flex flex-wrap justify-center">
+            @if($internships->count())
+                @foreach($internships as $internship)
+                    @include('components.internship-card',[$internship])
+                @endforeach
+            @else
+                <div class="max-w-7xl">
+                    <p class="text-center">Aucun stage pour le moment</p>
+                </div>
+            @endif
+        </div>
     </section>
 @endsection
 <span></span>

@@ -2,17 +2,17 @@
     <a href="/">
         <img class="w-48" src="{{asset('assets/blanc-murmure-logo.png')}}" alt="">
     </a>
-    <div class="block xl:hidden">
+    <div class="block lg:hidden">
         <img id="navbar__mobile__menu" class="h-10" src="{{asset('assets/icons/menu.svg')}}" alt="">
         <nav id="navigation" class="flex flex-col" style="display:none">
             <ul id="menu">
                 <li><a href="{{ Route ('home')}}">Accueil</a></li>
                 <li><a href="{{ Route ('news')}}">En ce moment</a></li>
-                <li id="project" class="flex hover:underline">
+                <li id="projectMobile" class="flex hover:underline">
                     <p>Nos projets</p>
                     <img class="pl-2.5" src="{{asset('assets/icons/chevron-down.svg')}}" alt="">
                 </li>
-                <ul id="menuDeroulant" class="ml-10 pt-0" style="display: none">
+                <ul id="menuDeroulantMobile" class="ml-10 pt-0" style="display: none">
                     <li><a class="text-base" href="{{ Route ('project')}}">Tous les projets</a></li>
                     <li><a class="text-base" href="{{ Route ('video') }}">Film d'animation - vidéo</a></li>
                     <li><a class="text-base" href="{{ Route ('sculpture')}}">Sculpture</a></li>
@@ -28,21 +28,29 @@
             class="bg-green text-white font-black text-center text-xl rounded-full w-52 py-4 mt-9">Choisir un stage</a>
         </nav>
     </div>
-    <div class="hidden xl:flex w-full justify-center items-center">
-        <div class="w-10/12 flex justify-center">
-            <nav class="flex justify-around w-10/12 2xl:w-6/12 pt-1">
-                <a class="{{ (request()->is('/')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('home')}}">Accueil</a>
-                <a class="{{ (request()->is('en-ce-moment')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('news')}}">En ce moment</a>
-                <li class="highlightBlack">
-                    <p>Nos projets</p>
+    <div class="hidden lg:flex w-full items-center">
+        <div class="w-full flex justify-center">
+            <nav class="flex justify-around w-10/12 lg:text-sm 2xl:w-6/12 pt-1">
+                <a class="pr-1 {{ (request()->is('/')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('home')}}">Accueil</a>
+                <a class="pr-1 {{ (request()->is('en-ce-moment')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('news')}}">Envie de créer ?</a>
+                <div id="project" class="highlightBlack">
+                    <p class="text-sm">Nos projets</p>
                     <img class="pl-2.5 w-3/12" src="{{asset('assets/icons/chevron-down.svg')}}" alt="">
-                </li>
-                <a class="{{ (request()->is('construire-un-projet')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('collaborater')}}">Envie de travailler avec nous ?</a>
-                <a class="{{ (request()->is('à-propos')) ? 'uppercase text-white' : 'highlightBlack' }}"" href="{{ Route ('about')}}">A propos</a>
-                <a class="{{ (request()->is('contact')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('contact')}}">Contact</a>
+                </div>
+                <ul id="menuDeroulant" class="absolute top-20 mr-32 bg-green p-5" style="display: none">
+                    <li><a class="{{ (request()->is('nos-projets')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('project')}}">Tous les projets</a></li>
+                    <li><a class="{{ (request()->is('nos-projets/video')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('video') }}">Film d'animation - vidéo</a></li>
+                    <li><a class="{{ (request()->is('nos-projets/sculpture')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('sculpture')}}">Sculpture</a></li>
+                    <li><a class="{{ (request()->is('nos-projets/illustration')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('illustration')}}">Illustration</a></li>
+                    <li><a class="{{ (request()->is('nos-projets/espace-urbain')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('urbanSpace')}}">Espace urbain</a></li>
+                    <li><a class="{{ (request()->is('nos-projets/catalogue')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('catalog')}}">Catalogue</a></li>
+                </ul>
+                <a class="pr-1 {{ (request()->is('construire-un-projet')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('collaborater')}}">Envie de travailler avec nous ?</a>
+                <a class="pr-1 {{ (request()->is('à-propos')) ? 'uppercase text-white' : 'highlightBlack' }}"" href="{{ Route ('about')}}">A propos</a>
+                <a class=" {{ (request()->is('contact')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('contact')}}">Contact</a>
             </nav>
         </div>
         <a href="{{ Route('inscription') }}"
-        class="bg-orange text-white Title font-black text-center text-xl rounded-full w-52 py-4 border-2 border-orange hover:bg-white hover:text-orange">Choisir un stage</a>
+        class="bg-orange text-white Title font-black text-center text-xl rounded-full w-52 py-4 border-2 border-orange hover:bg-white hover:text-orange lg:w-36 text-sm">Choisir un stage</a>
     </div>
 </section>
