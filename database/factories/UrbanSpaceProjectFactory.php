@@ -20,6 +20,7 @@ class UrbanSpaceProjectFactory extends Factory
             'title' => $this->faker->sentence(2),
             'description' => $this->faker->sentence(5),
             'thumbnail' => $this->faker->imageUrl,
+            'slug' => $this->faker->slug,
         ];
     }
 }

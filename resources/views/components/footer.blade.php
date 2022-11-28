@@ -1,7 +1,6 @@
 <footer class="flex flex-col mt-12 p-2.5 p-10 bg-green rounded-2xl">
-
-    <section>
-        <div class="flex flex-col">
+    <section class="xl:flex justify-around w-7/12">
+        <div class="flex flex-col xl:w-2/12">
             <div class="flex flex-row pl-5">
                 {{-- TODO: Add link to social --}}
                 <img class="w-6" src="{{asset('assets/icons/facebook_logo.png')}}" alt="">
@@ -18,24 +17,43 @@
             </button>
         </div>
 
-        <hr class="my-6 text-separator"/>
+        <hr class="block my-6 text-separator xl:hidden"/>
+        <div class="hidden xl:flex">
+            <nav class="flex flex-col mr-5">
+                <p class="Title font-light text-xl text-orange uppercase">Explorer</p>
+                <a class="py-1 highlightBlack" href="{{ Route ('home')}}">Acceuil</a>
+                <a class="py-1 highlightBlack" href="{{ Route ('news')}}">En ce moment</a>
+                <a class="py-1 highlightBlack" href="{{ Route ('collaborater')}}">Envie de travailler avec nous ?</a>
+                <a class="py-1 highlightBlack" href="{{ Route ('about')}}">A propos</a>
+                <a class="py-1 highlightBlack" href="{{ Route ('contact')}}">Contact</a>
+            </nav>
+            <nav class="flex flex-col">
+                <p class="Title font-light text-xl text-orange uppercase">Nos projets</p>
+                <a class="py-1 highlightBlack" href="{{ Route ('project')}}">Tous les projets</a>
+                <a class="py-1 highlightBlack" href="{{ Route ('video')}}">Film d'animation - Vidéo</a>
+                <a class="py-1 highlightBlack" href="{{ Route ('sculpture')}}">Sculpture</a>
+                <a class="py-1 highlightBlack" href="{{ Route ('illustration')}}">Illustration</a>
+                <a class="py-1 highlightBlack" href="{{ Route ('urbanSpace')}}">Espace urbain</a>
+                <a class="py-1 highlightBlack" href="{{ Route ('catalog')}}">Catalogue</a>
+            </nav>
+        </div>
 
         <div class="footer__information flex flex-col text-sm pl-5 text-base font-normal leading-5">
-            <div class="flex flex-row items-center">
+            <div class="flex flex-row items-center xl:my-2 text-base">
                 <img src="{{asset('assets/icons/opening_icon.png')}}" alt="">
-                <p class="pl-2.5 text-white">Du lundi au vendredi de 9h à 17h</p>
+                <p class="ml-2.5 text-white">Du lundi au vendredi de 9h à 17h</p>
             </div>
-            <div class="flex flex-row items-center">
+            <div class="flex flex-row items-center xl:my-2 text-base">
                 <img src="{{asset('assets/icons/location_icon.png')}}" alt="">
-                <p class="pl-2.5 text-white">36 rue de la Boule, 7390 Quaregnon, Belgique</p>
+                <p class="ml-2.5 text-white">36 rue de la Boule, 7390 Quaregnon, Belgique</p>
             </div>
-            <div class="flex flex-row items-center">
+            <div class="flex flex-row items-center xl:my-2 text-base">
                 <img src="{{asset('assets/icons/phone_icon.png')}}" alt="">
-                <p class="pl-2.5 text-white">+32 (0)65 515 217</p>
+                <p class="ml-2.5 text-white">+32 (0)65 515 217</p>
             </div>
-            <div class="flex flex-row items-center mb-4">
+            <div class="flex flex-row items-center mb-4 xl:my-2 text-base">
                 <img src="{{asset('assets/icons/mail_icon.png')}}" alt="">
-                <p class="pl-2.5 text-orange">info@blancmurmure.be</p>
+                <a class="ml-2.5 text-orange highlightOrange" href = "mailto: info@blancmurmure.be">info@blancmurmure.be</a>
             </div>
         </div>
     </section>

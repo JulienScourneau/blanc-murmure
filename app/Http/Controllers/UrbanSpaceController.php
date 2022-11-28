@@ -3,13 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Models\UrbanSpace;
+use App\Models\UrbanSpaceProject;
 
 class UrbanSpaceController extends Controller
 {
     public function index()
     {
         return view('projects.urbanspace', [
-            'projects' => UrbanSpace::all()
-            ]);
+            'projects' => UrbanSpaceProject::all()
+        ]);
+    }
+
+    public function show(UrbanSpaceProject $urbanSpace)
+    {
+        return view('urbanspace.show', [
+            'urbanSpaceProject' => $urbanSpace
+        ]);
     }
 }

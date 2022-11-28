@@ -7,6 +7,7 @@ use App\Models\Attendees;
 use App\Models\Catalog;
 use App\Models\Event;
 use App\Models\PhotoProject;
+use App\Models\PhotoUrbanspace;
 use App\Models\Project;
 use App\Models\ProjectCategory;
 use App\Models\ProjectPhoto;
@@ -32,12 +33,14 @@ class DatabaseSeeder extends Seeder
         ]);
         Attendees::factory(5)->create();
         Event::factory(5)->create();
-        Project::factory(10)->create();
-        PhotoProject::factory(40)->create();
         Catalog::factory(3)->create();
         Video::factory(5)->create();
 
         UrbanSpace::factory(6)->create();
         UrbanSpaceProject::factory(3)->create();
+        PhotoUrbanspace::factory(20)->create();
+
+        Project::factory(10)->create();
+        PhotoProject::factory(40)->create();
     }
 }
