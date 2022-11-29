@@ -3,8 +3,8 @@
     <img src="assets/Fresque.png" alt="">
     <div class="">
         <h1 class="Title uppercase text-center font-black text-2xl mt-6 mb-4">
-            Envie de faire <span class="text-orange underline cursor-pointer highlightOrange">
-                <a href="{{ Route('news') }}">un stage</a>
+            Envie de faire <span class="text-orange underline cursor-pointer highlightOrange font-black Title">
+                <a class="Title font-black" href="{{ Route('news') }}">un stage</a>
             </span>
             Créatif ? Voici le prochain !
         </h1>

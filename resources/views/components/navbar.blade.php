@@ -1,9 +1,9 @@
-<section class="navbar flex items-center p-2.5 bg-green">
+<section class="navbar flex justify-beetween items-center p-2.5 bg-green">
     <a href="/">
         <img class="w-48" src="{{asset('assets/blanc-murmure-logo.png')}}" alt="">
     </a>
     <div class="block xl:hidden">
-        <img id="navbar__mobile__menu" class="h-10" src="{{asset('assets/icons/menu.svg')}}" alt="">
+            <img id="navbar__mobile__menu" class="h-10 top-6" src="{{asset('assets/icons/menu.svg')}}" alt="">
         <nav id="navigation" class="flex flex-col" style="display:none">
             <ul id="menu">
                 <li><a href="{{ Route ('home')}}">Accueil</a></li>
