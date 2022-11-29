@@ -17,9 +17,16 @@ export function listener() {
     let menuDeroulant = document.getElementById("menuDeroulant");
     let project = document.getElementById("project");
     project.addEventListener("mouseover", (event) => {
-        menuDeroulant.style.display !== "none"
-            ? (menuDeroulant.style.display = "none")
-            : (menuDeroulant.style.display = "block");
+        // menuDeroulant.style.display !== "none"
+        //     ? (menuDeroulant.style.display = "none")
+        //     : (menuDeroulant.style.display = "block");
+        menuDeroulant.style.display = "block"
+    });
+    project.addEventListener("mouseout", (event) => {
+        // menuDeroulant.style.display !== "none"
+        //     ? (menuDeroulant.style.display = "block")
+        //     : (menuDeroulant.style.display = "none");
+        menuDeroulant.style.display = "none"
     });
 
     let collaborater__box =

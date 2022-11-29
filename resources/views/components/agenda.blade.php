@@ -21,7 +21,7 @@
                 Louvière.</p>
         </div>
         <div class="hidden xl:block w-6/12 overflow-hidden">
-            <img class="w-full" src="assets/agenda_test.png" alt="">
+            <img class="h-full" src="assets/agenda_test.png" alt="">
         </div>
         <div class="hidden xl:block w-24">
             <p class="text-6xl font-black flex justify-center h-full h-full items-center group-hover:text-orange group-hover:translate-x-2">></p>

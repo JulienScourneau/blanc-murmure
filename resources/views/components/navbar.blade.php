@@ -30,27 +30,29 @@
     </div>
     <div class="hidden lg:flex w-full items-center">
         <div class="w-full flex justify-center">
-            <nav class="flex justify-around w-10/12 lg:text-sm 2xl:w-6/12 pt-1">
+            <nav class="flex justify-around w-11/12 h-10 items-center lg:text-sm 2xl:w-6/12 pt-1">
                 <a class="pr-1 {{ (request()->is('/')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('home')}}">Accueil</a>
                 <a class="pr-1 {{ (request()->is('en-ce-moment')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('news')}}">Envie de créer ?</a>
-                <div id="project" class="highlightBlack">
-                    <p class="text-sm">Nos projets</p>
-                    <img class="pl-2.5 w-3/12" src="{{asset('assets/icons/chevron-down.svg')}}" alt="">
+                <div id="project" class="h-full flex justify-center items-center">
+                    <div class="highlightBlack">
+                        <p class="text-sm self-center">Nos projets</p>
+                        <img class="pl-2.5 w-3/12" src="{{asset('assets/icons/chevron-down.svg')}}" alt="">
+                        <ul id="menuDeroulant" class="absolute top-7 mr-32 bg-green p-5 w-52 shadow-lg" style="display: none">
+                            <li><a class="{{ (request()->is('nos-projets')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('project')}}">Tous les projets</a></li>
+                            <li><a class="{{ (request()->is('nos-projets/video')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('video') }}">Film d'animation - vidéo</a></li>
+                            <li><a class="{{ (request()->is('nos-projets/sculpture')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('sculpture')}}">Sculpture</a></li>
+                            <li><a class="{{ (request()->is('nos-projets/illustration')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('illustration')}}">Illustration</a></li>
+                            <li><a class="{{ (request()->is('nos-projets/espace-urbain')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('urbanSpace')}}">Espace urbain</a></li>
+                            <li><a class="{{ (request()->is('nos-projets/catalogue')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('catalog')}}">Catalogue</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <ul id="menuDeroulant" class="absolute top-20 mr-32 bg-green p-5" style="display: none">
-                    <li><a class="{{ (request()->is('nos-projets')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('project')}}">Tous les projets</a></li>
-                    <li><a class="{{ (request()->is('nos-projets/video')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('video') }}">Film d'animation - vidéo</a></li>
-                    <li><a class="{{ (request()->is('nos-projets/sculpture')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('sculpture')}}">Sculpture</a></li>
-                    <li><a class="{{ (request()->is('nos-projets/illustration')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('illustration')}}">Illustration</a></li>
-                    <li><a class="{{ (request()->is('nos-projets/espace-urbain')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('urbanSpace')}}">Espace urbain</a></li>
-                    <li><a class="{{ (request()->is('nos-projets/catalogue')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('catalog')}}">Catalogue</a></li>
-                </ul>
                 <a class="pr-1 {{ (request()->is('construire-un-projet')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('collaborater')}}">Envie de travailler avec nous ?</a>
-                <a class="pr-1 {{ (request()->is('à-propos')) ? 'uppercase text-white' : 'highlightBlack' }}"" href="{{ Route ('about')}}">A propos</a>
+                <a class="pr-1 {{ (request()->is('à-propos')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('about')}}">A propos</a>
                 <a class=" {{ (request()->is('contact')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('contact')}}">Contact</a>
             </nav>
         </div>
         <a href="{{ Route('inscription') }}"
-        class="bg-orange text-white Title font-black text-center text-xl rounded-full w-52 py-4 border-2 border-orange hover:bg-white hover:text-orange lg:w-36 text-sm">Choisir un stage</a>
+        class="bg-orange text-white Title font-black text-center text-xl rounded-full w-52 py-4 border-2 border-orange hover:bg-white hover:text-orange lg:w-36 text-sm font-base xl:w-52 text-xl">Choisir un stage</a>
     </div>
 </section>
