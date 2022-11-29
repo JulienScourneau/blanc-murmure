@@ -7,9 +7,16 @@ export function listener() {
             : (Menu.style.display = "flex");
     });
 
+    let menuDeroulantMobile = document.getElementById("menuDeroulantMobile");
+    let projectMobile = document.getElementById("projectMobile");
+    projectMobile.addEventListener("click", (event) => {
+        menuDeroulantMobile.style.display !== "none"
+            ? (menuDeroulantMobile.style.display = "none")
+            : (menuDeroulantMobile.style.display = "block");
+    });
     let menuDeroulant = document.getElementById("menuDeroulant");
     let project = document.getElementById("project");
-    project.addEventListener("click", (event) => {
+    project.addEventListener("mouseover", (event) => {
         menuDeroulant.style.display !== "none"
             ? (menuDeroulant.style.display = "none")
             : (menuDeroulant.style.display = "block");

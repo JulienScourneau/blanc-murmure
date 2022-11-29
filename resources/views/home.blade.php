@@ -15,7 +15,6 @@
     <section class="bg-greenDuck p-2.5 rounded-3xl xl:mx-auto">
         <div class="flex flex-col xl:flex-row xl:w-6/12 mx-auto py-2.5">
             <article class="rounded-2xl items-center border-2 border-white group hover:bg-white text-greenDuck xl:w-4/12 mx-2.5">
-                <a href="{{ Route ('news')}}">
                 <img class="rounded-t-2xl xl:w-full" src="assets/stage.png" alt="">
                 <div class="p-2.5">
                     <h2 class="Title uppercase font-black text-2xl leading-7 text-white group-hover:text-greenDuck">Envie de créer ?</h2>
@@ -25,13 +24,11 @@
                     {{-- TODO: Add link --}}
                     <p class="font-normal text-xs underline text-right pr-5 text-white group-hover:text-greenDuck">En savoir plus ></p>
                 </div>
-            </a>
             </article>
             <article class="mx-auto rounded-2xl items-center border-2 border-white xl:w-4/12 mx-2.5 group hover:bg-white">
-                <a href="{{ Route ('collaborater')}}">
                 <img class="rounded-t-2xl xl:w-full" src="assets/collab.png" alt="">
                 <div class="p-2.5">
-                <h2 class="Title uppercase font-black text-2xl leading-7 text-white group-hover:text-greenDuck">Envie de travailler avec nous ?</h2>
+                <h2 class="Title uppercase font-black text-2xl leading-7 text-white group-hover:text-greenDuck">Envie de travailler avec nous?</h2>
                 <p class="text-base font-normal text-white group-hover:text-greenDuck">
                     Développer les collaborations, les concertations et réunir les forces
                     en intégrant le public dans une dynamique de projet tout en favorisant l’épanouissement culturel et
@@ -40,10 +37,8 @@
                     {{-- TODO: Add link --}}
                 <p class="font-normal text-xs underline text-right pr-5 text-white group-hover:text-greenDuck">En savoir plus ></p>
                 </div>
-            </a>
             </article>
             <article class="mx-auto rounded-2xl items-center border-2 border-white xl:w-4/12 mx-2.5 group hover:bg-white">
-                <a href="{{ Route ('project')}}">
                 <img class="rounded-t-2xl w-full " src="assets/project.png" alt="">
                 <div class="p-2.5">
                     <h2 class="Title uppercase font-black text-2xl leading-7 text-white group-hover:text-greenDuck">Découvrir les projets</h2>
@@ -55,7 +50,6 @@
                     {{-- TODO: Add link --}}
                     <p class="font-normal text-xs underline text-right pr-5 text-white group-hover:text-greenDuck">En savoir plus ></p>
                 </div>
-            </a>
             </article>
         </div>
     </section>
