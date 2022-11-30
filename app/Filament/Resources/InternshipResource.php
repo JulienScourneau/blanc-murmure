@@ -5,19 +5,25 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\InternshipResource\Pages;
 use App\Filament\Resources\InternshipResource\RelationManagers;
 use App\Models\Internship;
-use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Tables\Columns\ImageColumn;
 
 class InternshipResource extends Resource
 {
     protected static ?string $model = Internship::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationGroup = 'Stages et Ateliers';
+
+    protected static ?string $breadcrumb = 'Stages';
+
+    protected static ?string $navigationIcon = 'heroicon-o-document-text';
+
+    protected static ?string $navigationLabel = 'Stages';
+
+    protected static ?string $slug = 'stages';
 
     public static function form(Form $form): Form
     {
@@ -31,11 +37,11 @@ class InternshipResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('title'),
-                Tables\Columns\TextColumn::make('subtitle'),
-                Tables\Columns\TextColumn::make('description'),
+                Tables\Columns\TextColumn::make('title')->label('Titre')->color('primary'),
+                Tables\Columns\TextColumn::make('subtitle')->label('Sous titre')->wrap(),
+                Tables\Columns\TextColumn::make('description')->wrap(),
                 Tables\Columns\TextColumn::make('age'),
-                Tables\Columns\TextColumn::make('begin_at'),
+                ImageColumn::make('thumbnail')->label('Photo')->size(100),
             ])
             ->filters([
                 //

@@ -13,6 +13,7 @@ use App\Models\ProjectCategory;
 use App\Models\ProjectPhoto;
 use App\Models\UrbanSpace;
 use App\Models\UrbanSpaceProject;
+use App\Models\User;
 use App\Models\Video;
 use Illuminate\Database\Seeder;
 
@@ -25,6 +26,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        User::factory()->create([
+            'name' => 'julien',
+            'email' => 'julien@mail.com',
+            'password' => 'password',
+        ]);
+
         ProjectCategory::factory()->create([
             'title' => 'Illustration'
         ]);
