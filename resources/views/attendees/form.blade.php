@@ -28,7 +28,7 @@
             <x-input name="email" type="email" label="Adresse email"/>
             <div class="flex flex-col mx-auto w-10/12">
                 <label class="text-primaryText flex self-start pl-8 my-2" for="stage_id">Stage</label>
-                <select class="rounded-full border-2 border-placeHolder p-5" name="stage_id" id="stage_id">
+                <select class="rounded-full border-2 border-disableText p-5 hover:cursor-pointer" name="stage_id" id="stage_id">
                     <option value=""></option>
                     @foreach($internships as $internship)
                         <option
