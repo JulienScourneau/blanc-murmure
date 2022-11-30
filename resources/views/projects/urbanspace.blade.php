@@ -7,5 +7,4 @@
         <x-ubranspace-card :project="$project"/>
     @endforeach
 
-
 @endsection

@@ -10,6 +10,6 @@
         </h1>
         <h2 class="Title uppercase font-black text-xl leading-7">{{$internship->title}}</h2>
         <h5 class="text-orange text-xs mb-6">En collaboration avec Le Collectif Innombrable</h5>
-        <a class="bg-orange rounded-3xl p-2.5 text-white text-xl hover:bg-white hover:text-orange hover:border-orange hover:border-2" href="{{ Route ('news') }}">En savoir plus ></a>
+        <a class="bg-orange rounded-3xl p-2.5 text-white text-xl hover:bg-white hover:text-orange hover:border-orange hover:border-2" href="/en-ce-moment/#stage-et-ateliers">En savoir plus ></a>
     </div>
 </section>
