@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <section class="shadow lg:flex mx-auto my-10">
+    <section class="shadow lg:flex w-10/12 mx-auto my-10">
         <img src="assets/stage/mercredi_1.png" alt="">
         <div>
             <div class="flex w-1/2">
@@ -42,7 +42,7 @@
             </p>
             </p>
         </div>
-        <div class="xl: flex flex-wrap justify-center">
+        <div class="w-full lg:flex flex-wrap w-10/12 mx-auto">
             @if($internships->count())
                 @foreach($internships as $internship)
                     @include('components.internship-card',[$internship])

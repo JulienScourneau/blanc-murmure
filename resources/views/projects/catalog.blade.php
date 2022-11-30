@@ -1,7 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-<h2 class="Title font-black text-2xl text-center">Catalogue</h2>
+<x-banner-project 
+    src="{{asset('assets/project/project_catalogue_banner.png')}}" 
+    text="Nos catalogues sont les miroirs d’un vécu. Ils nous permettent une rétrospective de nos projets
+    et par-là même nous donnent l’opportunité de nous réinventer, d’évoluer, d’échanger.
+    Véritables archives vivantes, c’est une trace de notre parcours ainsi qu’un moyen de transmission vers autrui." 
+/>
 
 <div class="flex flex-col w-10/12 mx-auto lg:flex-row w-8/12">
     @if($catalogs->count())
