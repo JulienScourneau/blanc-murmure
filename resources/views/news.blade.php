@@ -31,7 +31,7 @@
             </div>
         </div>
     </section>
-    <section class="mt-10">
+    <section id="stage-et-ateliers" class="mt-10">
         <div class="bg-greenDuck p-2.5 text-white mb-2.5">
             <h2 class="Title text-2xl font-black">Les stages et ateliers</h2>
             <p>
