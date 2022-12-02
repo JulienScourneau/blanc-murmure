@@ -25,6 +25,7 @@ class InternshipResource extends Resource
 
     protected static ?string $slug = 'stages';
 
+
     public static function form(Form $form): Form
     {
         return $form
