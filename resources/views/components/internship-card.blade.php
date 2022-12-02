@@ -1,4 +1,4 @@
-<article class="bg-greenDuck m-2.5 shadow-md w-11/12 lg:w-5/12">
+<article class="bg-greenDuck mt-2.5 shadow-md w-11/12 mx-auto overflow-hidden lg:w-2/12">
     <img class="w-full" src="{{$internship->thumbnail}}" alt="">
     <div class="text-white p-2.5">
         <div class="mb-5">
