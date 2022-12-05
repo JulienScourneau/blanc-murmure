@@ -2,10 +2,12 @@
 
 @section('content')
 <x-banner-project 
-src="{{asset('assets/project/project_illustration_banner_2.png')}}" 
-text="La vidéo
-    c’est s’éveiller à la représentation, figurative ou non, de ce qui nous entoure. Un regard, une forme, une couleur, 
-    autant d’outils pour créer un livre-objet, une peinture murale, une image." 
+src="{{asset('assets/project/project_video_banner.png')}}" 
+text="La vidéo 
+    permet une narration du monde, propre à chacun.
+    Petites idées de départ, grandes pensées en mouvement,
+    tel un laboratoire on y expérimente au fil des images 
+    une expression poétique et décalée." 
 />
     
     <div class="flex flex-col mx-auto lg:flex-row flex-wrap justify-center">

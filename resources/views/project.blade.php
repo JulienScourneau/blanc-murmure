@@ -35,11 +35,16 @@
             @endif
         </div>
         <h2 class="Title font-bold text-xl mt-5 mb-2.">Espace Urbain</h2>
-        <div class="flex flex-col">
+        <div class="flex flex-col mx-auto lg:flex-row flex-wrap">
             @if($urbanSpaces->count())
                 @foreach($urbanSpaces as $urbanSpace)
-                    <img src="{{$urbanSpace->thumbnail}}" height="100" width="100" alt="">
-                    <p>{{$urbanSpace->title}}</p>
+                <div class="border-1 shadow-lg my-2.5 bg-greenDuck rounded-2xl lg:mx-2.5 w-2/12">
+                    <img class="w-full h-64 rounded-t-2xl" src="{{$urbanSpace->thumbnail}}" height="100" width="100" alt="">
+                    <div class="p-5 text-white">
+                        <p class="font-black Title border-l-2 border-white pl-2.5">{{$urbanSpace->title}}</p>
+                        <p class="border-l-2 border-white pt-2.5 pl-2.5">{{$urbanSpace->description}}</p>
+                    </div>
+                </div>
                 @endforeach
             @else
                 <p>Aucun projet</p>

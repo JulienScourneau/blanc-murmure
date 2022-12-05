@@ -37,7 +37,7 @@
                     <div class="highlightBlack">
                         <p class="text-sm self-center">Nos projets</p>
                         <img class="pl-2.5 w-3/12" src="{{asset('assets/icons/chevron-down.svg')}}" alt="">
-                        <ul id="menuDeroulant" class="absolute top-7 mr-32 bg-green p-5 w-52 shadow-lg" style="display: none">
+                        <ul id="menuDeroulant" class="absolute z-50 top-7 mr-32 bg-green p-5 w-56 shadow-lg" style="display: none">
                             <li><a class="{{ (request()->is('nos-projets')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('project')}}">Tous les projets</a></li>
                             <li><a class="{{ (request()->is('nos-projets/video')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('video') }}">Film d'animation - vidéo</a></li>
                             <li><a class="{{ (request()->is('nos-projets/sculpture')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('sculpture')}}">Sculpture</a></li>
