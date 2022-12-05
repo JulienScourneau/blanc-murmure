@@ -6,7 +6,9 @@ namespace Database\Seeders;
 use App\Models\Attendees;
 use App\Models\Catalog;
 use App\Models\Event;
+use App\Models\HomePhoto;
 use App\Models\Illustration;
+use App\Models\NewsPhoto;
 use App\Models\PhotoIllustration;
 use App\Models\PhotoProject;
 use App\Models\PhotoSculpture;
@@ -35,6 +37,17 @@ class DatabaseSeeder extends Seeder
             'name' => 'julien',
             'email' => 'julien@mail.com',
             'password' => 'password',
+        ]);
+
+//        TODO: Check image storage and path
+        NewsPhoto::factory()->create([
+            'path' => 'mercredi_1.png'
+        ]);
+        NewsPhoto::factory()->create([
+            'path' => 'mercredi_2.png'
+        ]);
+        NewsPhoto::factory()->create([
+            'path' => 'mercredi_3.png'
         ]);
 
         Attendees::factory(5)->create();

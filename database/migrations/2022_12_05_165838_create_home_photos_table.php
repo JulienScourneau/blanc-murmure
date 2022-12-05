@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('home_photos', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('path');
             $table->timestamps();
         });
     }
