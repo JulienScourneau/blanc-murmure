@@ -10,25 +10,10 @@ use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\TimePicker;
 use Filament\Resources\Pages\CreateRecord;
+use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class CreateInternship extends CreateRecord
 {
     protected static string $resource = InternshipResource::class;
-
-    protected function getFormSchema(): array
-    {
-        return [
-            TextInput::make('title')->label('Titre')->unique(),
-            TextInput::make('subtitle')->label('Sous-Titre'),
-//            RichEditor::make('description')->required(),
-            SummerNote::make('description')->required(),
-            TextInput::make('age')->required(),
-            TextInput::make('price')->required(),
-            DatePicker::make('begin_at'),
-            DatePicker::make('end_at'),
-            TimePicker::make('begin_hour'),
-            TimePicker::make('end_hour'),
-            FileUpload::make('thumbnail')
-        ];
-    }
+    protected static ?string $title = "Créer un stage ou ateliers";
 }
