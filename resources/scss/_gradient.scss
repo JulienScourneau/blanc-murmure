@@ -1,0 +1,23 @@
+.gradient {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-image: linear-gradient(0deg,#b2b9b5,#717574);
+  &:after {
+    content: 'Vhello';
+    position: absolute;
+    width:0;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-image: linear-gradient(0deg,#11ab5e,#25d4ad);
+    opacity: 0;
+    transition: all 1s;
+  }
+  &:hover:after {
+    opacity: 1;
+    width:50%;
+  }
+}

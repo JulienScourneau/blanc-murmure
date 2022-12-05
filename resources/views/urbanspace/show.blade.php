@@ -8,5 +8,4 @@
             <img src="{{$photo->path}}" width="100" height="100" alt="">
         @endforeach
     @endforeach
-
 @endsection
