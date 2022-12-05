@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1 class="text-center font-black text-2xl py-2.5 text-green">A propos de blanc mumure</h1>
-    <article class="card bg-green w-11/12 rounded-3xl p-6 leading-tight text-justify shadow">
+    <h1 class="text-center font-black text-2xl py-2.5 text-green lg:mt-10">A propos de blanc mumure</h1>
+    <article class="card bg-green w-11/12 rounded-3xl p-6 leading-tight text-justify shadow lg:w-6/12">
         <p class="pb-4 text-white">
         Blanc Murmure est un Centre d’Expression et de Créativité (C.E.C.) reconnu par la Fédération Wallonie
         Bruxelles depuis 1998. 
@@ -27,22 +27,22 @@
         </p>
     </article>
 
-    <section class="contact__crew flex flex-col w-10/12 mx-auto">
+    <section class="contact__crew flex flex-col w-10/12 mx-auto lg:flex-row">
         <h2 class="uppercase font-black text-2xl mt-10 mb-12 text-green">Notre équipe</h2>
         <div class="contact__illustration__top">
             <div class="contact__illustration__top__border rounded-l-full h-5 mb-4"></div>
             <div class="contact__illustration__top__background bg-green h-20 rounded-l-full"></div>
         </div>
-        <div class="mb-10">
-            <img class="w-full mx-auto" src="assets/eugenio.png" alt="">
+        <div class="mb-10 lg:mt-20 lg:p-5   ">
+            <img class="w-full mx-auto lg:mx-2.5 flex" src="assets/eugenio.png" alt="">
             <p>Eugénio Furino - plasticien illustrateur</p>
         </div>
-        <div class="mb-10">
+        <div class="mb-10 lg:mt-20 lg:p-5">
             <p>Muriel Loth - coordinatrice vidéaste</p>
-            <img class="w-full mx-auto" src="assets/muriel.png" alt="">
+            <img class="w-full mx-auto lg:mx-2.5 flex" src="assets/muriel.png" alt="">
         </div>
-        <div>
-            <img class="w-full mx-auto" src="assets/boris.png" alt="">
+        <div class=" lg:mt-20 lg:p-5">
+            <img class="w-full mx-auto lg:mx-2.5 flex" src="assets/boris.png" alt="">
             <p>Boris Grégoire - plasticien sculpteur</p>
         </div>
         <div class="contact__illustration__bottom">
