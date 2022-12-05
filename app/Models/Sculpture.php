@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Sculpture extends Model
 {
     use HasFactory;
+
+    public function photos()
+    {
+        return $this->belongsToMany(Photo::class,'photo_sculptures','sculptures_id', 'photos_id');
+    }
 }

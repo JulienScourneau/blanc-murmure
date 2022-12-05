@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\UrbanSpaceResource\Pages;
-use App\Filament\Resources\UrbanSpaceResource\RelationManagers;
-use App\Models\UrbanSpace;
+use App\Filament\Resources\UrbanSpaceProjectResource\Pages;
+use App\Filament\Resources\UrbanSpaceProjectResource\RelationManagers;
+use App\Models\UrbanSpaceProject;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -13,13 +13,10 @@ use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class UrbanSpaceResource extends Resource
+class UrbanSpaceProjectResource extends Resource
 {
-    protected static ?string $model = UrbanSpace::class;
-
-    protected static ?string $navigationGroup = 'Projets';
-
-    protected static ?string $navigationLabel = 'Oeuvres';
+    protected static ?string $model = UrbanSpaceProject::class;
+    protected static ?string $navigationLabel = 'Projet Urbain';
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
@@ -58,9 +55,9 @@ class UrbanSpaceResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListUrbanSpaces::route('/'),
-            'create' => Pages\CreateUrbanSpace::route('/create'),
-            'edit' => Pages\EditUrbanSpace::route('/{record}/edit'),
+            'index' => Pages\ListUrbanSpaceProjects::route('/'),
+            'create' => Pages\CreateUrbanSpaceProject::route('/create'),
+            'edit' => Pages\EditUrbanSpaceProject::route('/{record}/edit'),
         ];
     }
 }

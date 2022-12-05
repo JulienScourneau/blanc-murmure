@@ -17,6 +17,8 @@ class CatalogResource extends Resource
 {
     protected static ?string $model = Catalog::class;
 
+    protected static ?string $navigationGroup = 'Projets';
+
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
     public static function form(Form $form): Form
@@ -43,14 +45,14 @@ class CatalogResource extends Resource
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -58,5 +60,5 @@ class CatalogResource extends Resource
             'create' => Pages\CreateCatalog::route('/create'),
             'edit' => Pages\EditCatalog::route('/{record}/edit'),
         ];
-    }    
+    }
 }

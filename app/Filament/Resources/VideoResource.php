@@ -17,6 +17,8 @@ class VideoResource extends Resource
 {
     protected static ?string $model = Video::class;
 
+    protected static ?string $navigationGroup = 'Projets';
+
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
     public static function form(Form $form): Form
@@ -43,14 +45,14 @@ class VideoResource extends Resource
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -58,5 +60,5 @@ class VideoResource extends Resource
             'create' => Pages\CreateVideo::route('/create'),
             'edit' => Pages\EditVideo::route('/{record}/edit'),
         ];
-    }    
+    }
 }

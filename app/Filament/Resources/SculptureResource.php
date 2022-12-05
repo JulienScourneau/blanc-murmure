@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\UrbanSpaceResource\Pages;
-use App\Filament\Resources\UrbanSpaceResource\RelationManagers;
-use App\Models\UrbanSpace;
+use App\Filament\Resources\SculptureResource\Pages;
+use App\Filament\Resources\SculptureResource\RelationManagers;
+use App\Models\Sculpture;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -13,13 +13,11 @@ use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class UrbanSpaceResource extends Resource
+class SculptureResource extends Resource
 {
-    protected static ?string $model = UrbanSpace::class;
+    protected static ?string $model = Sculpture::class;
 
     protected static ?string $navigationGroup = 'Projets';
-
-    protected static ?string $navigationLabel = 'Oeuvres';
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
@@ -58,9 +56,9 @@ class UrbanSpaceResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListUrbanSpaces::route('/'),
-            'create' => Pages\CreateUrbanSpace::route('/create'),
-            'edit' => Pages\EditUrbanSpace::route('/{record}/edit'),
+            'index' => Pages\ListSculptures::route('/'),
+            'create' => Pages\CreateSculpture::route('/create'),
+            'edit' => Pages\EditSculpture::route('/{record}/edit'),
         ];
     }
 }
