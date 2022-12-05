@@ -6,7 +6,7 @@
             style="background-image: url('{{asset('assets/agenda_test.png')}}');"
             href="/nos-projets/espace-urbain/{{$project->slug}}"
         >
-            <h2 class="pl-10 Title font-black text-green text-2xl">{{$project->title}}</h2>
+            <h2 class="pl-10 Title font-black text-black text-2xl">{{$project->title}}</h2>
         </a>
     </div>
 </div>
