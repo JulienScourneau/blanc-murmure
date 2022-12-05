@@ -1,8 +1,8 @@
-<section class="navbar flex justify-beetween items-center p-2.5 bg-green">
+<section class="navbar w-full flex justify-beetween items-center p-2.5 bg-green">
     <a href="/">
         <img class="w-48" src="{{asset('assets/blanc-murmure-logo.png')}}" alt="">
     </a>
-    <div class="block lg:hidden">
+    <div class="block h-10 lg:hidden">
         <img id="navbar__mobile__menu" class="h-10" src="{{asset('assets/icons/menu.svg')}}" alt="">
         <nav id="navigation" class="flex flex-col" style="display:none">
             <ul id="menu">
