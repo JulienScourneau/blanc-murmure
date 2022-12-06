@@ -2,7 +2,21 @@
 
 namespace App\Providers;
 
+use App\Filament\Resources\CatalogResource;
+use App\Filament\Resources\EventResource;
+use App\Filament\Resources\IllustrationResource;
+use App\Filament\Resources\InternshipResource;
+use App\Filament\Resources\SculptureResource;
+use App\Filament\Resources\UrbanSpaceProjectResource;
+use App\Filament\Resources\UrbanSpaceResource;
+use App\Filament\Resources\VideoResource;
+use App\Models\Illustration;
+use App\Models\Sculpture;
+use App\Models\UrbanSpaceProject;
 use Filament\Facades\Filament;
+use Filament\Navigation\NavigationBuilder;
+use Filament\Navigation\NavigationGroup;
+use Filament\Navigation\NavigationItem;
 use Illuminate\Support\HtmlString;
 use Illuminate\Support\ServiceProvider;
 
@@ -25,12 +39,36 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Filament::pushMeta([
-            new HtmlString('
-                    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-                    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
-                    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
-                    '),
-            ]);
+        Filament::navigation(function (NavigationBuilder $builder): NavigationBuilder {
+            return $builder
+                ->items([
+                    NavigationItem::make('Tableau de bord')
+                        ->icon('heroicon-o-home')
+                        ->activeIcon('heroicon-s-home')
+                        ->isActiveWhen(fn(): bool => request()->routeIs('filament.pages.dashboard'))
+                        ->url(route('filament.pages.dashboard')),
+                ])
+                ->groups([
+                    NavigationGroup::make('Ateliers, Événements et Stages')
+                        ->items([
+                            ...InternshipResource::getNavigationItems(),
+                            ...EventResource::getNavigationItems(),
+
+                        ]),
+                    NavigationGroup::make('Projets')
+                        ->items([
+                            ...CatalogResource::getNavigationItems(),
+                            ...IllustrationResource::getNavigationItems(),
+                            ...SculptureResource::getNavigationItems(),
+                            ...VideoResource::getNavigationItems(),
+                            NavigationGroup::make('Espace Urbain')
+                                ->items([
+                                    ...UrbanSpaceProjectResource::getNavigationItems(),
+                                    ...UrbanSpaceResource::getNavigationItems(),
+                                ])
+                        ]),
+                ]);
+        });
+
     }
 }

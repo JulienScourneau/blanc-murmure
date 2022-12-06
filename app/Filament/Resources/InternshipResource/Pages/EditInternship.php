@@ -10,6 +10,8 @@ class EditInternship extends EditRecord
 {
     protected static string $resource = InternshipResource::class;
 
+    protected static ?string $title = 'Modifier';
+
     protected function getActions(): array
     {
         return [

@@ -19,10 +19,9 @@ return [
         ],
 
         'simple' => [
-            'plugins' => 'autoresize directionality emoticons link',
-            'toolbar' => 'removeformat | fontselect | bold italic underline | alignjustify alignright aligncenter alignleft | forecolor backcolor | link emoticons',
+            'plugins' => 'autoresize emoticons link',
+            'toolbar' => 'removeformat | fontselect | bold italic underline | alignjustify alignleft alignright aligncenter | forecolor backcolor | link',
             'upload_directory' => null,
-            'elementpath' => false
         ],
 
         'template' => [
