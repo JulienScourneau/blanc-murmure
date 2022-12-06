@@ -1,6 +1,6 @@
 
-<section class="card w-11/12 items-center text-center xl:flex flex-row justify-center">
-    <img src="assets/Fresque.png" alt="">
+<section class="mx-auto w-11/12 items-center text-center lg:flex flex-row justify-center">
+    <img class="mx-auto" src="assets/Fresque.png" alt="">
     <div class="">
         <h1 class="Title uppercase text-center font-black text-2xl mt-6 mb-4">
             Envie de faire <span class="text-orange underline cursor-pointer highlightOrange font-black Title">
