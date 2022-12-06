@@ -1,6 +1,6 @@
 <footer class="flex flex-col mt-12 p-2.5 p-10 bg-green rounded-2xl">
     <section class="xl:flex justify-around w-7/12">
-        <div class="flex flex-col xl:w-2/12">
+        <div class="flex flex-col xl:w-3/12">
             <div class="flex flex-row pl-5">
                 {{-- TODO: Add link to social --}}
                 <img class="w-6" src="{{asset('assets/icons/facebook_logo.png')}}" alt="">
