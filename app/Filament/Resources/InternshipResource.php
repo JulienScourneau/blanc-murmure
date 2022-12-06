@@ -46,7 +46,8 @@ class InternshipResource extends Resource
                     DatePicker::make('end_at')->label('Date de fin'),
                     TimePicker::make('begin_hour')->label('Heure de début'),
                     TimePicker::make('end_hour')->label('Heure de fin'),
-                    FileUpload::make('thumbnail')->label('Image')
+                    FileUpload::make('thumbnail')->label('Image'),
+
                 ])
             ]);
     }

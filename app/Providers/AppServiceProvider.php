@@ -4,20 +4,18 @@ namespace App\Providers;
 
 use App\Filament\Resources\CatalogResource;
 use App\Filament\Resources\EventResource;
+use App\Filament\Resources\HomePhotoResource;
 use App\Filament\Resources\IllustrationResource;
 use App\Filament\Resources\InternshipResource;
+use App\Filament\Resources\NewsPhotoResource;
 use App\Filament\Resources\SculptureResource;
 use App\Filament\Resources\UrbanSpaceProjectResource;
 use App\Filament\Resources\UrbanSpaceResource;
 use App\Filament\Resources\VideoResource;
-use App\Models\Illustration;
-use App\Models\Sculpture;
-use App\Models\UrbanSpaceProject;
 use Filament\Facades\Filament;
 use Filament\Navigation\NavigationBuilder;
 use Filament\Navigation\NavigationGroup;
 use Filament\Navigation\NavigationItem;
-use Illuminate\Support\HtmlString;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -47,6 +45,13 @@ class AppServiceProvider extends ServiceProvider
                         ->activeIcon('heroicon-s-home')
                         ->isActiveWhen(fn(): bool => request()->routeIs('filament.pages.dashboard'))
                         ->url(route('filament.pages.dashboard')),
+                ])
+                ->groups([
+                    NavigationGroup::make('Photos')
+                        ->items([
+                            ...HomePhotoResource::getNavigationItems(),
+                            ...NewsPhotoResource::getNavigationItems(),
+                        ])
                 ])
                 ->groups([
                     NavigationGroup::make('Ateliers, Événements et Stages')

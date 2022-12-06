@@ -41,13 +41,13 @@ class DatabaseSeeder extends Seeder
 
 //        TODO: Check image storage and path
         NewsPhoto::factory()->create([
-            'path' => 'mercredi_1.png'
+            'path' => 'images/mercredi_1.png'
         ]);
         NewsPhoto::factory()->create([
-            'path' => 'mercredi_2.png'
+            'path' => 'images/mercredi_2.png'
         ]);
         NewsPhoto::factory()->create([
-            'path' => 'mercredi_3.png'
+            'path' => 'images/mercredi_3.png'
         ]);
 
         Attendees::factory(5)->create();
