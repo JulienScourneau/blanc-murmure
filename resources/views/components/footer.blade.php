@@ -1,5 +1,5 @@
 <footer class="flex flex-col mt-12 p-2.5 p-10 bg-green rounded-2xl">
-    <section class="xl:flex justify-around w-7/12">
+    <section class="xl:flex justify-around w-11/12">
         <div class="flex flex-col xl:w-3/12">
             <div class="flex flex-row pl-5">
                 {{-- TODO: Add link to social --}}
@@ -7,7 +7,7 @@
                 <img class="w-6 ml-2" src="{{asset('assets/icons/instagram_logo.png')}}" alt="">
             </div>
             <hr class="mt-5 mb-2.5 text-white"/>
-            <h2 class="Title uppercase text-orange text-2xl leading-7 font-black w-10/12 self-center">Restez au courant
+            <h2 class="Title uppercase text-orange text-2xl leading-7 font-black w-11/12 self-center">Restez au courant
                 de notre actualité !</h2>
             <input class="FooterInput border-placeHolder border-2 p-1.5 pl-4 rounded-3xl my-5 w-10/12 self-center" type="text"
                    placeholder="Email">
@@ -38,20 +38,20 @@
             </nav>
         </div>
 
-        <div class="footer__information flex flex-col text-sm pl-5 text-base font-normal leading-5">
-            <div class="flex flex-row items-center xl:my-2 text-base">
+        <div class="footer__information flex flex-col text-sm pl-5 text-sm lg:text-base font-normal leading-5">
+            <div class="flex flex-row items-center xl:my-2 text-sm lg:text-base">
                 <img src="{{asset('assets/icons/opening_icon.png')}}" alt="">
                 <p class="ml-2.5 text-white">Du lundi au vendredi de 9h à 17h</p>
             </div>
-            <div class="flex flex-row items-center xl:my-2 text-base">
+            <div class="flex flex-row items-center xl:my-2 text-sm lg:text-base">
                 <img src="{{asset('assets/icons/location_icon.png')}}" alt="">
                 <p class="ml-2.5 text-white">36 rue de la Boule, 7390 Quaregnon, Belgique</p>
             </div>
-            <div class="flex flex-row items-center xl:my-2 text-base">
+            <div class="flex flex-row items-center xl:my-2 text-sm lg:text-base">
                 <img src="{{asset('assets/icons/phone_icon.png')}}" alt="">
                 <p class="ml-2.5 text-white">+32 (0)65 515 217</p>
             </div>
-            <div class="flex flex-row items-center mb-4 xl:my-2 text-base">
+            <div class="flex flex-row items-center mb-4 xl:my-2 text-sm lg:text-base">
                 <img src="{{asset('assets/icons/mail_icon.png')}}" alt="">
                 <a class="ml-2.5 text-orange highlightOrange" href = "mailto: info@blancmurmure.be">info@blancmurmure.be</a>
             </div>
