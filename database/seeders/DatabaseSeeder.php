@@ -40,12 +40,15 @@ class DatabaseSeeder extends Seeder
         ]);
 
         NewsPhoto::factory()->create([
+            'title' => "Mercredi s'éveille (Grand format)",
             'path' => 'images/mercredi_1.png'
         ]);
         NewsPhoto::factory()->create([
+            'title' => "Mercredi s'éveille (Petit format 1)",
             'path' => 'images/mercredi_2.png'
         ]);
         NewsPhoto::factory()->create([
+            'title' => "Mercredi s'éveille (Petit format 2)",
             'path' => 'images/mercredi_3.png'
         ]);
 
