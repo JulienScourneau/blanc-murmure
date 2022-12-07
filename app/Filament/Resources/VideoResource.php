@@ -19,7 +19,8 @@ class VideoResource extends Resource
 
     protected static ?string $navigationGroup = 'Projets';
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-film';
+    protected static ?string $activeNavigationIcon = 'heroicon-s-film';
 
     public static function form(Form $form): Form
     {

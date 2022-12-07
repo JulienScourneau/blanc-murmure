@@ -47,18 +47,16 @@ class AppServiceProvider extends ServiceProvider
                         ->url(route('filament.pages.dashboard')),
                 ])
                 ->groups([
-                    NavigationGroup::make('Photos')
-                        ->items([
-                            ...HomePhotoResource::getNavigationItems(),
-                            ...NewsPhotoResource::getNavigationItems(),
-                        ])
-                ])
-                ->groups([
                     NavigationGroup::make('Ateliers, Événements et Stages')
                         ->items([
                             ...InternshipResource::getNavigationItems(),
                             ...EventResource::getNavigationItems(),
 
+                        ]),
+                    NavigationGroup::make('Photos')
+                        ->items([
+                            ...HomePhotoResource::getNavigationItems(),
+                            ...NewsPhotoResource::getNavigationItems(),
                         ]),
                     NavigationGroup::make('Projets')
                         ->items([

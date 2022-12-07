@@ -26,7 +26,8 @@ class InternshipResource extends Resource
 
     protected static ?string $breadcrumb = 'Ateliers et Stages';
 
-    protected static ?string $navigationIcon = 'heroicon-o-document-text';
+    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $activeNavigationIcon = 'heroicon-s-collection';
 
     protected static ?string $navigationLabel = 'Ateliers et Stages';
 

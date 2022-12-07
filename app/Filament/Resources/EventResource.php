@@ -18,7 +18,8 @@ class EventResource extends Resource
 
     protected static ?string $navigationGroup = 'Ateliers, Événements et Stages';
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-calendar';
+    protected static ?string $activeNavigationIcon = 'heroicon-s-calendar';
 
     protected static ?string $breadcrumb = 'Événements';
 

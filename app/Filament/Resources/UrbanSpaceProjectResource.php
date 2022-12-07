@@ -16,9 +16,10 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class UrbanSpaceProjectResource extends Resource
 {
     protected static ?string $model = UrbanSpaceProject::class;
-    protected static ?string $navigationLabel = 'Projet Urbain';
+    protected static ?string $navigationLabel = 'Projet';
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $activeNavigationIcon = 'heroicon-s-collection';
 
     public static function form(Form $form): Form
     {
