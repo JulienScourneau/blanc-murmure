@@ -13,8 +13,8 @@ class NewsPhoto extends Model
 
     protected $fillable = ['path'];
 
-//    protected $dispatchesEvents = [
-//        'updated' => NewsPhotoUpdated::class,
-//        'deleted' => NewsPhotoDeleted::class,
-//    ];
+    protected $dispatchesEvents = [
+        'updated' => NewsPhotoUpdated::class,
+        'deleted' => NewsPhotoDeleted::class,
+    ];
 }

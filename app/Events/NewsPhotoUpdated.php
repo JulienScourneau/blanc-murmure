@@ -2,25 +2,19 @@
 
 namespace App\Events;
 
-use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
-use Illuminate\Broadcasting\PresenceChannel;
 use Illuminate\Broadcasting\PrivateChannel;
-use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Storage;
 
 class NewsPhotoUpdated
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    public $oldImagePath;
-    public $newImagePath;
-
-    public function __construct($oldImagePath, $newImagePath)
+    public function __construct($imagePath)
     {
-        $this->oldImagePath = $oldImagePath;
-        $this->newImagePath = $newImagePath;
+        Storage::disk('public')->delete($imagePath->getOriginal('path'));
     }
 
     /**
