@@ -1,5 +1,5 @@
 <section class="navbar w-full flex justify-beetween items-center p-2.5 bg-green">
-    <a href="/">
+    <a class="shrink-0" href="/">
         <img class="w-48" src="{{asset('assets/blanc-murmure-logo.png')}}" alt="">
     </a>
     <div class="block h-10 lg:hidden">
@@ -30,9 +30,9 @@
     </div>
     <div class="hidden lg:flex w-full items-center">
         <div class="w-full flex justify-center">
-            <nav class="flex justify-around w-11/12 h-10 items-center lg:text-sm 2xl:w-6/12 pt-1">
-                <a class="pr-1 {{ (request()->is('/')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('home')}}">Accueil</a>
-                <a class="pr-1 {{ (request()->is('en-ce-moment')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('news')}}">Envie de créer ?</a>
+            <nav class="flex text-center justify-around w-11/12 h-10 items-center lg:text-sm 2xl:w-8/12 pt-1">
+                <a class="{{ (request()->is('/')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('home')}}">Accueil</a>
+                <a class="{{ (request()->is('en-ce-moment')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('news')}}">Envie de créer ?</a>
                 <div id="project" class="h-full flex justify-center items-center relative z-50">
                     <div class="highlightBlack">
                         <p class="text-sm self-center">Nos projets</p>
@@ -47,8 +47,8 @@
                         </ul>
                     </div>
                 </div>
-                <a class="pr-1 {{ (request()->is('construire-un-projet')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('collaborater')}}">Envie de travailler avec nous ?</a>
-                <a class="pr-1 {{ (request()->is('à-propos')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('about')}}">A propos</a>
+                <a class="{{ (request()->is('construire-un-projet')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('collaborater')}}">Envie de travailler avec nous ?</a>
+                <a class="{{ (request()->is('à-propos')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('about')}}">A propos</a>
                 <a class=" {{ (request()->is('contact')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('contact')}}">Contact</a>
             </nav>
         </div>
