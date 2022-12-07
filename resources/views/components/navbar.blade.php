@@ -38,18 +38,18 @@
                         <p class="text-sm self-center">Nos projets</p>
                         <img class="pl-2.5 w-3/12" src="{{asset('assets/icons/chevron-down.svg')}}" alt="">
                         <ul id="menuDeroulant" class="absolute top-7 mr-32 bg-green p-5 w-56 shadow-lg" style="display: none">
-                            <li><a class="{{ (request()->is('nos-projets')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('project')}}">Tous les projets</a></li>
-                            <li><a class="{{ (request()->is('nos-projets/video')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('video') }}">Film d'animation - vidéo</a></li>
-                            <li><a class="{{ (request()->is('nos-projets/sculpture')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('sculpture')}}">Sculpture</a></li>
-                            <li><a class="{{ (request()->is('nos-projets/illustration')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('illustration')}}">Illustration</a></li>
-                            <li><a class="{{ (request()->is('nos-projets/espace-urbain')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('urbanSpace')}}">Espace urbain</a></li>
-                            <li><a class="{{ (request()->is('nos-projets/catalogue')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('catalog')}}">Catalogue</a></li>
+                            <li><a class="{{ (request()->is('nos-projets')) ? 'uppercase text-white flex justify-start' : 'highlightBlack' }}" href="{{ Route ('project')}}">Tous les projets</a></li>
+                            <li><a class="{{ (request()->is('nos-projets/video')) ? 'uppercase text-white flex justify-start' : 'highlightBlack' }}" href="{{ Route ('video') }}">Film d'animation - vidéo</a></li>
+                            <li><a class="{{ (request()->is('nos-projets/sculpture')) ? 'uppercase text-white flex justify-start' : 'highlightBlack' }}" href="{{ Route ('sculpture')}}">Sculpture</a></li>
+                            <li><a class="{{ (request()->is('nos-projets/illustration')) ? 'uppercase text-white flex justify-start' : 'highlightBlack' }}" href="{{ Route ('illustration')}}">Illustration</a></li>
+                            <li><a class="{{ (request()->is('nos-projets/espace-urbain')) ? 'uppercase text-white flex justify-start' : 'highlightBlack' }}" href="{{ Route ('urbanSpace')}}">Espace urbain</a></li>
+                            <li><a class="{{ (request()->is('nos-projets/catalogue')) ? 'uppercase text-white flex justify-start' : 'highlightBlack' }}" href="{{ Route ('catalog')}}">Catalogue</a></li>
                         </ul>
                     </div>
                 </div>
                 <a class="{{ (request()->is('construire-un-projet')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('collaborater')}}">Envie de travailler avec nous ?</a>
                 <a class="{{ (request()->is('à-propos')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('about')}}">A propos</a>
-                <a class=" {{ (request()->is('contact')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('contact')}}">Contact</a>
+                <a class="{{ (request()->is('contact')) ? 'uppercase text-white' : 'highlightBlack' }}" href="{{ Route ('contact')}}">Contact</a>
             </nav>
         </div>
         <a href="{{ Route('inscription') }}"

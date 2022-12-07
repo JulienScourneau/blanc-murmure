@@ -8,7 +8,7 @@
     Véritables archives vivantes, c’est une trace de notre parcours ainsi qu’un moyen de transmission vers autrui." 
 />
 
-<div class="flex flex-col w-10/12 mx-auto lg:flex-row w-8/12">
+<div class="flex flex-col w-10/12 mx-auto lg:flex-row lg:w-6/12">
     @if($catalogs->count())
         @foreach($catalogs as $catalog)
         <x-project-card-catalogue :project="$catalog"/>

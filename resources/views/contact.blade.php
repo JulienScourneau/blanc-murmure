@@ -4,7 +4,7 @@
     <h2 class="uppercase text-center font-black text-2xl mt-6 mb-4">Des questions ?</h2>
 
 
-    <form action="">
+    <form class="lg:w-10/12 xl:w-8/12 2xl:w-6/12 lg:mx-auto" action="">
         <div class="w-10/12 mx-auto py-2.5">
             <label class="text-primaryText flex self-start pl-10 my-2" for="nom">Nom</label>
             <input class="w-full rounded-full border-2 border-disableText p-5" type="text" id="nom">
