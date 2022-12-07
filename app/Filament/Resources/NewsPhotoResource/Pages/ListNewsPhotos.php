@@ -5,11 +5,11 @@ namespace App\Filament\Resources\NewsPhotoResource\Pages;
 use App\Filament\Resources\NewsPhotoResource;
 use Filament\Pages\Actions;
 use Filament\Resources\Pages\ListRecords;
-use Filament\Tables\Columns\ImageColumn;
 
 class ListNewsPhotos extends ListRecords
 {
     protected static string $resource = NewsPhotoResource::class;
+    protected static ?string $title = "Mercredi s'éveille";
 
     protected function getActions(): array
     {

@@ -16,6 +16,11 @@ class NewsPhotoResource extends Resource
 {
     protected static ?string $model = NewsPhoto::class;
 
+    protected static ?string $navigationGroup = "Mercredi s'éveille";
+    protected static ?string $breadcrumb = "Mercredi s'éveille";
+    protected static ?string $navigationLabel = "Mercredi s'éveille";
+    protected static ?string $slug = "mercredi-s-eveille";
+
     protected static ?string $navigationIcon = 'heroicon-o-photograph';
     protected static ?string $activeNavigationIcon = 'heroicon-s-photograph';
 

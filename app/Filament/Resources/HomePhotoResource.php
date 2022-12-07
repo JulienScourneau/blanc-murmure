@@ -16,6 +16,11 @@ class HomePhotoResource extends Resource
 {
     protected static ?string $model = HomePhoto::class;
 
+    protected static ?string $navigationGroup = 'Accueil';
+    protected static ?string $breadcrumb = 'Accueil';
+    protected static ?string $navigationLabel = 'Accueil';
+    protected static ?string $slug = 'accueil';
+
     protected static ?string $navigationIcon = 'heroicon-o-photograph';
     protected static ?string $activeNavigationIcon = 'heroicon-s-photograph';
 

@@ -10,10 +10,16 @@ class EditNewsPhoto extends EditRecord
 {
     protected static string $resource = NewsPhotoResource::class;
 
+    protected static ?string $title = 'Modifier';
+
     protected function getActions(): array
     {
         return [
-            Actions\DeleteAction::make(),
         ];
+    }
+
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl('index');
     }
 }

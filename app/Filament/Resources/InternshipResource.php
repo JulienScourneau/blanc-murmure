@@ -23,15 +23,14 @@ class InternshipResource extends Resource
     protected static ?string $model = Internship::class;
 
     protected static ?string $navigationGroup = 'Ateliers, Événements et Stages';
-
     protected static ?string $breadcrumb = 'Ateliers et Stages';
+    protected static ?string $navigationLabel = 'Ateliers et Stages';
+    protected static ?string $slug = 'ateliers-et-stages';
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
     protected static ?string $activeNavigationIcon = 'heroicon-s-collection';
 
-    protected static ?string $navigationLabel = 'Ateliers et Stages';
 
-    protected static ?string $slug = 'ateliers-et-stages';
 
     public static function form(Form $form): Form
     {
