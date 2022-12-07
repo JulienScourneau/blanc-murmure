@@ -42,7 +42,7 @@
             </p>
             </p>
         </div>
-        <div class="w-full lg:flex flex-wrap w-10/12 mx-auto">
+        <div class="w-full lg:flex lg:flex-wrap lg:justify-center xl:w-12/12">
             @if($internships->count())
                 @foreach($internships as $internship)
                     @include('components.internship-card',[$internship])
