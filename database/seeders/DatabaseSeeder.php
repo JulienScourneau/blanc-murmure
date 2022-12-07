@@ -39,7 +39,6 @@ class DatabaseSeeder extends Seeder
             'password' => 'password',
         ]);
 
-//        TODO: Check image storage and path
         NewsPhoto::factory()->create([
             'path' => 'images/mercredi_1.png'
         ]);
@@ -48,6 +47,19 @@ class DatabaseSeeder extends Seeder
         ]);
         NewsPhoto::factory()->create([
             'path' => 'images/mercredi_3.png'
+        ]);
+
+        HomePhoto::factory()->create([
+            'title'=> 'Stages et Ateliers',
+            'path' => 'images/stage.png'
+        ]);
+        HomePhoto::factory()->create([
+            'title'=> 'Collaborateurs',
+            'path' => 'images/collab.png'
+        ]);
+        HomePhoto::factory()->create([
+            'title'=> 'Projets',
+            'path' => 'images/project.png'
         ]);
 
         Attendees::factory(5)->create();
