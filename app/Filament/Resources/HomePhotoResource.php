@@ -5,6 +5,8 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\HomePhotoResource\Pages;
 use App\Filament\Resources\HomePhotoResource\RelationManagers;
 use App\Models\HomePhoto;
+use Filament\Forms\Components\Card;
+use Filament\Forms\Components\FileUpload;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
@@ -14,13 +16,16 @@ class HomePhotoResource extends Resource
 {
     protected static ?string $model = HomePhoto::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-photograph';
+    protected static ?string $activeNavigationIcon = 'heroicon-s-photograph';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                //
+                Card::make()->schema([
+                    FileUpload::make('path')->label('Photo')->image()->directory('images')->imagePreviewHeight('300')
+                ])
             ]);
     }
 
@@ -28,8 +33,8 @@ class HomePhotoResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('title'),
-                Tables\Columns\ImageColumn::make('path')
+                Tables\Columns\TextColumn::make('title')->label('Nom')->disableClick(),
+                Tables\Columns\ImageColumn::make('path')->label('Photo')->width(200)->height(150)->square()->disableClick()
             ])
             ->filters([
                 //
@@ -38,7 +43,7 @@ class HomePhotoResource extends Resource
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\DeleteBulkAction::make(),
+
             ]);
     }
 
@@ -49,11 +54,15 @@ class HomePhotoResource extends Resource
         ];
     }
 
+    public static function canCreate(): bool
+    {
+        return false;
+    }
+
     public static function getPages(): array
     {
         return [
             'index' => Pages\ListHomePhotos::route('/'),
-            'create' => Pages\CreateHomePhoto::route('/create'),
             'edit' => Pages\EditHomePhoto::route('/{record}/edit'),
         ];
     }

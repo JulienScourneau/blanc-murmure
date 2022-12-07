@@ -5,6 +5,7 @@ namespace App\Filament\Resources\NewsPhotoResource\Pages;
 use App\Filament\Resources\NewsPhotoResource;
 use Filament\Pages\Actions;
 use Filament\Resources\Pages\ListRecords;
+use Filament\Tables\Columns\ImageColumn;
 
 class ListNewsPhotos extends ListRecords
 {
@@ -15,5 +16,10 @@ class ListNewsPhotos extends ListRecords
         return [
             Actions\CreateAction::make(),
         ];
+    }
+
+    protected function isTablePaginationEnabled(): bool
+    {
+        return false;
     }
 }

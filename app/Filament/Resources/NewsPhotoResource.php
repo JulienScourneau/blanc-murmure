@@ -6,6 +6,7 @@ use App\Filament\Resources\NewsPhotoResource\Pages;
 use App\Filament\Resources\NewsPhotoResource\RelationManagers;
 use App\Models\NewsPhoto;
 use Filament\Forms;
+use Filament\Forms\Components\Card;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
@@ -15,13 +16,16 @@ class NewsPhotoResource extends Resource
 {
     protected static ?string $model = NewsPhoto::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-photograph';
+    protected static ?string $activeNavigationIcon = 'heroicon-s-photograph';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\FileUpload::make('path')->label('Photo')->image()->directory('images')
+                Card::make()->schema([
+                    Forms\Components\FileUpload::make('path')->label('Photo')->image()->directory('images')->imagePreviewHeight('300')
+                ])
             ]);
     }
 
@@ -29,7 +33,8 @@ class NewsPhotoResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('path')->label('Photo')->size(100)
+                Tables\Columns\TextColumn::make('title')->label('Nom')->disableClick(),
+                Tables\Columns\ImageColumn::make('path')->label('Photo')->width(200)->height(150)->square()->disableClick()
             ])
             ->filters([
                 //
@@ -38,7 +43,6 @@ class NewsPhotoResource extends Resource
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
 
@@ -49,11 +53,15 @@ class NewsPhotoResource extends Resource
         ];
     }
 
+    public static function canCreate(): bool
+    {
+        return false;
+    }
+
     public static function getPages(): array
     {
         return [
             'index' => Pages\ListNewsPhotos::route('/'),
-            'create' => Pages\CreateNewsPhoto::route('/create'),
             'edit' => Pages\EditNewsPhoto::route('/{record}/edit'),
         ];
     }

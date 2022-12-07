@@ -16,4 +16,9 @@ class ListHomePhotos extends ListRecords
             Actions\CreateAction::make(),
         ];
     }
+
+    protected function isTablePaginationEnabled(): bool
+    {
+        return false;
+    }
 }
