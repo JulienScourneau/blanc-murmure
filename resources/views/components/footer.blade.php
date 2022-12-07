@@ -1,5 +1,5 @@
 <footer class="flex flex-col mt-12 p-2.5 p-10 bg-green rounded-2xl">
-    <section class="xl:flex justify-around w-11/12">
+    <section class="xl:flex justify-around w-11/12 md:w-6/12 xl:w-11/12 mx-auto">
         <div class="flex flex-col xl:w-3/12">
             <div class="flex flex-row pl-5">
                 {{-- TODO: Add link to social --}}
