@@ -9,6 +9,7 @@ use Filament\Resources\Pages\ListRecords;
 class ListHomePhotos extends ListRecords
 {
     protected static string $resource = HomePhotoResource::class;
+    protected static ?string $title = "Accueil";
 
     protected function getActions(): array
     {
