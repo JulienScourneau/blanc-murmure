@@ -28,7 +28,22 @@ class IllustrationResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Forms\Components\Card::make()->schema([
+                    Forms\Components\TextInput::make('title'),
+                    Forms\Components\TextInput::make('subtitle'),
+                    Forms\Components\TextInput::make('description'),
+                    Forms\Components\TextInput::make('parternship'),
+                    Forms\Components\TextInput::make('date'),
+
+                ]),
+                Forms\Components\Card::make()->schema([
+                    Forms\Components\Repeater::make('photo')
+                        ->relationship()
+                        ->schema([
+                        Forms\Components\FileUpload::make('path'),
+                        Forms\Components\TextInput::make('alt'),
+                    ])->createItemButtonLabel('Ajouter une photo')->grid(2)
+                ])
             ]);
     }
 
