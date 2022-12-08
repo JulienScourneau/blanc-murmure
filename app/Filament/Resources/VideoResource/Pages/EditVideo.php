@@ -9,6 +9,7 @@ use Filament\Resources\Pages\EditRecord;
 class EditVideo extends EditRecord
 {
     protected static string $resource = VideoResource::class;
+    protected static ?string $title = 'Modifier';
 
     protected function getActions(): array
     {

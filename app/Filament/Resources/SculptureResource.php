@@ -19,6 +19,10 @@ class SculptureResource extends Resource
 
     protected static ?string $navigationGroup = 'Projets';
 
+    protected static ?string $breadcrumb = 'Sculptures';
+    protected static ?string $navigationLabel = 'Sculptures';
+    protected static ?string $slug = 'sculptures';
+
     protected static ?string $navigationIcon = 'heroicon-o-user';
     protected static ?string $activeNavigationIcon = 'heroicon-s-user';
 

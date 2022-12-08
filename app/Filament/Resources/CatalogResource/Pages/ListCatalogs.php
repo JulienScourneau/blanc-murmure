@@ -9,6 +9,7 @@ use Filament\Resources\Pages\ListRecords;
 class ListCatalogs extends ListRecords
 {
     protected static string $resource = CatalogResource::class;
+    protected static ?string $title = "Livres";
 
     protected function getActions(): array
     {

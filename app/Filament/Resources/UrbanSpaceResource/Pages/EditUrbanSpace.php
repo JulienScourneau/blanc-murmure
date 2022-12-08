@@ -9,6 +9,7 @@ use Filament\Resources\Pages\EditRecord;
 class EditUrbanSpace extends EditRecord
 {
     protected static string $resource = UrbanSpaceResource::class;
+    protected static ?string $title = 'Modifier';
 
     protected function getActions(): array
     {

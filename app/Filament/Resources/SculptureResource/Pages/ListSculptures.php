@@ -9,6 +9,7 @@ use Filament\Resources\Pages\ListRecords;
 class ListSculptures extends ListRecords
 {
     protected static string $resource = SculptureResource::class;
+    protected static ?string $title = 'Sculptures';
 
     protected function getActions(): array
     {

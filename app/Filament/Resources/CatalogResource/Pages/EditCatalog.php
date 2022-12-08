@@ -9,6 +9,7 @@ use Filament\Resources\Pages\EditRecord;
 class EditCatalog extends EditRecord
 {
     protected static string $resource = CatalogResource::class;
+    protected static ?string $title = 'Modifier';
 
     protected function getActions(): array
     {

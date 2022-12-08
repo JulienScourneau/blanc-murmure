@@ -9,6 +9,7 @@ use Filament\Resources\Pages\EditRecord;
 class EditSculpture extends EditRecord
 {
     protected static string $resource = SculptureResource::class;
+    protected static ?string $title = 'Modifier';
 
     protected function getActions(): array
     {

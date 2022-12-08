@@ -9,4 +9,5 @@ use Filament\Resources\Pages\CreateRecord;
 class CreateUrbanSpaceProject extends CreateRecord
 {
     protected static string $resource = UrbanSpaceProjectResource::class;
+    protected static ?string $title = 'Ajouter un espace urbain';
 }

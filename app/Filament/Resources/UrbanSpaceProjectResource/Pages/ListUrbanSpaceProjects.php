@@ -9,6 +9,7 @@ use Filament\Resources\Pages\ListRecords;
 class ListUrbanSpaceProjects extends ListRecords
 {
     protected static string $resource = UrbanSpaceProjectResource::class;
+    protected static ?string $title = 'Espace Urbains';
 
     protected function getActions(): array
     {

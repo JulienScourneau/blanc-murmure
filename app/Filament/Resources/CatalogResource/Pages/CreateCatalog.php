@@ -9,4 +9,6 @@ use Filament\Resources\Pages\CreateRecord;
 class CreateCatalog extends CreateRecord
 {
     protected static string $resource = CatalogResource::class;
+
+    protected static ?string $title = "Ajouter un livre";
 }

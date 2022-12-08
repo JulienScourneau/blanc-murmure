@@ -17,7 +17,9 @@ class CatalogResource extends Resource
 {
     protected static ?string $model = Catalog::class;
 
-    protected static ?string $navigationGroup = 'Projets';
+    protected static ?string $breadcrumb = 'Livres';
+    protected static ?string $navigationLabel = 'Livres';
+    protected static ?string $slug = 'livres';
 
     protected static ?string $navigationIcon = 'heroicon-o-book-open';
     protected static ?string $activeNavigationIcon = 'heroicon-s-book-open';

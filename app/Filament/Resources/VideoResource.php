@@ -17,7 +17,9 @@ class VideoResource extends Resource
 {
     protected static ?string $model = Video::class;
 
-    protected static ?string $navigationGroup = 'Projets';
+    protected static ?string $breadcrumb = 'Vidéos';
+    protected static ?string $navigationLabel = 'Vidéos';
+    protected static ?string $slug = 'videos';
 
     protected static ?string $navigationIcon = 'heroicon-o-film';
     protected static ?string $activeNavigationIcon = 'heroicon-s-film';

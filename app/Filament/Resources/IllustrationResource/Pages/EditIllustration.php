@@ -9,6 +9,7 @@ use Filament\Resources\Pages\EditRecord;
 class EditIllustration extends EditRecord
 {
     protected static string $resource = IllustrationResource::class;
+    protected static ?string $title = 'Modifier';
 
     protected function getActions(): array
     {

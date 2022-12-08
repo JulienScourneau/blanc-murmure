@@ -9,4 +9,5 @@ use Filament\Resources\Pages\CreateRecord;
 class CreateIllustration extends CreateRecord
 {
     protected static string $resource = IllustrationResource::class;
+    protected static ?string $title = 'Ajouter une illustration';
 }

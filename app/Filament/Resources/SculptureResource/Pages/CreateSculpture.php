@@ -9,4 +9,5 @@ use Filament\Resources\Pages\CreateRecord;
 class CreateSculpture extends CreateRecord
 {
     protected static string $resource = SculptureResource::class;
+    protected static ?string $title = 'Ajouter une sculpture';
 }
