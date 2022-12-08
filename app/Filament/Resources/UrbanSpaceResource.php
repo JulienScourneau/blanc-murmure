@@ -21,7 +21,8 @@ class UrbanSpaceResource extends Resource
 
     protected static ?string $navigationLabel = 'Oeuvres';
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-photograph';
+    protected static ?string $activeNavigationIcon = 'heroicon-s-photograph';
 
     public static function form(Form $form): Form
     {

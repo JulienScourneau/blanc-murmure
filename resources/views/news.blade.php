@@ -2,12 +2,12 @@
 
 @section('content')
 
-    <section class="shadow lg:flex w-10/12 mx-auto my-10">
-        <img src="assets/stage/mercredi_1.png" alt="">
+    <section class="shadow w-full lg:flex md:w-10/12 md:mx-auto md:my-10">
+        <img class="w-full lg:w-1/2" src="{{asset('storage/'.$newsPhoto[0]->path)}}" alt="">
         <div>
-            <div class="flex w-1/2">
-                <img class="mx-2" src="assets/stage/mercredi_2.png" alt="">
-                <img src="assets/stage/mercredi_3.png" alt="">
+            <div class="flex w-3/6 xl:w-full">
+                <img class="xl:w-1/2" src="{{asset('storage/'.$newsPhoto[1]->path)}}" alt="">
+                <img class="xl:w-1/2" src="{{asset('storage/'.$newsPhoto[2]->path)}}" alt="">
             </div>
             <div class="p-2.5">
                 <h2 class="Title text-orange text-2xl font-black py-5">Mecredi s'éveille</h2>
@@ -22,8 +22,9 @@
                     technique, chaque thème se développent au gré des démêlés.
                 </p>
             </div>
-            <div class="flex justify-center lg:justify-end items-end h-2/6 pr-5 pb-12">
-                <button class="bg-orange text-white font-black text-center text-xl rounded-full w-48 py-4 mt-7 border-2 hover:bg-white hover:text-orange">
+            <div class="flex justify-center lg:justify-end lg:items-end lg:pr-5 lg:pt-10 pb-2.5 lg:pb-5">
+                <button
+                    class="bg-orange text-white font-black text-center text-xl rounded-full w-48 py-4 border-2 hover:bg-white hover:text-orange">
                     <a href="{{ Route('inscription') }}">
                         Inscrivez-vous !
                     </a>
@@ -42,7 +43,7 @@
             </p>
             </p>
         </div>
-        <div class="w-full lg:flex flex-wrap w-10/12 mx-auto">
+        <div class="w-full lg:flex lg:flex-wrap lg:justify-center xl:w-12/12">
             @if($internships->count())
                 @foreach($internships as $internship)
                     @include('components.internship-card',[$internship])

@@ -19,7 +19,8 @@ class CatalogResource extends Resource
 
     protected static ?string $navigationGroup = 'Projets';
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-book-open';
+    protected static ?string $activeNavigationIcon = 'heroicon-s-book-open';
 
     public static function form(Form $form): Form
     {

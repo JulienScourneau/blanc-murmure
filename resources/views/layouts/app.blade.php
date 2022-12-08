@@ -22,7 +22,7 @@
     <title>Blanc Murmure</title>
 </head>
 
-<body>
+<body class="w-full">
 @include('components.navbar')
 @yield('content')
 @include('components.footer')

@@ -20,7 +20,6 @@ return new class extends Migration
             $table->string('description');
             $table->timestamp('begin_at');
             $table->timestamp('end_at')->nullable();
-            $table->foreignId('category_id');
             $table->string('thumbnail')->nullable();
             $table->timestamps();
         });

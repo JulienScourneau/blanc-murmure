@@ -18,7 +18,8 @@ class EventResource extends Resource
 
     protected static ?string $navigationGroup = 'Ateliers, Événements et Stages';
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-calendar';
+    protected static ?string $activeNavigationIcon = 'heroicon-s-calendar';
 
     protected static ?string $breadcrumb = 'Événements';
 
@@ -38,13 +39,12 @@ class EventResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('title')->label('Titre')->color('primary'),
-                Tables\Columns\TextColumn::make('subtitle')->label('Sous titre')->wrap(),
-                Tables\Columns\TextColumn::make('description')->wrap(),
-                Tables\Columns\TextColumn::make('age'),
-                ImageColumn::make('thumbnail')->label('Photo')->size(100),
-                Tables\Columns\TextColumn::make('begin_at')->label('Date de début')->date('d F Y'),
-                Tables\Columns\TextColumn::make('end_at')->label('Date de fin')->date('d F Y'),
+                Tables\Columns\TextColumn::make('title')->label('Titre')->color('primary')->wrap()->disableClick(),
+                Tables\Columns\TextColumn::make('subtitle')->label('Sous titre')->wrap()->disableClick(),
+                Tables\Columns\TextColumn::make('description')->wrap()->disableClick(),
+                ImageColumn::make('thumbnail')->label('Photo')->size(100)->disableClick(),
+                Tables\Columns\TextColumn::make('begin_at')->label('Date de début')->date('d F Y')->disableClick(),
+                Tables\Columns\TextColumn::make('end_at')->label('Date de fin')->date('d F Y')->disableClick(),
             ])
             ->filters([
                 //

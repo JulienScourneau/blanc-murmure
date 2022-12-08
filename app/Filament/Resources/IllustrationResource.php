@@ -19,7 +19,8 @@ class IllustrationResource extends Resource
 
     protected static ?string $navigationGroup = 'Projets';
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-pencil-alt';
+    protected static ?string $activeNavigationIcon = 'heroicon-s-pencil-alt';
 
     public static function form(Form $form): Form
     {

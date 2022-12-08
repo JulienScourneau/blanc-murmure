@@ -20,7 +20,7 @@ return [
 
         'simple' => [
             'plugins' => 'autoresize emoticons link',
-            'toolbar' => 'removeformat | bold italic underline | alignjustify alignleft alignright aligncenter | forecolor backcolor | link',
+            'toolbar' => 'removeformat | fontselect | bold italic underline | alignjustify alignleft alignright aligncenter | forecolor backcolor | link',
             'upload_directory' => null,
         ],
 

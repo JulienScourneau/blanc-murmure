@@ -23,14 +23,14 @@ class InternshipResource extends Resource
     protected static ?string $model = Internship::class;
 
     protected static ?string $navigationGroup = 'Ateliers, Événements et Stages';
-
     protected static ?string $breadcrumb = 'Ateliers et Stages';
-
-    protected static ?string $navigationIcon = 'heroicon-o-document-text';
-
     protected static ?string $navigationLabel = 'Ateliers et Stages';
-
     protected static ?string $slug = 'ateliers-et-stages';
+
+    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $activeNavigationIcon = 'heroicon-s-collection';
+
+
 
     public static function form(Form $form): Form
     {
@@ -41,12 +41,13 @@ class InternshipResource extends Resource
                     TextInput::make('subtitle')->label('Sous-Titre'),
                     TinyEditor::make('description')->profile('simple'),
                     TextInput::make('age')->required(),
-                    TextInput::make('price')->label('Prix')->required(),
+                    TextInput::make('price')->numeric()->suffix('€')->label('Prix')->required(),
                     DatePicker::make('begin_at')->label('Date de début'),
                     DatePicker::make('end_at')->label('Date de fin'),
                     TimePicker::make('begin_hour')->label('Heure de début'),
                     TimePicker::make('end_hour')->label('Heure de fin'),
-                    FileUpload::make('thumbnail')->label('Image')
+                    FileUpload::make('thumbnail')->label('Image'),
+
                 ])
             ]);
     }
@@ -55,11 +56,12 @@ class InternshipResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('title')->label('Titre')->color('primary'),
-                Tables\Columns\TextColumn::make('subtitle')->label('Sous titre')->wrap(),
-                Tables\Columns\TextColumn::make('description')->wrap(),
-                Tables\Columns\TextColumn::make('age'),
-                ImageColumn::make('thumbnail')->label('Photo')->size(100),
+                Tables\Columns\TextColumn::make('title')->label('Titre')->color('primary')->wrap()->disableClick(),
+                Tables\Columns\TextColumn::make('subtitle')->label('Sous titre')->wrap()->disableClick(),
+                Tables\Columns\TextColumn::make('description')->wrap()->disableClick(),
+                Tables\Columns\TextColumn::make('price')->label('Prix')->suffix('€')->wrap()->disableClick(),
+                Tables\Columns\TextColumn::make('age')->disableClick(),
+                ImageColumn::make('thumbnail')->label('Photo')->size(100)->disableClick(),
             ])
             ->filters([
                 //
