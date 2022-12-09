@@ -16,7 +16,6 @@ return new class extends Migration {
             $table->id();
             $table->unsignedBigInteger('photos_id')->unsigned();
             $table->unsignedBigInteger('illustrations_id')->unsigned();
-
             $table->foreign('photos_id')->references('id')
                 ->on('photos')->onDelete('cascade');
 
