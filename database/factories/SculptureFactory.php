@@ -21,6 +21,7 @@ class SculptureFactory extends Factory
             'subtitle' => $this->faker->sentence(6),
             'partnership' => $this->faker->sentence(6),
             'description' => $this->faker->sentence(6),
+            'thumbnail' => 'images/project_illustration_banner.png',
             'date' => $this->faker->sentence(6),
         ];
     }

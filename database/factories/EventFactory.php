@@ -23,7 +23,7 @@ class EventFactory extends Factory
             'description' => $this->faker->sentence(6),
             'begin_at' => $this->faker->date(),
             'end_at' => $this->faker->date(),
-            'thumbnail' => $this->faker->imageUrl,
+            'thumbnail' => 'images/project_illustration_banner.png',
         ];
     }
 }

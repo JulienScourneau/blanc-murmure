@@ -19,7 +19,7 @@ class CatalogFactory extends Factory
         return [
             'name' => $this->faker->sentence(3),
             'description' => $this->faker->sentence(10),
-            'link' => $this->faker->url,
+            'link' => 'images/project_illustration_banner.png',
             'page_number' => $this->faker->numberBetween(40, 60),
             'size' => '00 x 00',
             'thumbnail' => $this->faker->imageUrl,

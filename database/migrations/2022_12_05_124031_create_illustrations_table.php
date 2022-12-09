@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('subtitle')->nullable();
             $table->string('partnership')->nullable();
             $table->string('description')->nullable();
+            $table->string('thumbnail');
             $table->string('date')->nullable();
             $table->timestamps();
         });

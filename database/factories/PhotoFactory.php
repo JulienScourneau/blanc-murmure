@@ -18,7 +18,7 @@ class PhotoFactory extends Factory
     public function definition()
     {
         return [
-            'path' => $this->faker->imageUrl,
+            'path' => 'images/project_illustration_banner.png',
             'alt' => $this->faker->sentence(3),
         ];
     }
