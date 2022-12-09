@@ -43,5 +43,14 @@ export function listener() {
             text.style.display = "none";
         });
     }
+
+    let buttonCarousel = document.getElementsByClassName("buttonCarousel");
+    let swiper = document.getElementsByClassName("carouselModal");
+    for (const button of buttonCarousel) {
+        button.addEventListener("click", (event) => {
+            console.log(event.target);
+            swiper.style.display = "block";
+        });
+    }
 }
 listener();
