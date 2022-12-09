@@ -3,7 +3,6 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\IllustrationResource\Pages;
-use App\Filament\Resources\IllustrationResource\RelationManagers;
 use App\Models\Illustration;
 use Filament\Forms;
 use Filament\Resources\Form;
@@ -32,17 +31,21 @@ class IllustrationResource extends Resource
                     Forms\Components\TextInput::make('title'),
                     Forms\Components\TextInput::make('subtitle'),
                     Forms\Components\TextInput::make('description'),
-                    Forms\Components\TextInput::make('parternship'),
+                    Forms\Components\TextInput::make('partnership'),
                     Forms\Components\TextInput::make('date'),
 
                 ]),
                 Forms\Components\Card::make()->schema([
-                    Forms\Components\Repeater::make('photo')
+                    Forms\Components\Repeater::make('photos')
                         ->relationship()
                         ->schema([
-                        Forms\Components\FileUpload::make('path'),
+                        Forms\Components\FileUpload::make('path')
+                            ->label('Photo')
+                            ->image()
+                            ->directory('images'),
                         Forms\Components\TextInput::make('alt'),
-                    ])->createItemButtonLabel('Ajouter une photo')->grid(2)
+                    ])->createItemButtonLabel('Ajouter une photo')
+                        ->grid(2)
                 ])
             ]);
     }
