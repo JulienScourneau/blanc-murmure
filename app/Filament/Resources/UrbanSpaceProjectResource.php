@@ -5,13 +5,13 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\UrbanSpaceProjectResource\Pages;
 use App\Filament\Resources\UrbanSpaceProjectResource\RelationManagers;
 use App\Models\UrbanSpaceProject;
+use Closure;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Str;
 
 class UrbanSpaceProjectResource extends Resource
 {
@@ -27,7 +27,17 @@ class UrbanSpaceProjectResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Forms\Components\Card::make()->schema([
+                    Forms\Components\TextInput::make('title')
+                    ->reactive()
+                    ->afterStateUpdated(function (Closure $set, $state){
+                        $set('slug', Str::slug($state));
+                    })
+                    ->required(),
+                    Forms\Components\TextInput::make('slug')->disabled(),
+                    Forms\Components\TextInput::make('description'),
+                    Forms\Components\FileUpload::make('thumbnail'),
+                ])
             ]);
     }
 
@@ -35,7 +45,9 @@ class UrbanSpaceProjectResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('title')->label('Titre')->disableClick(),
+                Tables\Columns\TextColumn::make('description')->label('Description')->disableClick(),
+                Tables\Columns\ImageColumn::make('thumbnail')->label('Photo')->width(200)->height(150)->square()->disableClick(),
             ])
             ->filters([
                 //

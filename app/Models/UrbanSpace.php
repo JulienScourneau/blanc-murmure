@@ -14,7 +14,7 @@ class UrbanSpace extends Model
         return $this->belongsToMany(Photo::class, 'photo_urbanspaces', 'urban_spaces_id', 'photos_id');
     }
 
-    public function urbanSpacePorject()
+    public function urbanSpaceProject()
     {
         return $this->belongsTo(UrbanSpaceProject::class);
     }
