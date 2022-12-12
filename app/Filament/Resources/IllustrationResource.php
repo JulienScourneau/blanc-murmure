@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use App\Filament\RelationManagers\PhotosRelationManager;
 use App\Filament\Resources\IllustrationResource\Pages;
 use App\Filament\Resources\IllustrationResource\RelationManagers;
 use App\Models\Illustration;
@@ -41,12 +42,12 @@ class IllustrationResource extends Resource
                     Forms\Components\Repeater::make('photos')
                         ->relationship()
                         ->schema([
-                        Forms\Components\FileUpload::make('path')
-                            ->label('Photo')
-                            ->image()
-                            ->directory('images'),
-                        Forms\Components\TextInput::make('alt'),
-                    ])->createItemButtonLabel('Ajouter une photo')
+                            Forms\Components\FileUpload::make('path')
+                                ->label('Photo')
+                                ->image()
+                                ->directory('images'),
+                            Forms\Components\TextInput::make('alt'),
+                        ])->createItemButtonLabel('Ajouter une photo')
                         ->grid(2)
                 ])
             ]);
@@ -61,16 +62,13 @@ class IllustrationResource extends Resource
                 Tables\Columns\TextColumn::make('description')->label('Description')->sortable()->wrap()->disableClick(),
                 Tables\Columns\TextColumn::make('partnership')->label('Partenaire')->sortable()->wrap()->disableClick(),
                 Tables\Columns\TextColumn::make('date')->label('Date')->sortable()->wrap()->disableClick(),
-                Tables\Columns\ImageColumn::make('thumbnail')->label('Photo de couverture')->size(200),
+                Tables\Columns\ImageColumn::make('thumbnail')->label('Photo de couverture')->size(150),
             ])
             ->filters([
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make()
-                    ->action(function (Illustration $record): void{
-                    dd($record);
-                }),
+                Tables\Actions\EditAction::make(),
                 DeleteAction::make()
                     ->action(function (Illustration $record): void {
                         $record->photos()->each(function ($photo) {
@@ -80,15 +78,15 @@ class IllustrationResource extends Resource
                     })
             ])
             ->bulkActions([
-                Tables\Actions\DeleteBulkAction::make(),
+        Tables\Actions\DeleteBulkAction::make(),
 
-            ]);
+    ]);
     }
 
     public static function getRelations(): array
     {
         return [
-            IllustrationResource\RelationManagers\PhotosRelationManager::class
+            PhotosRelationManager::class
         ];
     }
 
