@@ -11,8 +11,4 @@
         <p class="font-black Title border-l-2 border-white pl-2.5">{{$project->title}}</p>
         <p class="border-l-2 border-white pt-2.5 pl-2.5">{{$project->description}}</p>
     </div>
-
-    <div id="carouselModal absolute w-full h-full bg-orange top-0 left-0" style="display: none">
-        <p>hello</p>
-    </div>
 </div>

@@ -15,30 +15,17 @@
 
     <!-- Demo styles -->
     <style>
-      html,
-      body {
-        position: relative;
-        height: 100%;
-      }
-
-      body {
-        background: #eee;
-        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        color: #000;
-        margin: 0;
-        padding: 0;
-      }
-
       .swiper {
-        width: 100%;
-        height: 100%;
+        width: 80%;
+        height: 80%;
       }
-
       .swiper-slide {
         text-align: center;
         font-size: 18px;
-        background: #fff;
+        height: 100%;
+        display: flex;
+        align-self: center;
+        background: rgba(255, 255, 255);
 
         /* Center slide text vertically */
         display: -webkit-box;
@@ -57,14 +44,16 @@
 
       .swiper-slide img {
         display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        /* width: 100%; */
+        /* height: 100%; */
+        object-fit: contain;
       }
 
       .swiper {
         margin-left: auto;
         margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
       }
     </style>
   </head>

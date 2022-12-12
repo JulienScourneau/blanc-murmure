@@ -17,5 +17,6 @@
 @else
 <p>Nothing to show</p>
 @endif
+<x-modal />
 </div>
 @endsection

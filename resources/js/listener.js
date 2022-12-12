@@ -27,13 +27,6 @@ export function listener() {
         document.getElementsByClassName("collaborater__box");
 
     for (const box of collaborater__box) {
-        // box.addEventListener("click", (event) => {
-        //     let text = box.children[1];
-        //     text.style.display !== "none"
-        //         ? (text.style.display = "none")
-        //         : (text.style.display = "block");
-        // });
-
         box.addEventListener("mouseover", (event) => {
             let text = box.children[1];
             text.style.display = "block";
@@ -45,12 +38,18 @@ export function listener() {
     }
 
     let buttonCarousel = document.getElementsByClassName("buttonCarousel");
-    let swiper = document.getElementsByClassName("carouselModal");
+    let carouselModal = document.getElementById("carouselModal");
     for (const button of buttonCarousel) {
         button.addEventListener("click", (event) => {
+            carouselModal.style.display = "block";
             console.log(event.target);
-            swiper.style.display = "block";
+            console.log(carouselModal);
         });
     }
+
+    let closeCarousel = document.getElementById("closeCarousel");
+    closeCarousel.addEventListener("click", (event) => {
+        carouselModal.style.display = "none";
+    });
 }
 listener();
