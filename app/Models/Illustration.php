@@ -9,8 +9,11 @@ class Illustration extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     public function photos()
     {
-        return $this->belongsToMany(Photo::class,'photo_illustrations','illustrations_id', 'photos_id');
+        return $this->belongsToMany(Photo::class, 'photo_illustrations', 'illustrations_id', 'photos_id');
     }
+
 }
