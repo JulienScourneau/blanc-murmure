@@ -2,16 +2,18 @@
 
 namespace App\Filament\Resources;
 
+use App\Filament\RelationManagers\PhotosRelationManager;
 use App\Filament\Resources\SculptureResource\Pages;
 use App\Filament\Resources\SculptureResource\RelationManagers;
+use App\Models\Illustration;
 use App\Models\Sculpture;
 use Filament\Forms;
+use Filament\Forms\Components\FileUpload;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Tables\Actions\DeleteAction;
 
 class SculptureResource extends Resource
 {
@@ -30,7 +32,27 @@ class SculptureResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Forms\Components\Card::make()->schema([
+                    Forms\Components\TextInput::make('title')->label('Nom du projet')->required(),
+                    Forms\Components\TextInput::make('subtitle')->label('Sous titre')->required(),
+                    Forms\Components\TextInput::make('description')->label('Description')->required(),
+                    Forms\Components\TextInput::make('partnership')->label('Partenaire'),
+                    Forms\Components\TextInput::make('date')->label('Date'),
+                    FileUpload::make('thumbnail')->label('Photo')->image()->directory('images')->imagePreviewHeight('300'),
+
+                ]),
+                Forms\Components\Card::make()->schema([
+                    Forms\Components\Repeater::make('photos')
+                        ->relationship()
+                        ->schema([
+                            Forms\Components\FileUpload::make('path')
+                                ->label('Photo')
+                                ->image()
+                                ->directory('images'),
+                            Forms\Components\TextInput::make('alt'),
+                        ])->createItemButtonLabel('Ajouter une photo')
+                        ->grid(2)
+                ])
             ]);
     }
 
@@ -38,13 +60,25 @@ class SculptureResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('title')->label('Nom')->sortable()->wrap()->disableClick(),
+                Tables\Columns\TextColumn::make('subtitle')->label('Sous titre')->sortable()->wrap()->disableClick(),
+                Tables\Columns\TextColumn::make('description')->label('Description')->sortable()->wrap()->disableClick(),
+                Tables\Columns\TextColumn::make('partnership')->label('Partenaire')->sortable()->wrap()->disableClick(),
+                Tables\Columns\TextColumn::make('date')->label('Date')->sortable()->wrap()->disableClick(),
+                Tables\Columns\ImageColumn::make('thumbnail')->label('Photo de couverture')->size(150),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                DeleteAction::make()
+                    ->action(function (Sculpture $record): void {
+                        $record->photos()->each(function ($photo) {
+                            $photo->delete();
+                        });
+                        $record->delete();
+                    })
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
@@ -54,7 +88,7 @@ class SculptureResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            PhotosRelationManager::class
         ];
     }
 
