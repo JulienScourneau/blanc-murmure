@@ -13,4 +13,9 @@ class UrbanSpaceProject extends Model
     {
         return $this->hasMany(UrbanSpace::class);
     }
+
+    public function transformTitle()
+    {
+        return str_replace(' ', '_', $this->title);
+    }
 }

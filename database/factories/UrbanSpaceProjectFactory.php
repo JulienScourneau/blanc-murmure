@@ -19,7 +19,7 @@ class UrbanSpaceProjectFactory extends Factory
         return [
             'title' => $this->faker->sentence(2),
             'description' => $this->faker->sentence(5),
-            'thumbnail' => $this->faker->imageUrl,
+            'thumbnail' => 'images/project_illustration_banner.png',
             'slug' => $this->faker->slug,
         ];
     }

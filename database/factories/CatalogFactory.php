@@ -22,7 +22,7 @@ class CatalogFactory extends Factory
             'link' => $this->faker->url,
             'page_number' => $this->faker->numberBetween(40, 60),
             'size' => '00 x 00',
-            'thumbnail' => $this->faker->imageUrl,
+            'thumbnail' => 'images/project_illustration_banner.png',
         ];
     }
 }

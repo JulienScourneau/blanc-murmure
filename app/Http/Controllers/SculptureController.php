@@ -3,13 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Project;
+use App\Models\Sculpture;
 
 class SculptureController extends Controller
 {
     public function index()
     {
         return view('projects.sculpture',[
-            'sculptures' => Project::with('photos')->where('project_category_id','=',2)->get()
+            'sculptures' => Sculpture::with('photos')->get()
         ]);
     }
 }

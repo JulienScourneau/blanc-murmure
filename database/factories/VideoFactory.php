@@ -20,7 +20,7 @@ class VideoFactory extends Factory
             'title' => $this->faker->sentence('2'),
             'description' => $this->faker->sentence('12'),
             'link' => $this->faker->url,
-            'thumbnail' => $this->faker->imageUrl,
+            'thumbnail' => 'images/project_illustration_banner.png',
         ];
     }
 }
