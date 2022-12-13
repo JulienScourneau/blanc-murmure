@@ -55,3 +55,25 @@
   height: 110%;
   width: 110%;
 }
+
+.gradient {
+  display: block;
+  position: relative;
+  background-image: linear-gradient(0deg, #b2b9b5, #717574);
+}
+.gradient:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-image: linear-gradient(90deg, #92CDB9, rgba(146, 205, 185, 0));
+  opacity: 0;
+  transition: all 1s;
+}
+.gradient:hover:after {
+  opacity: 1;
+  width: 50%;
+}

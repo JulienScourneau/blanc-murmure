@@ -1,18 +1,16 @@
 .gradient {
     display: block;
     position: relative;
-    width: 100%;
-    height: 300px;
     background-image: linear-gradient(0deg,#b2b9b5,#717574);
   &:after {
-    content: 'Vhello';
+    content: '';
     position: absolute;
     width:0;
     left: 0px;
     top: 0px;
     right: 0px;
     bottom: 0px;
-    background-image: linear-gradient(0deg,#11ab5e,#25d4ad);
+    background-image: linear-gradient(90deg,#92CDB9,#92cdb900);
     opacity: 0;
     transition: all 1s;
   }
