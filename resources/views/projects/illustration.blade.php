@@ -13,9 +13,10 @@
     @foreach($illustrations as $illustration)
         <x-project-card :project="$illustration"/>
     @endforeach
-@else
-<p>Nothing to show</p>
-@endif
+    @else
+    <p>Nothing to show</p>
+    @endif
+    <x-modal />
 </div>
 
     {{-- @foreach($projects as $project)
