@@ -5,8 +5,7 @@
     @if(isset($internship))
         @include('components.banner', ['internship'=>$internship])
     @else
-        {{-- TODO: Add banner for event? --}}
-        {{-- TODO: Always need to show something --}}
+        {{-- TODO: Always need to show something, Add message --}}
         <p>Nothing to show</p>
     @endif
     <!-- <hr class="mt-12 text-separator"/>
