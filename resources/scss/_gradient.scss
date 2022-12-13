@@ -1,7 +1,6 @@
 .gradient {
     display: block;
     position: relative;
-    background-image: linear-gradient(0deg,#b2b9b5,#717574);
   &:after {
     content: '';
     position: absolute;
@@ -12,10 +11,10 @@
     bottom: 0px;
     background-image: linear-gradient(90deg,#92CDB9,#92cdb900);
     opacity: 0;
-    transition: all 1s;
+    transition: all 0.5s;
   }
   &:hover:after {
     opacity: 1;
-    width:50%;
+    width:100%;
   }
 }
