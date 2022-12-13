@@ -25,6 +25,8 @@ class UrbanSpaceFactory extends Factory
             'author' => $this->faker->name(),
             'partnership' => $this->faker->name(),
             'urban_space_project_id' => $this->faker->numberBetween(1, 3),
+            'thumbnail_landscape' => 'images/project_urbanSpace_01_landscape.png',
+            'thumbnail_portrait' => 'images/project_urbanSpace_01_portrait.png',
         ];
     }
 }

@@ -22,6 +22,8 @@ return new class extends Migration
             $table->string('author');
             $table->string('partnership');
             $table->foreignId('urban_space_project_id');
+            $table->string('thumbnail_landscape');
+            $table->string('thumbnail_portrait');
             $table->timestamps();
         });
     }
