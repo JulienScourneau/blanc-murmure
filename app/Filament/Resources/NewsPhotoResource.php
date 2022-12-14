@@ -29,7 +29,7 @@ class NewsPhotoResource extends Resource
         return $form
             ->schema([
                 Card::make()->schema([
-                    Forms\Components\FileUpload::make('path')->label('Photo')->image()->directory('images')->imagePreviewHeight('300')
+                    Forms\Components\FileUpload::make('path')->label('Photo')->image()->directory('images')->imagePreviewHeight('300')->required()
                 ])
             ]);
     }

@@ -29,7 +29,7 @@ class HomePhotoResource extends Resource
         return $form
             ->schema([
                 Card::make()->schema([
-                    FileUpload::make('path')->label('Photo')->image()->directory('images')->imagePreviewHeight('300')
+                    FileUpload::make('path')->label('Photo')->image()->directory('images')->imagePreviewHeight('300')->required()
                 ])
             ]);
     }
