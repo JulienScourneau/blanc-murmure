@@ -6,6 +6,7 @@ use App\Filament\Resources\CatalogResource\Pages;
 use App\Filament\Resources\CatalogResource\RelationManagers;
 use App\Models\Catalog;
 use Filament\Forms;
+use Filament\Pages\Actions\DeleteAction;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
@@ -29,12 +30,13 @@ class CatalogResource extends Resource
         return $form
             ->schema([
                 Forms\Components\Card::make()->schema([
-                    Forms\Components\TextInput::make('name')->label('Nom')->unique(),
-                    Forms\Components\TextInput::make('description')->label('Description'),
-                    Forms\Components\TextInput::make('link')->label('Lien'),
-                    Forms\Components\TextInput::make('page_number')->label('Nombre de page'),
-                    Forms\Components\TextInput::make('size')->label('Taille')->suffix('Format 00 x 00'),
-                    Forms\Components\FileUpload::make('thumbnail')->label('Photo')->image()->directory('images')->imagePreviewHeight('300'),
+                    Forms\Components\TextInput::make('name')->label('Nom')->unique()->required(),
+                    Forms\Components\TextInput::make('description')->label('Description')->required(),
+                    Forms\Components\TextInput::make('link')->label('Lien')->required(),
+                    Forms\Components\TextInput::make('page_number')->label('Nombre de page')->numeric()->required(),
+                    Forms\Components\TextInput::make('size')->label('Taille')->suffix('Format 00 x 00')->required(),
+                    Forms\Components\FileUpload::make('thumbnail')->label('Photo')
+                        ->image()->directory('images')->imagePreviewHeight('300')->required(),
                 ])
 
             ]);
@@ -56,6 +58,7 @@ class CatalogResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make()
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
