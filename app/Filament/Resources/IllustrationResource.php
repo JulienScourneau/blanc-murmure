@@ -49,7 +49,7 @@ class IllustrationResource extends Resource
                                 ->image()
                                 ->directory('images')
                                 ->required(),
-                            Forms\Components\TextInput::make('Description')->required(),
+                            Forms\Components\TextInput::make('alt')->label('Description')->required(),
                         ])->createItemButtonLabel('Ajouter une photo')
                         ->grid(2)
                 ])
