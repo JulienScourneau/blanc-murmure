@@ -13,6 +13,7 @@ use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
 use Filament\Tables\Actions\DeleteAction;
+use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class IllustrationResource extends Resource
 {
@@ -31,11 +32,12 @@ class IllustrationResource extends Resource
             ->schema([
                 Forms\Components\Card::make()->schema([
                     Forms\Components\TextInput::make('title')->label('Nom du projet')->required(),
-                    Forms\Components\TextInput::make('subtitle')->label('Sous titre')->required(),
-                    Forms\Components\TextInput::make('description')->label('Description')->required(),
+                    Forms\Components\TextInput::make('subtitle')->label('Sous titre'),
+                    TinyEditor::make('description')->profile('simple')->label('Description'),
                     Forms\Components\TextInput::make('partnership')->label('Partenaire'),
                     Forms\Components\TextInput::make('date')->label('Date'),
-                    FileUpload::make('thumbnail')->label('Photo')->image()->directory('images')->imagePreviewHeight('300'),
+                    FileUpload::make('thumbnail')->label('Photo de couverture')
+                        ->image()->directory('images')->imagePreviewHeight('300')->required(),
 
                 ]),
                 Forms\Components\Card::make()->schema([
@@ -45,8 +47,9 @@ class IllustrationResource extends Resource
                             Forms\Components\FileUpload::make('path')
                                 ->label('Photo')
                                 ->image()
-                                ->directory('images'),
-                            Forms\Components\TextInput::make('alt'),
+                                ->directory('images')
+                                ->required(),
+                            Forms\Components\TextInput::make('Description')->required(),
                         ])->createItemButtonLabel('Ajouter une photo')
                         ->grid(2)
                 ])
@@ -78,9 +81,9 @@ class IllustrationResource extends Resource
                     })
             ])
             ->bulkActions([
-        Tables\Actions\DeleteBulkAction::make(),
+                Tables\Actions\DeleteBulkAction::make(),
 
-    ]);
+            ]);
     }
 
     public static function getRelations(): array
