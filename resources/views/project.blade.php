@@ -38,7 +38,7 @@
         <div class="flex flex-col mx-auto lg:flex-row flex-wrap">
             @if($urbanSpaces->count())
                 @foreach($urbanSpaces as $urbanSpace)
-                <div class="border-1 shadow-lg my-2.5 bg-greenDuck rounded-2xl lg:mx-2.5 w-2/12">
+                <div class="border-1 shadow-lg my-2.5 bg-greenDuck rounded-2xl lg:mx-2.5 w-full lg:w-4/12 xl:w-2/12">
                     <img class="w-full h-64 rounded-t-2xl" src="{{$urbanSpace->thumbnail}}" height="100" width="100" alt="">
                     <div class="p-5 text-white">
                         <p class="font-black Title border-l-2 border-white pl-2.5">{{$urbanSpace->title}}</p>
