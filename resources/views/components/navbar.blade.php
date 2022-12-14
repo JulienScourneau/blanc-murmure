@@ -53,7 +53,7 @@
             </nav>
         </div>
         <a href="{{ Route('inscription') }}"
-        class="bg-orange text-white Title font-black text-center text-xl rounded-full w-52 py-4 border-2 border-orange hover:bg-white hover:text-orange lg:w-36 text-sm font-base xl:w-52 text-xl">Choisir un stage</a>
+        class="bg-orange text-white Title font-black text-center lg:text-sm xl:text-xl rounded-full w-52 py-4 border-2 border-orange hover:bg-white hover:text-orange lg:w-36 text-sm font-base xl:w-52 text-xl">Choisir un stage</a>
     </div>
 </section>
 
