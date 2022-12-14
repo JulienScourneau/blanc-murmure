@@ -9,6 +9,8 @@ class UrbanSpaceProject extends Model
 {
     use HasFactory;
 
+    protected $guarded = [''];
+
     public function urbanSpace()
     {
         return $this->hasMany(UrbanSpace::class);
