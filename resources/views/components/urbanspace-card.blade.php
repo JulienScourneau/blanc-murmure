@@ -14,4 +14,3 @@
         </a>
     </div>
 </div>
-{{-- {{$project->title}} --}}
