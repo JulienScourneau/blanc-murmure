@@ -2,19 +2,19 @@
 
 @section('content')
 <section class="my-10">
-    <div class="flex flex-col items-center justify-around">
+    <div class="flex flex-col lg:flex-row items-center justify-around md:w-11/12 lg:w-8/12 xl:w-6/12 mx-auto">
         <h1 class="text-3xl font-semibold text-center text-greenDuck lg:w-4/12">{{$urbanSpaceProject->title}}</h1>
         <p class="text-greenDuck lg:w-8/12">{{$urbanSpaceProject->description}}</p>
     </div>
     @foreach($urbanSpaceProject->urbanSpace as $urbanSpace)
-    <article class="shadow-lg my-10">
+    <article class="shadow-lg my-10 md:mb-20 md:mx-auto md:w-11/12 lg:w-8/12 xl:w-6/12">
         {{-- @foreach($urbanSpace->photos as $photo)
             <div class="bg-orange flex flex-row">
                 <img src="{{$photo->path}}" width="100" height="100" alt="">
             </div>    
             @endforeach --}} 
-    <div class="flex flex-col">
-        <img src="{{asset("storage/".$urbanSpace->thumbnail_portrait)}}" alt="">
+    <div class="flex flex-col lg:flex-row">
+        <img class="lg:w-3/6" src="{{asset("storage/".$urbanSpace->thumbnail_portrait)}}" alt="">
         <div>
             <img src="{{asset("storage/".$urbanSpace->thumbnail_landscape)}}" alt="">
             <div class=" ml-5 my-5 p-2.5 border-green border-l-2 text-secondaryText">
@@ -29,7 +29,7 @@
         <p>{{$urbanSpace->description}}</p>
     </div>
     <div class="flex justify-end">
-        <button class="m-5g">Diaporama ></button>
+        <button class="m-5 highlightOrange">Diaporama ></button>
     </div>
     </article>
     @endforeach
