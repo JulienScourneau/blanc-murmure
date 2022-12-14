@@ -37,7 +37,8 @@ class UrbanSpaceProjectResource extends Resource
                         ->required(),
                     Forms\Components\Hidden::make('slug')->label('Lien')->disabled(),
                     TinyEditor::make('description')->profile('simple')->required(),
-                    Forms\Components\FileUpload::make('thumbnail')->label('Photo de couverture')->required(),
+                    Forms\Components\FileUpload::make('thumbnail')->label('Photo de couverture')
+                        ->image()->directory('images')->imagePreviewHeight('300')->required(),
                 ])
             ]);
     }
