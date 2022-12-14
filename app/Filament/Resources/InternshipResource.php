@@ -64,7 +64,8 @@ class InternshipResource extends Resource
                 Tables\Columns\TextColumn::make('begin_at')->label('Date de début')->disableClick()->date('d F Y'),
                 Tables\Columns\TextColumn::make('end_at')->label('Date de fin')->disableClick()->date('d F Y'),
 
-            ])
+
+            ])->defaultSort('created_at','desc')
             ->filters([
                 //
             ])
@@ -75,7 +76,7 @@ class InternshipResource extends Resource
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
             ])
-            ->reorderable('');
+            ;
     }
 
     public static function getRelations(): array
