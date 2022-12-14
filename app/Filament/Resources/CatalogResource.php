@@ -34,11 +34,10 @@ class CatalogResource extends Resource
                     Forms\Components\TextInput::make('description')->label('Description')->required(),
                     Forms\Components\TextInput::make('link')->label('Lien')->required(),
                     Forms\Components\TextInput::make('page_number')->label('Nombre de page')->numeric()->required(),
-                    Forms\Components\TextInput::make('size')->label('Taille')->suffix('Format 00 x 00')->required(),
+                    Forms\Components\TextInput::make('size')->label('Taille')->prefix("Format '00 x 00'")->required(),
                     Forms\Components\FileUpload::make('thumbnail')->label('Photo')
                         ->image()->directory('images')->imagePreviewHeight('300')->required(),
                 ])
-
             ]);
     }
 
