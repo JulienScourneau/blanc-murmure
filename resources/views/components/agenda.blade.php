@@ -5,7 +5,7 @@
 </div>
 @foreach($agendas as $event)
 
-    <div class="shadow w-full flex max-h-28 group mb-2.5 lg:w-10/12 lg:mx-auto">
+    <div class="shadow w-full flex max-h-28 group mb-2.5 mx-auto sm:w-11/12 lg:w-10/12 lg:mx-auto">
         <div class="w-24 bg-white border-orange border-2 text-center group-hover:bg-orange lg:w-24 flex items-center lg:justify-center">
             <p class="w-24 text-3xl font-light text-orange group-hover:text-white">{{date('d', strtotime($event['begin_at']))}}
                 <br><span
@@ -20,10 +20,10 @@
             <p class="text-sm font-normal leading-tight py-0.5 text-white group-hover:text-green">Projet de fresque avec La HELHA à La
                 Louvière.</p>
         </div>
-        <div class="hidden md:block w-6/12 overflow-hidden">
-            <img class="md:h-full lg:h-auto lg:w-full" src="assets/agenda_test.png" alt="">
+        <div class="hidden sm:block w-6/12 overflow-hidden">
+            <img class="h-full lg:w-full " src="assets/agenda_test.png" alt="">
         </div>
-        <div class="hidden md:block w-24">
+        <div class="hidden sm:block w-24">
             <p class="text-6xl font-black flex justify-center h-full h-full items-center group-hover:text-orange group-hover:translate-x-2">></p>
         </div>
     </div>
