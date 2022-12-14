@@ -5,7 +5,6 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\InternshipResource\Pages;
 use App\Filament\Resources\InternshipResource\RelationManagers;
 use App\Models\Internship;
-use Filament\Forms;
 use Filament\Forms\Components\Card;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
@@ -21,7 +20,6 @@ use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 class InternshipResource extends Resource
 {
     protected static ?string $model = Internship::class;
-
     protected static ?string $navigationGroup = 'Ateliers, Événements et Stages';
     protected static ?string $breadcrumb = 'Ateliers et Stages';
     protected static ?string $navigationLabel = 'Ateliers et Stages';
@@ -31,22 +29,21 @@ class InternshipResource extends Resource
     protected static ?string $activeNavigationIcon = 'heroicon-s-collection';
 
 
-
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 Card::make()->schema([
-                    TextInput::make('title')->label('Titre')->unique(),
+                    TextInput::make('title')->label('Titre')->required(),
                     TextInput::make('subtitle')->label('Sous-Titre'),
                     TinyEditor::make('description')->profile('simple'),
                     TextInput::make('age')->required(),
                     TextInput::make('price')->numeric()->suffix('€')->label('Prix')->required(),
-                    DatePicker::make('begin_at')->label('Date de début'),
-                    DatePicker::make('end_at')->label('Date de fin'),
-                    TimePicker::make('begin_hour')->label('Heure de début'),
-                    TimePicker::make('end_hour')->label('Heure de fin'),
-                    FileUpload::make('thumbnail')->label('Photo')->image()->directory('images')->imagePreviewHeight('300'),
+                    DatePicker::make('begin_at')->label('Date de début')->required(),
+                    DatePicker::make('end_at')->label('Date de fin')->required(),
+                    TimePicker::make('begin_hour')->label('Heure de début')->required(),
+                    TimePicker::make('end_hour')->label('Heure de fin')->required(),
+                    FileUpload::make('thumbnail')->label('Photo')->image()->directory('images')->imagePreviewHeight('300')->required(),
 
                 ])
             ]);
@@ -61,13 +58,14 @@ class InternshipResource extends Resource
                 Tables\Columns\TextColumn::make('description')->wrap()->disableClick(),
                 Tables\Columns\TextColumn::make('price')->label('Prix')->suffix('€')->wrap()->disableClick(),
                 Tables\Columns\TextColumn::make('age')->disableClick(),
-                ImageColumn::make('thumbnail')->label('Photo')->size(100)->disableClick(),
+                ImageColumn::make('thumbnail')->label('Photo')->size(150)->disableClick(),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
