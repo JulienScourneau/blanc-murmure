@@ -11,9 +11,8 @@ use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class UrbanSpaceResource extends Resource
 {
@@ -38,9 +37,10 @@ class UrbanSpaceResource extends Resource
                     Forms\Components\TextInput::make('author'),
                     Forms\Components\TextInput::make('partnership'),
                     Select::make('urban_space_project_id')->label('Projet')
-                        ->relationship('urbanSpaceProject', 'title')
+                        ->relationship('urbanSpaceProject', 'title'),
+                    Forms\Components\FileUpload::make('thumbnail_landscape')->label('Photo paysage')->image()->directory('images')->imagePreviewHeight('300')->required(),
+                    Forms\Components\FileUpload::make('thumbnail_portrait')->label('Photo portrait')->image()->directory('images')->imagePreviewHeight('300')->required(),
                 ])
-
             ]);
     }
 
@@ -48,18 +48,21 @@ class UrbanSpaceResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('title'),
-                TextColumn::make('description'),
-                TextColumn::make('location'),
-                TextColumn::make('author'),
-                TextColumn::make('partnership'),
-                TextColumn::make('urbanSpaceProject.title')
+                TextColumn::make('title')->label('Titre')->wrap()->disableClick(),
+                TextColumn::make('description')->label('Description')->wrap()->disableClick(),
+                TextColumn::make('location')->label('Adresse')->wrap()->disableClick(),
+                TextColumn::make('author')->label('Auteur')->wrap()->disableClick(),
+                TextColumn::make('partnership')->label('Partenaire')->wrap()->disableClick(),
+                TextColumn::make('urbanSpaceProject.title')->label('Projet Urbain')->wrap()->disableClick(),
+                ImageColumn::make('thumbnail_landscape')->label('Photo paysage')->size(150)->disableClick(),
+                ImageColumn::make('thumbnail_portrait')->label('Photo portrait')->size(150)->disableClick(),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),

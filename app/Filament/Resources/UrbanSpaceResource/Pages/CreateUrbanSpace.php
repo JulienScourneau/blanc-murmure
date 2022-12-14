@@ -11,4 +11,9 @@ class CreateUrbanSpace extends CreateRecord
     protected static string $resource = UrbanSpaceResource::class;
 
     protected static ?string $title = 'Ajouter une oeuvre';
+
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl('index');
+    }
 }
