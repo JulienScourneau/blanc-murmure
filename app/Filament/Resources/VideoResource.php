@@ -10,8 +10,6 @@ use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class VideoResource extends Resource
 {
@@ -28,7 +26,13 @@ class VideoResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Forms\Components\Card::make()->schema([
+                    Forms\Components\TextInput::make('title')->label('Titre')->required(),
+                    Forms\Components\TextInput::make('description')->label('Description')->required(),
+                    Forms\Components\TextInput::make('link')->label('Lien')->required(),
+                    Forms\Components\FileUpload::make('thumbnail')->label('Photo de couverture')
+                        ->image()->directory('images')->imagePreviewHeight('300')->required(),
+                ])
             ]);
     }
 
@@ -36,13 +40,17 @@ class VideoResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('title')->label('Nom')->sortable()->wrap()->disableClick(),
+                Tables\Columns\TextColumn::make('description')->label('Description')->wrap()->disableClick(),
+                Tables\Columns\TextColumn::make('link')->label('Lien')->wrap()->disableClick(),
+                Tables\Columns\ImageColumn::make('thumbnail')->label('Photo')->size(150)->disableClick(),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
