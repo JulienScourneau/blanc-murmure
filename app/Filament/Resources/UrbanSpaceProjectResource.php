@@ -12,6 +12,7 @@ use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
 use Illuminate\Support\Str;
+use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class UrbanSpaceProjectResource extends Resource
 {
@@ -28,15 +29,15 @@ class UrbanSpaceProjectResource extends Resource
         return $form
             ->schema([
                 Forms\Components\Card::make()->schema([
-                    Forms\Components\TextInput::make('title')
-                    ->reactive()
-                    ->afterStateUpdated(function (Closure $set, $state){
-                        $set('slug', Str::slug($state));
-                    })
-                    ->required(),
-                    Forms\Components\TextInput::make('slug')->disabled(),
-                    Forms\Components\TextInput::make('description'),
-                    Forms\Components\FileUpload::make('thumbnail'),
+                    Forms\Components\TextInput::make('title')->unique(ignoreRecord: true)
+                        ->reactive()
+                        ->afterStateUpdated(function (Closure $set, $state) {
+                            $set('slug', Str::slug($state));
+                        })
+                        ->required(),
+                    Forms\Components\Hidden::make('slug')->label('Lien')->disabled(),
+                    TinyEditor::make('description')->profile('simple')->required(),
+                    Forms\Components\FileUpload::make('thumbnail')->label('Photo de couverture')->required(),
                 ])
             ]);
     }
@@ -46,7 +47,7 @@ class UrbanSpaceProjectResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title')->label('Titre')->disableClick(),
-                Tables\Columns\TextColumn::make('description')->label('Description')->disableClick(),
+                Tables\Columns\TextColumn::make('description')->label('Description')->wrap()->disableClick()->html(),
                 Tables\Columns\ImageColumn::make('thumbnail')->label('Photo')->width(200)->height(150)->square()->disableClick(),
             ])
             ->filters([
@@ -54,6 +55,7 @@ class UrbanSpaceProjectResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make()
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
