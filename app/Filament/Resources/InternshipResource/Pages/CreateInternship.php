@@ -3,7 +3,6 @@
 namespace App\Filament\Resources\InternshipResource\Pages;
 
 use App\Filament\Resources\InternshipResource;
-use App\Forms\Components\SummerNote;
 use Filament\Resources\Pages\CreateRecord;
 
 class CreateInternship extends CreateRecord
