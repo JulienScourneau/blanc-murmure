@@ -28,6 +28,11 @@ class EditSculpture extends EditRecord
         ];
     }
 
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl('index');
+    }
+
     protected function getActions(): array
     {
         return [

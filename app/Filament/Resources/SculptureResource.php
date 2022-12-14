@@ -5,7 +5,6 @@ namespace App\Filament\Resources;
 use App\Filament\RelationManagers\PhotosRelationManager;
 use App\Filament\Resources\SculptureResource\Pages;
 use App\Filament\Resources\SculptureResource\RelationManagers;
-use App\Models\Illustration;
 use App\Models\Sculpture;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
@@ -14,6 +13,7 @@ use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
 use Filament\Tables\Actions\DeleteAction;
+use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class SculptureResource extends Resource
 {
@@ -34,11 +34,12 @@ class SculptureResource extends Resource
             ->schema([
                 Forms\Components\Card::make()->schema([
                     Forms\Components\TextInput::make('title')->label('Nom du projet')->required(),
-                    Forms\Components\TextInput::make('subtitle')->label('Sous titre')->required(),
-                    Forms\Components\TextInput::make('description')->label('Description')->required(),
+                    Forms\Components\TextInput::make('subtitle')->label('Sous titre'),
+                    TinyEditor::make('description')->label('Description'),
                     Forms\Components\TextInput::make('partnership')->label('Partenaire'),
                     Forms\Components\TextInput::make('date')->label('Date'),
-                    FileUpload::make('thumbnail')->label('Photo')->image()->directory('images')->imagePreviewHeight('300'),
+                    FileUpload::make('thumbnail')->label('Photo')
+                        ->image()->directory('images')->imagePreviewHeight('300')->required(),
 
                 ]),
                 Forms\Components\Card::make()->schema([
@@ -48,8 +49,9 @@ class SculptureResource extends Resource
                             Forms\Components\FileUpload::make('path')
                                 ->label('Photo')
                                 ->image()
-                                ->directory('images'),
-                            Forms\Components\TextInput::make('alt'),
+                                ->directory('images')
+                                ->required(),
+                            Forms\Components\TextInput::make('alt')->label('Description')->required(),
                         ])->createItemButtonLabel('Ajouter une photo')
                         ->grid(2)
                 ])

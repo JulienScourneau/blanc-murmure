@@ -10,4 +10,9 @@ class CreateSculpture extends CreateRecord
 {
     protected static string $resource = SculptureResource::class;
     protected static ?string $title = 'Ajouter une sculpture';
+
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl('index');
+    }
 }
