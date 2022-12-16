@@ -1,7 +1,7 @@
 @props(['project'])
 
 <div class="">
-    <div class="mx-auto my-6 h-32 w-8/12 group hover:shadow-lg">
+    <div class="mx-auto my-6 h-32 w-full lg:w-8/12 group hover:shadow-lg">
         <a 
             class="gradient h-32 flex bg-right bg-no-repeat bg-cover" 
             style="background-image: url('{{asset('assets/agenda_test.png')}}');" 
@@ -14,4 +14,3 @@
         </a>
     </div>
 </div>
-{{-- {{$project->title}} --}}
