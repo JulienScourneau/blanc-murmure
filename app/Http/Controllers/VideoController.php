@@ -15,7 +15,7 @@ class VideoController extends Controller
 
     public function show(Video $video)
     {
-        return view('video_details', [
+        return view('projects.video-details', [
             'video' => $video
         ]);
     }

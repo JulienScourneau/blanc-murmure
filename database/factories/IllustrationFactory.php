@@ -23,6 +23,7 @@ class IllustrationFactory extends Factory
             'description' => $this->faker->sentence(6),
             'thumbnail' => 'images/project_illustration_banner.png',
             'date' => $this->faker->sentence(6),
+            'photo_list'=> "['images\/R38Ag8LbDlJz9CmX28iBsGRDWOLrfU-metaNDIydHo0LmpwZw==-.jpg','images\/3ciP7fuvL5SNrzF9efgKL34EE73csU-metaNTAweDUwMF9hcGFzaGVfZGVhZF95aXp6eS5qcGc=-.jpg']"
         ];
     }
 }
