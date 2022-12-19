@@ -9,7 +9,8 @@
     <div class="p-5 text-white">
         <p class="font-black Title border-l-2 border-white pl-2.5">{{$project->title}}</p>
         <p class="border-l-2 border-white pt-2.5 pl-2.5">{{$project->description}}</p>
-        <div class="flex justify-end items-end">
+        <div class="flex justify-around items-end mt-5">
+            <a class="hover:underline" target="_blank" rel="noopener noreferrer" href="">Détails ></a>
             <a class="hover:underline" target="_blank" rel="noopener noreferrer" href="{{$project->link}}">Vimeo ></a>
         </div>
     </div>
