@@ -34,8 +34,10 @@ Route::get('/nos-projets', [ProjectController::class, 'index'])->name('project')
 
 Route::get('/nos-projets/sculpture', [SculptureController::class, 'index'])->name('sculpture');
 Route::get('/nos-projets/illustration', [IllustrationController::class, 'index'])->name('illustration');
-Route::get('/nos-projets/video', [VideoController::class, 'index'])->name('video');
 Route::get('/nos-projets/catalogue', [CatalogController::class, 'index'])->name('catalog');
+
+Route::get('/nos-projets/video', [VideoController::class, 'index'])->name('video');
+Route::get('/nos-projets/video/{video:title}', [VideoController::class, 'show'])->name('videoDetails');
 
 Route::get('/nos-projets/espace-urbain', [UrbanSpaceController::class, 'index'])->name('urbanSpace');
 Route::get('/nos-projets/espace-urbain/{urbanSpace:slug}', [UrbanSpaceController::class, 'show'])->name('urbanSpaceShow');
