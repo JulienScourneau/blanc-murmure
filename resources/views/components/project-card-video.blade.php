@@ -10,7 +10,11 @@
         <p class="font-black Title border-l-2 border-white pl-2.5">{{$project->title}}</p>
         <p class="border-l-2 border-white pt-2.5 pl-2.5">{{$project->description}}</p>
         <div class="flex justify-around items-end mt-5">
+<<<<<<< HEAD
             <a class="hover:underline" target="_blank" rel="noopener noreferrer" href="/nos-projets/video/{{video->Title}}">Détails ></a>
+=======
+            <a class="hover:underline" href="/nos-projets/video/{{$project->slug}}">Détails ></a>
+>>>>>>> 233fb7f80bfd1aaec15cfc44e78cd23ea02e51eb
             <a class="hover:underline" target="_blank" rel="noopener noreferrer" href="{{$project->link}}">Vimeo ></a>
         </div>
     </div>
