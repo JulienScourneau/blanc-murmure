@@ -10,7 +10,10 @@ de comment le traduire formellement et le réaliser techniquement.
 Mettre en oeuvre, donner une place à chacun, à sa mesure, pour le plaisir de tous."
 />
     @foreach($projects as $project)
-        <x-urbanspace-card :project="$project"/>
+        @if ($loop->first)
+            <x-urbanspace-card-first :project="$project" />
+        @endif
+            <x-urbanspace-card :project="$project" />
     @endforeach
 
 @endsection

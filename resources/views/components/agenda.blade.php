@@ -6,14 +6,34 @@
 @foreach($agendas as $event)
 
     <div class="shadow w-full flex max-h-28 group mb-2.5 mx-auto sm:w-11/12 lg:w-8/12 xl:w-6/12 lg:mx-auto">
-        <div class="w-24 bg-white border-orange border-2 text-center group-hover:bg-orange lg:w-24 flex items-center lg:justify-center">
-            <p class="w-24 text-3xl font-light text-orange group-hover:text-white">{{date('d', strtotime($event['begin_at']))}}
-                <br><span
-                    class="uppercase text-orange font-black group-hover:text-white">
-                    {{Carbon\Carbon::parse($event['begin_at'])->translatedFormat('M')}}
+        <div class="w-40 bg-white border-orange border-2 text-center group-hover:bg-orange lg:w-44 flex items-center lg:justify-center">
+            @if ($event['end_at'])
+                <p class="w-40 text-2xl font-light text-orange group-hover:text-white">
+                    {{date('d', strtotime($event['begin_at']))}}
+                    <br><span
+                        class="uppercase text-orange font-black group-hover:text-white">
+                        {{Carbon\Carbon::parse($event['begin_at'])->translatedFormat('M')}}
 {{--                    {{date('M', strtotime($event['begin_at']))}}--}}
-                </span>
-            </p>
+                    </span>
+                </p>
+                    <p>-</p>
+                <p class="w-40 text-2xl font-light text-orange group-hover:text-white">
+                    {{date('d', strtotime($event['end_at']))}}
+                    <br><span
+                        class="uppercase text-orange font-black group-hover:text-white">
+                        {{Carbon\Carbon::parse($event['begin_at'])->translatedFormat('M')}}
+{{--                    {{date('M', strtotime($event['begin_at']))}}--}}
+                    </span>
+                </p>
+            @else
+                <p class="w-44 text-2xl font-light text-orange group-hover:text-white">{{date('d', strtotime($event['begin_at']))}}
+                    <br><span
+                        class="uppercase text-orange font-black group-hover:text-white">
+                        {{Carbon\Carbon::parse($event['begin_at'])->translatedFormat('M')}}
+{{--                    {{date('M', strtotime($event['begin_at']))}}--}}
+                    </span>
+                </p>
+            @endif
         </div>
         <div class="p-2.5 bg-green w-full lg:w-8/12 group-hover:bg-white">
             <h2 class="w-64 md:w-96 lg:w-72 xl:w-86 2xl:w-96 Title uppercase font-black text-xl lg:text-2xl text-white overflow-hidden overflow-ellipsis 2xl:overflow-none whitespace-nowrap group-hover:text-green">{{$event['title']}}</h2>
