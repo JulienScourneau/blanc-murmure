@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('subtitle')->nullable();
-            $table->string('description');
+            $table->text('description');
             $table->string('age');
             $table->timestamp('begin_at');
             $table->timestamp('end_at');

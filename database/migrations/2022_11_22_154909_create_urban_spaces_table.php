@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('location');
-            $table->string('description');
+            $table->text('description');
             $table->string('participant');
             $table->string('author');
             $table->string('partnership');
