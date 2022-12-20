@@ -1,9 +1,10 @@
 @props(['project'])
 <div class="border-1 shadow-lg my-2.5 bg-greenDuck rounded-2xl lg:mx-2.5 w-full lg:w-4/12 xl:w-2/12">
     @if($project->photos->count())
-    <div class="buttonCarousel w-full hover:cursor-pointer">
-        <img class="w-full h-64 rounded-t-2xl" src="{{$project->photos[0]->path}}" height="100" width="100" alt="">
-    </div>
+        <div class="buttonCarousel w-full hover:cursor-pointer">
+            <img class="w-full h-64 rounded-t-2xl" src="{{asset('storage/'. $project->thumbnail)}}" height="100"
+                 width="100" alt="">
+        </div>
     @else
         <img class="w-full h-64 rounded-t-2xl" src="{{asset('assets/blanc-murmure-logo.png')}}" alt="">
     @endif
