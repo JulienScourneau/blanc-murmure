@@ -22,6 +22,10 @@ class VideoFactory extends Factory
             'description' => $this->faker->sentence('12'),
             'link' => $this->faker->url,
             'thumbnail' => 'images/project_illustration_banner.png',
+            'author' => $this->faker->name,
+            'partnership' => $this->faker->sentence(2),
+            'duration' => $this->faker->time('i:s'),
+            'year' => $this->faker->year(),
         ];
     }
 }

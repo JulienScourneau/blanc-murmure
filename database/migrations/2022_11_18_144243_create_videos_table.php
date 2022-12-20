@@ -19,6 +19,10 @@ return new class extends Migration {
             $table->string('description');
             $table->string('link');
             $table->string('thumbnail');
+            $table->string('author');
+            $table->string('partnership')->nullable();
+            $table->string('duration');
+            $table->string('year');
             $table->timestamps();
         });
     }

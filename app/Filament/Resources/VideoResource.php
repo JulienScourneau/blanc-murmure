@@ -5,11 +5,13 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\VideoResource\Pages;
 use App\Filament\Resources\VideoResource\RelationManagers;
 use App\Models\Video;
+use Closure;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use Illuminate\Support\Str;
 
 class VideoResource extends Resource
 {
@@ -27,11 +29,19 @@ class VideoResource extends Resource
         return $form
             ->schema([
                 Forms\Components\Card::make()->schema([
-                    Forms\Components\TextInput::make('title')->label('Titre')->required(),
+                    Forms\Components\TextInput::make('title')->label('Titre')->required()->reactive()
+                        ->afterStateUpdated(function (Closure $set, $state) {
+                            $set('slug', Str::slug($state));
+                        }),
+                    Forms\Components\Hidden::make('slug'),
                     Forms\Components\TextInput::make('description')->label('Description')->required(),
                     Forms\Components\TextInput::make('link')->label('Lien')->required(),
                     Forms\Components\FileUpload::make('thumbnail')->label('Photo de couverture')
                         ->image()->directory('images')->imagePreviewHeight('300')->required(),
+                    Forms\Components\TimePicker::make('duration')->label('Durée')->format('i:s'),
+                    Forms\Components\TextInput::make('author')->label('Auteur'),
+                    Forms\Components\TextInput::make('partnership')->label('Partenaire'),
+                    Forms\Components\TextInput::make('year')->label('Année')->numeric(),
                 ])
             ]);
     }
