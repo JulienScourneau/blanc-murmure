@@ -16,14 +16,4 @@ class Illustration extends Model
         'photo_list' => 'array',
     ];
 
-    public function photos()
-    {
-        return $this->belongsToMany(Photo::class, 'photo_illustrations', 'illustrations_id', 'photos_id');
-    }
-
-//    protected $dispatchesEvents = [
-//        'updated' => IllustrationUpdated::class,
-//        'deleted' => IllustrationDeleted::class,
-//    ];
-
 }
