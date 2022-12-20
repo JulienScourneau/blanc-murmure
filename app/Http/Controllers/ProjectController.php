@@ -18,7 +18,7 @@ class ProjectController extends Controller
             'illustrations' => Illustration::latest()->limit(5)->get(),
             'urbanSpaces' => UrbanSpaceProject::latest()->limit(5)->get(),
             'catalogs' => Catalog::latest()->limit(5)->get(),
-            'videos' => Video::select('title','thumbnail','description','link')->latest()->limit(5)->get(),
+            'videos' => Video::select('title','thumbnail','description','link','slug')->latest()->limit(5)->get(),
         ]);
     }
 }
