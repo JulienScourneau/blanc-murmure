@@ -72,13 +72,10 @@ class DatabaseSeeder extends Seeder
 
         UrbanSpace::factory(6)->create();
         UrbanSpaceProject::factory(3)->create();
-        PhotoUrbanspace::factory(20)->create();
 
         Illustration::factory(5)->create();
-        PhotoIllustration::factory(20)->create();
 
         Sculpture::factory(5)->create();
-        PhotoSculpture::factory(20)->create();
 
     }
 }
