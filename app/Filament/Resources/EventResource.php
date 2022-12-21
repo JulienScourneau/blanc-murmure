@@ -29,7 +29,17 @@ class EventResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('title')
+                Forms\Components\Card::make()->schema([
+                    Forms\Components\TextInput::make('title')->label('Titre')->required(),
+                    Forms\Components\TextInput::make('subtitle')->label('Sous titre'),
+                    Forms\Components\DatePicker::make('begin_at')->label('Date de début')
+                        ->after('tomorrow')
+                        ->required(),
+                    Forms\Components\DatePicker::make('end_at')->label('Date de fin')
+                        ->afterOrEqual('begin_at'),
+                    Forms\Components\FileUpload::make('thumbnail')->label('Photo')
+                        ->image()->directory('images')->imagePreviewHeight('300')->required(),
+                ])
             ]);
     }
 
@@ -39,8 +49,7 @@ class EventResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('title')->label('Titre')->color('primary')->wrap()->disableClick(),
                 Tables\Columns\TextColumn::make('subtitle')->label('Sous titre')->wrap()->disableClick(),
-                Tables\Columns\TextColumn::make('description')->wrap()->disableClick(),
-                ImageColumn::make('thumbnail')->label('Photo')->size(100)->disableClick(),
+                ImageColumn::make('thumbnail')->label('Photo')->width(200)->square()->disableClick(),
                 Tables\Columns\TextColumn::make('begin_at')->label('Date de début')->date('d F Y')->disableClick(),
                 Tables\Columns\TextColumn::make('end_at')->label('Date de fin')->date('d F Y')->disableClick(),
             ])
@@ -49,6 +58,7 @@ class EventResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make()
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
