@@ -29,7 +29,7 @@
                 <p class="w-44 text-2xl font-light text-orange group-hover:text-white">{{date('d', strtotime($event['begin_at']))}}
                     <br><span
                         class="uppercase text-orange font-black group-hover:text-white">
-                        {{Carbon\Carbon::parse($event['begin_at'])->translatedFormat('M')}}
+                        {{Carbon\Carbon::parse($event['begin_at'])->translatedFormat('F')}}
 {{--                    {{date('M', strtotime($event['begin_at']))}}--}}
                     </span>
                 </p>
