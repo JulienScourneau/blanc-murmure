@@ -14,7 +14,7 @@ return new class extends Migration {
     {
         Schema::create('catalogs', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('title');
             $table->text('description');
             $table->string('link');
             $table->string('page_number');
