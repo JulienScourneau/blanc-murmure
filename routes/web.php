@@ -54,4 +54,4 @@ Route::get('/contact', function () {
 Route::get('/inscription', [AttendeesController::class, 'index'])->name('inscription');
 Route::post('/inscription', [AttendeesController::class, 'store'])->name('inscription');
 
-Route::redirect('/laravel/login', 'admin/login')->name('login');
+Route::redirect('/laravel/login', '/login')->name('login');
