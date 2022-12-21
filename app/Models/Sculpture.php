@@ -11,8 +11,7 @@ class Sculpture extends Model
 
     protected $guarded = [];
 
-    public function photos()
-    {
-        return $this->belongsToMany(Photo::class, 'photo_sculptures', 'sculptures_id', 'photos_id');
-    }
+    protected $casts = [
+        'photo_list' => 'array',
+    ];
 }
