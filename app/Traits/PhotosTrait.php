@@ -7,7 +7,7 @@ trait PhotosTrait
     public static function bootPhotosTrait()
     {
         static::updated(function ($model) {
-           dd('Trait', $model->getOriginal());
+//           dd('Trait', $model->getOriginal());
         });
     }
 }
