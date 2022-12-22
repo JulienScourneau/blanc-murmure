@@ -2,7 +2,7 @@
 
 namespace App\Traits;
 
-trait PhotosTrait
+trait PhotosListTrait
 {
     public static function bootPhotosTrait()
     {

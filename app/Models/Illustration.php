@@ -2,13 +2,14 @@
 
 namespace App\Models;
 
-use App\Traits\PhotosTrait;
+
+use App\Traits\PhotosListTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Illustration extends Model
 {
-    use HasFactory, PhotosTrait;
+    use HasFactory, PhotosListTrait;
 
     protected $guarded = [];
 
