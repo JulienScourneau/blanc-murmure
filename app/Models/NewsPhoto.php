@@ -11,10 +11,5 @@ class NewsPhoto extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['path'];
-
-    protected $dispatchesEvents = [
-        'updated' => NewsPhotoUpdated::class,
-        'deleted' => NewsPhotoDeleted::class,
-    ];
+    protected $guarded = [''];
 }
