@@ -68,12 +68,6 @@ class IllustrationResource extends Resource
             ->actions([
                 Tables\Actions\EditAction::make(),
                 DeleteAction::make()
-//                    ->action(function (Illustration $record): void {
-//                        $record->getOriginal()['photo_list']->each(function ($photo) {
-//                            $photo->delete();
-//                        });
-//                        $record->delete();
-//                    })
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
