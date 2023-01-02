@@ -2,6 +2,10 @@
 
 namespace App\Providers;
 
+use App\Models\HomePhoto;
+use App\Models\NewsPhoto;
+use App\Observers\HomeObserver;
+use App\Observers\NewsObserver;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -27,7 +31,8 @@ class EventServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        NewsPhoto::observe(NewsObserver::class);
+        HomePhoto::observe(HomeObserver::class);
     }
 
     /**

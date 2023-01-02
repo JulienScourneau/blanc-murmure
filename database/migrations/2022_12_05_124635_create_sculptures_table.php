@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('partnership')->nullable();
             $table->string('thumbnail');
             $table->string('date')->nullable();
+            $table->text('photo_list')->nullable();
             $table->timestamps();
         });
     }

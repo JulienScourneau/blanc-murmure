@@ -6,6 +6,7 @@ use App\Filament\Resources\UrbanSpaceResource\Pages;
 use App\Filament\Resources\UrbanSpaceResource\RelationManagers;
 use App\Models\UrbanSpace;
 use Filament\Forms;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -40,6 +41,15 @@ class UrbanSpaceResource extends Resource
                         ->relationship('urbanSpaceProject', 'title'),
                     Forms\Components\FileUpload::make('thumbnail_landscape')->label('Photo paysage')->image()->directory('images')->imagePreviewHeight('300')->required(),
                     Forms\Components\FileUpload::make('thumbnail_portrait')->label('Photo portrait')->image()->directory('images')->imagePreviewHeight('300')->required(),
+                ]),
+                Forms\Components\Card::make()->schema([
+                    FileUpload::make('photo_list')
+                        ->multiple()
+                        ->enableReordering()
+                        ->label('Photos')
+                        ->image()
+                        ->directory('images')
+                        ->required(),
                 ])
             ]);
     }

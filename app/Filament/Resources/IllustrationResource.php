@@ -40,7 +40,6 @@ class IllustrationResource extends Resource
                         ->image()->directory('images')->imagePreviewHeight('300')->required(),
 
                 ]),
-
                 Forms\Components\Card::make()->schema([
                     FileUpload::make('photo_list')
                         ->multiple()
@@ -50,19 +49,6 @@ class IllustrationResource extends Resource
                         ->directory('images')
                         ->required(),
                 ])
-//                Forms\Components\Card::make()->schema([
-//                    Forms\Components\Repeater::make('photos')
-//                        ->relationship()
-//                        ->schema([
-//                            Forms\Components\FileUpload::make('path')
-//                                ->label('Photo')
-//                                ->image()
-//                                ->directory('images')
-//                                ->required(),
-//                            Forms\Components\TextInput::make('alt')->label('Description')->required(),
-//                        ])->createItemButtonLabel('Ajouter une photo')
-//                        ->grid(2)
-//                ])
             ]);
     }
 
@@ -99,7 +85,7 @@ class IllustrationResource extends Resource
     public static function getRelations(): array
     {
         return [
-//            PhotosRelationManager::class
+//
         ];
     }
 

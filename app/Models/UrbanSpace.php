@@ -18,4 +18,8 @@ class UrbanSpace extends Model
     {
         return $this->belongsTo(UrbanSpaceProject::class);
     }
+
+    protected $casts = [
+        'photo_list' => 'array',
+    ];
 }
