@@ -34,8 +34,8 @@ class DatabaseSeeder extends Seeder
     {
 //        TODO: Remove on production
         User::factory()->create([
-            'name' => 'julien',
-            'email' => 'julien@mail.com',
+            'name' => 'admin',
+            'email' => 'admin@mail.com',
             'password' => 'password',
         ]);
 
