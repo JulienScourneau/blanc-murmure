@@ -10,16 +10,15 @@
 
 <div class="flex flex-col mx-auto lg:flex-row flex-wrap justify-center">
 @if($illustrations->count())
-    @foreach($illustrations as $illustration)
+    @foreach($illustrations as $key => $illustration)
         <x-project-card :project="$illustration"/>
+        <x-modal :project="$illustration" :key="$key"/>
+        {{-- @foreach ($illustration->photo_list as $photo)
+            <img class="w-full h-full" src="{{asset("storage/".$photo)}}" alt="">
+        @endforeach --}}
     @endforeach
     @else
     <p>Nothing to show</p>
     @endif
-    <x-modal />
 </div>
-
-    {{-- @foreach($projects as $project)
-        <img src="{{$project->photos[0]->path}}" width="100" height="100" alt="">
-    @endforeach --}}
 @endsection

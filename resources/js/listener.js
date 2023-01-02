@@ -42,8 +42,7 @@ export function listener() {
     for (const button of buttonCarousel) {
         button.addEventListener("click", (event) => {
             carouselModal.style.display = "block";
-            console.log(event.target);
-            console.log(carouselModal);
+            console.log(event.pointerId);
         });
     }
 

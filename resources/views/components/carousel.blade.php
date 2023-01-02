@@ -1,3 +1,4 @@
+@props(['project','key'])
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -59,22 +60,25 @@
   </head>
 
   <body>
-    <!-- Swiper -->
     <div class="swiper mySwiper" >
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="{{asset('assets/project/project_catalogue_01.png')}}" alt=""></div>
-        <div class="swiper-slide"><img src="{{asset('assets/project/project_sculpture_banner.png')}}" alt=""></div>
-        <div class="swiper-slide"><img src="{{asset('assets/project/project_illustration_banner.png')}}" alt=""></div>
-      </div>
+        @if ($key+1 === $project->id) 
+        @dump($key+1) 
+        @dump($project->id)
+          @foreach ($project->photo_list as $photo)  
+            <div class="swiper-slide">
+              <img class="w-52" src="{{asset("storage/".$photo)}}" alt="">
+            </div>
+          @endforeach
+        @endif
+        </div>
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
       <div class="swiper-pagination"></div>
     </div>
 
-    <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
-    <!-- Initialize Swiper -->
     <script>
       var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
