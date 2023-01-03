@@ -3,8 +3,12 @@
         <div class="flex flex-col xl:w-3/12">
             <div class="flex flex-row pl-5">
                 {{-- TODO: Add link to social --}}
-                <img class="w-6" src="{{asset('assets/icons/facebook_logo.png')}}" alt="">
-                <img class="w-6 ml-2" src="{{asset('assets/icons/instagram_logo.png')}}" alt="">
+                <a href="https://www.facebook.com/blancmurmure.be" target="_blank" rel="noopener noreferrer">
+                    <img class="w-6" src="{{asset('assets/icons/facebook_logo.png')}}" alt="">
+                </a>
+                <a href="https://www.instagram.com/blancmurmure/" target="_blank" rel="noopener noreferrer">
+                    <img class="w-6 ml-2" src="{{asset('assets/icons/instagram_logo.png')}}" alt="">
+                </a>
             </div>
             <hr class="mt-5 mb-2.5 text-white"/>
             <h2 class="Title uppercase text-orange text-2xl leading-7 font-black w-11/12 self-center">Restez au courant

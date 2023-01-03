@@ -45,7 +45,7 @@ export function listener() {
 
             let TitleName = event.path[2].children[1].children[0].textContent;
             console.log(TitleName);
-            
+            console.log(event.pointerId);
         });
     }
 

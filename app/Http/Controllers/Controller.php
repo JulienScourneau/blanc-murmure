@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Event;
+use App\Models\HomePhoto;
 use App\Models\Internship;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
@@ -18,6 +19,7 @@ class Controller extends BaseController
 
         return view('home', [
             "internship" => Internship::oldest('begin_at')->first(),
+            "photos" => HomePhoto::all(),
             "agendas" => $this->getAgendaList(),
         ]);
     }

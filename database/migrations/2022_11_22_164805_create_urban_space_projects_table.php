@@ -15,7 +15,7 @@ return new class extends Migration {
         Schema::create('urban_space_projects', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('description');
+            $table->text('description');
             $table->string('thumbnail');
             $table->string('slug')->unique();
             $table->timestamps();

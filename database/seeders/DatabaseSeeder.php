@@ -34,8 +34,8 @@ class DatabaseSeeder extends Seeder
     {
 //        TODO: Remove on production
         User::factory()->create([
-            'name' => 'julien',
-            'email' => 'julien@mail.com',
+            'name' => 'admin',
+            'email' => 'admin@mail.com',
             'password' => 'password',
         ]);
 
@@ -72,13 +72,10 @@ class DatabaseSeeder extends Seeder
 
         UrbanSpace::factory(6)->create();
         UrbanSpaceProject::factory(3)->create();
-        PhotoUrbanspace::factory(20)->create();
 
         Illustration::factory(5)->create();
-        PhotoIllustration::factory(20)->create();
 
         Sculpture::factory(5)->create();
-        PhotoSculpture::factory(20)->create();
 
     }
 }

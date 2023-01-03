@@ -20,7 +20,6 @@ class EventFactory extends Factory
         return [
             'title' => $this->faker->unique()->name,
             'subtitle' => $this->faker->sentence(4),
-            'description' => $this->faker->sentence(6),
             'begin_at' => $this->faker->date(),
             'end_at' => $this->faker->date(),
             'thumbnail' => 'images/project_illustration_banner.png',

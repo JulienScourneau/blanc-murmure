@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 @props(['project'])
+=======
+@props(['project','key'])
+>>>>>>> 683620d018dc9b6badfd5c1783dddf5a01768b45
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -60,25 +64,25 @@
   </head>
 
   <body>
-    <!-- Swiper -->
     <div class="swiper mySwiper" >
       <div class="swiper-wrapper">
-        @foreach ($project->photo_list as $images)
-        <div class="swiper-slide"><img src="{{asset('storage/'. $images)}}" alt=""></div>
-        @endforeach
-        {{-- <div class="swiper-slide"><img src="{{asset('assets/project/project_catalogue_01.png')}}" alt=""></div>
-        <div class="swiper-slide"><img src="{{asset('assets/project/project_sculpture_banner.png')}}" alt=""></div>
-        <div class="swiper-slide"><img src="{{asset('assets/project/project_illustration_banner.png')}}" alt=""></div> --}}
-      </div>
+        @if ($key+1 === $project->id) 
+        @dump($key+1) 
+        @dump($project->id)
+          @foreach ($project->photo_list as $photo)  
+            <div class="swiper-slide">
+              <img class="w-52" src="{{asset("storage/".$photo)}}" alt="">
+            </div>
+          @endforeach
+        @endif
+        </div>
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
       <div class="swiper-pagination"></div>
     </div>
 
-    <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
-    <!-- Initialize Swiper -->
     <script>
       var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
@@ -95,6 +99,10 @@
       });
     </script>
   </body>
+<<<<<<< HEAD
 </html>
                       storage/images/1kXO08UN8KrvNC3QmMhgKzctdTphFr-metaUDEwMTAyNjkuanBn-.jpg
 http://127.0.0.1:8000/storage/images/3ciP7fuvL5SNrzF9efgKL34EE73csU-metaNTAweDUwMF9hcGFzaGVfZGVhZF95aXp6eS5qcGc=-.jpg
+=======
+</html>
+>>>>>>> 683620d018dc9b6badfd5c1783dddf5a01768b45

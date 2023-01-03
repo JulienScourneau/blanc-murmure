@@ -1,78 +1,106 @@
 @import url("https://fonts.googleapis.com/css?family=Bitter:700");
 .highlightOrange {
-  display: inline-block;
-  color: #e88746;
-  transition: color 250ms, text-shadow 250ms;
-  text-decoration: none;
-  position: relative;
-  z-index: 0;
+    display: inline-block;
+    color: #e88746;
+    transition: color 250ms, text-shadow 250ms;
+    text-decoration: none;
+    position: relative;
+    z-index: 0;
 }
 .highlightOrange::after {
-  position: absolute;
-  z-index: -1;
-  bottom: 0px;
-  left: 50%;
-  transform: translateX(-50%);
-  content: "";
-  width: 100%;
-  height: 0px;
-  background-color: #e88746;
-  transition: all 250ms;
+    position: absolute;
+    z-index: -1;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    width: 100%;
+    height: 0px;
+    background-color: #e88746;
+    transition: all 250ms;
 }
 .highlightOrange:hover {
-  color: white;
+    color: white;
 }
 .highlightOrange:hover::after {
-  height: 105%;
-  width: 105%;
+    height: 105%;
+    width: 105%;
+}
+
+.highlightGreen {
+    display: inline-block;
+    color: #92cdb9;
+    transition: color 250ms, text-shadow 250ms;
+    text-decoration: none;
+    position: relative;
+    z-index: 0;
+}
+.highlightGreen::after {
+    position: absolute;
+    z-index: -1;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    width: 100%;
+    height: 0px;
+    background-color: #92cdb9;
+    transition: all 250ms;
+}
+.highlightGreen:hover {
+    color: white;
+}
+.highlightGreen:hover::after {
+    height: 105%;
+    width: 105%;
 }
 
 .highlightBlack {
-  display: flex;
-  color: #313131;
-  transition: color 250ms, text-shadow 250ms;
-  text-decoration: none;
-  position: relative;
-  z-index: 0;
+    display: flex;
+    color: #313131;
+    transition: color 250ms, text-shadow 250ms;
+    text-decoration: none;
+    position: relative;
+    z-index: 0;
 }
 .highlightBlack::after {
-  position: absolute;
-  z-index: -1;
-  bottom: -2px;
-  left: 50%;
-  transform: translateX(-50%);
-  content: "";
-  width: 100%;
-  height: 0px;
-  background-color: #e88746;
-  border-radius: 40px;
-  transition: all 250ms;
+    position: absolute;
+    z-index: -1;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    width: 100%;
+    height: 0px;
+    background-color: #e88746;
+    border-radius: 40px;
+    transition: all 250ms;
 }
 .highlightBlack:hover {
-  color: white;
+    color: white;
 }
 .highlightBlack:hover::after {
-  height: 110%;
-  width: 110%;
+    height: 110%;
+    width: 110%;
 }
 
 .gradient {
-  display: block;
-  position: relative;
+    display: block;
+    position: relative;
 }
 .gradient:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  left: 0px;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  background-image: linear-gradient(90deg, #92CDB9, rgba(146, 205, 185, 0));
-  opacity: 0;
-  transition: all 0.5s;
+    content: "";
+    position: absolute;
+    width: 0;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-image: linear-gradient(90deg, #92cdb9, rgba(146, 205, 185, 0));
+    opacity: 0;
+    transition: all 0.5s;
 }
 .gradient:hover:after {
-  opacity: 1;
-  width: 100%;
+    opacity: 1;
+    width: 100%;
 }

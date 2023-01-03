@@ -14,7 +14,7 @@ class ProjectController extends Controller
     public function index()
     {
         return view('project', [
-            'sculptures' => Sculpture::latest()->with('photos')->limit(5)->get(),
+            'sculptures' => Sculpture::latest()->limit(5)->get(),
             'illustrations' => Illustration::latest()->limit(5)->get(),
             'urbanSpaces' => UrbanSpaceProject::latest()->limit(5)->get(),
             'catalogs' => Catalog::latest()->limit(5)->get(),

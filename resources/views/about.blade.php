@@ -54,6 +54,6 @@
     </section>
 
     <h1 class="uppercase text-center font-black text-4xl mt-52 mb-24">
-    Envie de nous rencontrer ? <span class="text-green underline"><a href="{{ Route ('contact')}}">contacter</a></span> nous !
+    Envie de nous rencontrer ? <span class="highlightGreen text-green underline"><a href="{{ Route ('contact')}}">contacter</a></span> nous !
     </h1>
 @endsection

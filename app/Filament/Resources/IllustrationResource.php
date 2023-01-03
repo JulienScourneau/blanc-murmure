@@ -40,29 +40,14 @@ class IllustrationResource extends Resource
                         ->image()->directory('images')->imagePreviewHeight('300')->required(),
 
                 ]),
-
                 Forms\Components\Card::make()->schema([
                     FileUpload::make('photo_list')
                         ->multiple()
                         ->enableReordering()
                         ->label('Photos')
                         ->image()
-                        ->directory('images')
-                        ->required(),
+                        ->directory('images'),
                 ])
-//                Forms\Components\Card::make()->schema([
-//                    Forms\Components\Repeater::make('photos')
-//                        ->relationship()
-//                        ->schema([
-//                            Forms\Components\FileUpload::make('path')
-//                                ->label('Photo')
-//                                ->image()
-//                                ->directory('images')
-//                                ->required(),
-//                            Forms\Components\TextInput::make('alt')->label('Description')->required(),
-//                        ])->createItemButtonLabel('Ajouter une photo')
-//                        ->grid(2)
-//                ])
             ]);
     }
 
@@ -83,12 +68,6 @@ class IllustrationResource extends Resource
             ->actions([
                 Tables\Actions\EditAction::make(),
                 DeleteAction::make()
-                    ->action(function (Illustration $record): void {
-                        $record->photos()->each(function ($photo) {
-                            $photo->delete();
-                        });
-                        $record->delete();
-                    })
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
@@ -99,7 +78,7 @@ class IllustrationResource extends Resource
     public static function getRelations(): array
     {
         return [
-//            PhotosRelationManager::class
+//
         ];
     }
 

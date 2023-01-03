@@ -9,13 +9,14 @@ class UrbanSpace extends Model
 {
     use HasFactory;
 
-    public function photos()
-    {
-        return $this->belongsToMany(Photo::class, 'photo_urbanspaces', 'urban_spaces_id', 'photos_id');
-    }
+    protected $guarded = [''];
 
     public function urbanSpaceProject()
     {
         return $this->belongsTo(UrbanSpaceProject::class);
     }
+
+    protected $casts = [
+        'photo_list' => 'array',
+    ];
 }

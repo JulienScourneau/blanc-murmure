@@ -17,7 +17,7 @@ class CatalogFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->sentence(3),
+            'title' => $this->faker->sentence(3),
             'description' => $this->faker->sentence(10),
             'link' => $this->faker->url,
             'page_number' => $this->faker->numberBetween(40, 60),
