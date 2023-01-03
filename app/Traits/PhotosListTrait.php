@@ -21,9 +21,12 @@ trait PhotosListTrait
         });
 
         static::deleted(function ($model) {
-            Storage::disk('public')->delete($model->getOriginal()['thumbnail']);
-            foreach ($model->getOriginal()['photo_list'] as $photo) {
-                Storage::disk('public')->delete($photo);
+            if (isset($model->getOriginal()['thumbnail']))
+                Storage::disk('public')->delete($model->getOriginal()['thumbnail']);
+            if (isset($model->getOriginal()['photo_list'])) {
+                foreach ($model->getOriginal()['photo_list'] as $photo) {
+                    Storage::disk('public')->delete($photo);
+                }
             }
         });
     }
