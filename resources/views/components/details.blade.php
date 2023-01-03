@@ -2,7 +2,7 @@
 <div class="p-5 bg-greenDuck lg:my-5">
     <h2 class="Title font-black text-2xl text-white flex justify-end">{{$video->title}}</h2>
 </div>
-<div>
+<div class="group hover:shadow">
     <a class="flex justify-center items-center" target="_blank" rel="noopener noreferrer" href="{{$video->link}}">
         <img class="w-full h-64 rounded-t-2xl" src="{{asset('storage/'.$video->thumbnail)}}" height="100" width="100"
              alt="">

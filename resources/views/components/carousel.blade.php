@@ -1,3 +1,4 @@
+@props(['project'])
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -62,9 +63,12 @@
     <!-- Swiper -->
     <div class="swiper mySwiper" >
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="{{asset('assets/project/project_catalogue_01.png')}}" alt=""></div>
+        @foreach ($project->photo_list as $images)
+        <div class="swiper-slide"><img src="{{asset('storage/'. $images)}}" alt=""></div>
+        @endforeach
+        {{-- <div class="swiper-slide"><img src="{{asset('assets/project/project_catalogue_01.png')}}" alt=""></div>
         <div class="swiper-slide"><img src="{{asset('assets/project/project_sculpture_banner.png')}}" alt=""></div>
-        <div class="swiper-slide"><img src="{{asset('assets/project/project_illustration_banner.png')}}" alt=""></div>
+        <div class="swiper-slide"><img src="{{asset('assets/project/project_illustration_banner.png')}}" alt=""></div> --}}
       </div>
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
@@ -92,3 +96,5 @@
     </script>
   </body>
 </html>
+                      storage/images/1kXO08UN8KrvNC3QmMhgKzctdTphFr-metaUDEwMTAyNjkuanBn-.jpg
+http://127.0.0.1:8000/storage/images/3ciP7fuvL5SNrzF9efgKL34EE73csU-metaNTAweDUwMF9hcGFzaGVfZGVhZF95aXp6eS5qcGc=-.jpg
