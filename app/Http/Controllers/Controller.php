@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Event;
 use App\Models\HomePhoto;
 use App\Models\Internship;
+use Carbon\Carbon;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -16,9 +17,8 @@ class Controller extends BaseController
 
     public function index()
     {
-
         return view('home', [
-            "internship" => Internship::oldest('begin_at')->first(),
+            "internship" => $this->getNearestUpcomingInternship(Internship::all()),
             "photos" => HomePhoto::all(),
             "agendas" => $this->getAgendaList(),
         ]);
@@ -36,5 +36,19 @@ class Controller extends BaseController
         });
         return $result;
 
+    }
+
+    public function getNearestUpcomingInternship($internships)
+    {
+        $nextInternship = null;
+        foreach ($internships as $internship) {
+            if ($internship->begin_at < Carbon::now()) {
+                continue;
+            }
+            if (!$nextInternship || $internship->begin_at < $nextInternship->begin_at) {
+                $nextInternship = $internship;
+            }
+        }
+        return $nextInternship;
     }
 }
