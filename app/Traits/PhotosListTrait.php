@@ -9,19 +9,22 @@ trait PhotosListTrait
     public static function bootPhotosListTrait()
     {
         static::updated(function ($model) {
-           if (isset($model->getChanges()['thumbnail'])) {
-           Storage::disk('public')->delete($model->getOriginal()['thumbnail']);
-        }
-            $diff = array_diff($model->getOriginal()["photo_list"], json_decode($model->getChanges()["photo_list"]));
-            foreach ($diff as $photo) {
-                Storage::disk('public')->delete($photo);
-//                dd($photo);
+            if (isset($model->getChanges()['thumbnail'])) {
+                Storage::disk('public')->delete($model->getOriginal()['thumbnail']);
             }
-//           dd('Trait', $model->getOriginal());
+            if (isset($model->getChanges()['photo_list'])) {
+                $diff = array_diff($model->getOriginal()["photo_list"], json_decode($model->getChanges()["photo_list"]));
+                foreach ($diff as $photo) {
+                    Storage::disk('public')->delete($photo);
+                }
+            }
         });
 
         static::deleted(function ($model) {
-            dd('deleted', $model->getOriginal());
+            Storage::disk('public')->delete($model->getOriginal()['thumbnail']);
+            foreach ($model->getOriginal()['photo_list'] as $photo) {
+                Storage::disk('public')->delete($photo);
+            }
         });
     }
 }
