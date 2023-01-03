@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+@props(['project'])
+=======
 @props(['project','key'])
+>>>>>>> 683620d018dc9b6badfd5c1783dddf5a01768b45
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -95,4 +99,10 @@
       });
     </script>
   </body>
+<<<<<<< HEAD
 </html>
+                      storage/images/1kXO08UN8KrvNC3QmMhgKzctdTphFr-metaUDEwMTAyNjkuanBn-.jpg
+http://127.0.0.1:8000/storage/images/3ciP7fuvL5SNrzF9efgKL34EE73csU-metaNTAweDUwMF9hcGFzaGVfZGVhZF95aXp6eS5qcGc=-.jpg
+=======
+</html>
+>>>>>>> 683620d018dc9b6badfd5c1783dddf5a01768b45

@@ -11,12 +11,12 @@
     <!-- <hr class="mt-12 text-separator"/>
     <h2 class="font-black text-3xl py-2.5 text-green">Nos activités</h2>
     <hr class="mb-6 w-48 shadow text-separator"/> -->
-    <section class="w-full bg-greenDuck p-2.5 rounded-3xl lg:mx-auto my-10">
+    <section class="w-full bg-greenDuck p-2.5 rounded-3xl lg:mx-auto ">
         <div class="flex flex-col lg:flex-row lg:w-full xl:w-10/12 mx-auto py-2.5">
             <article
-                class="mx-auto overflow-hidden rounded-2xl items-center border-2 border-white w-full md:w-full md:mx-auto lg:w-10/12 lg:mx-2.5 my-2.5 group hover:bg-white">
+                class="mx-auto overflow-hidden rounded-2xl items-center border-2 border-white w-full h-2/12 md:w-full md:mx-auto lg:w-10/12 lg:mx-2.5 my-2.5 group hover:bg-white">
                 <a href="{{ Route ('news')}}">
-                    <img class="w-full md:w-full xl:w-full" src="{{asset('storage/'.$photos[0]->path)}}" alt="">
+                    <img class="w-full h-auto object-cover" src="{{asset('storage/'.$photos[0]->path)}}" alt="">
                     <div class="p-2.5">
                         <h2 class="Title uppercase font-black text-xl md:text-2xl text-white group-hover:text-greenDuck">
                             Envie de créer ?</h2>

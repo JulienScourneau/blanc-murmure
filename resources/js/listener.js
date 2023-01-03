@@ -33,7 +33,7 @@ export function listener() {
         });
         box.addEventListener("mouseout", (event) => {
             let text = box.children[1];
-            text.style.display = "none";
+            text.style.display = "none";    
         });
     }
 
@@ -42,6 +42,9 @@ export function listener() {
     for (const button of buttonCarousel) {
         button.addEventListener("click", (event) => {
             carouselModal.style.display = "block";
+
+            let TitleName = event.path[2].children[1].children[0].textContent;
+            console.log(TitleName);
             console.log(event.pointerId);
         });
     }
