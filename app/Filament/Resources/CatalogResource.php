@@ -45,9 +45,8 @@ class CatalogResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')->label('Nom')->wrap()->disableClick(),
-                Tables\Columns\TextColumn::make('description')->label('Description')->wrap()->disableClick(),
-                Tables\Columns\TextColumn::make('link')->label('Lien')->wrap()->disableClick(),
+                Tables\Columns\TextColumn::make('title')->label('Nom')->wrap()->disableClick(),
+                Tables\Columns\TextColumn::make('description')->label('Description')->limit(80)->wrap()->disableClick(),
                 Tables\Columns\TextColumn::make('page_number')->label('Nombre de page')->wrap()->disableClick(),
                 Tables\Columns\TextColumn::make('size')->label('Taille')->disableClick(),
                 Tables\Columns\ImageColumn::make('thumbnail')->label('Photo')->size(150)->disableClick(),
