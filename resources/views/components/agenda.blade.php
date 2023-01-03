@@ -6,9 +6,9 @@
 @foreach($agendas as $event)
 
     <div class="shadow w-full flex max-h-28 group mb-2.5 mx-auto sm:w-11/12 lg:w-8/12 xl:w-6/12 lg:mx-auto">
-        <div class="w-40 bg-white border-orange border-2 text-center group-hover:bg-orange lg:w-44 flex items-center lg:justify-center">
+        <div class="w-24 bg-white border-orange border-2 text-center group-hover:bg-orange lg:w-44 flex items-center lg:justify-center">
             @if ($event['end_at'])
-                <p class="w-40 text-2xl font-light text-orange group-hover:text-white">
+                <p class="w-40 text-sm lg:text-2xl font-light text-orange group-hover:text-white">
                     {{date('d', strtotime($event['begin_at']))}}
                     <br><span
                         class="uppercase text-orange font-black group-hover:text-white">
@@ -17,7 +17,7 @@
                     </span>
                 </p>
                     <p>-</p>
-                <p class="w-40 text-2xl font-light text-orange group-hover:text-white">
+                <p class="w-40 text-sm lg:text-2xl font-light text-orange group-hover:text-white">
                     {{date('d', strtotime($event['end_at']))}}
                     <br><span
                         class="uppercase text-orange font-black group-hover:text-white">
@@ -26,7 +26,7 @@
                     </span>
                 </p>
             @else
-                <p class="w-44 text-2xl font-light text-orange group-hover:text-white">{{date('d', strtotime($event['begin_at']))}}
+                <p class="w-44 text-sm lg:text-2xl font-light text-orange group-hover:text-white">{{date('d', strtotime($event['begin_at']))}}
                     <br><span
                         class="uppercase text-orange font-black group-hover:text-white">
                         {{Carbon\Carbon::parse($event['begin_at'])->translatedFormat('F')}}
