@@ -33,25 +33,29 @@ export function listener() {
         });
         box.addEventListener("mouseout", (event) => {
             let text = box.children[1];
-            text.style.display = "none";    
+            text.style.display = "none";
         });
     }
 
     let buttonCarousel = document.getElementsByClassName("buttonCarousel");
-    let carouselModal = document.getElementById("carouselModal");
+    let Carousels = document.getElementsByClassName("Carousel");
     for (const button of buttonCarousel) {
         button.addEventListener("click", (event) => {
-            carouselModal.style.display = "block";
+            // carouselModal.style.display = "block";
 
             let TitleName = event.path[2].children[1].children[0].textContent;
             console.log(TitleName);
-            console.log(event);
+
+            for (const carousel of Carousels) {
+                console.log(event);
+            }
         });
     }
 
     let closeCarousel = document.getElementById("closeCarousel");
     closeCarousel.addEventListener("click", (event) => {
-        carouselModal.style.display = "none";
+        // carouselModal.style.display = "none";
+        console.log("close");
     });
 }
 listener();

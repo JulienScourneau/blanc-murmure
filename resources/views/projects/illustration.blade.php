@@ -12,7 +12,7 @@
 @if($illustrations->count())
     @foreach($illustrations as $key=> $illustration)
         <x-project-card :project="$illustration"/>
-        <div id="{{ $illustration->id }}" class="bg-green w-52 h-auto">
+        <div id="{{ $illustration->id }}" class="Carousel bg-green w-52 h-auto">
             <div>
                 <img id="closeCarousel" class="w-16 opacity-30 hover:cursor-pointer hover:opacity-100" src="{{asset("assets/icons/close.svg")}}" alt="">
             </div>
