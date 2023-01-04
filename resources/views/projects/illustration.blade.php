@@ -10,12 +10,14 @@
 
 <div class="flex flex-col mx-auto lg:flex-row flex-wrap justify-center">
 @if($illustrations->count())
-    @foreach($illustrations as $key => $illustration)
+    @foreach($illustrations as $key=> $illustration)
         <x-project-card :project="$illustration"/>
-        <x-modal :project="$illustration" :key="$key"/>
-        {{-- @foreach ($illustration->photo_list as $photo)
-            <img class="w-full h-full" src="{{asset("storage/".$photo)}}" alt="">
-        @endforeach --}}
+        <div id="{{ $illustration->id }}" class="bg-green w-52 h-auto">
+            <div>
+                <img id="closeCarousel" class="w-16 opacity-30 hover:cursor-pointer hover:opacity-100" src="{{asset("assets/icons/close.svg")}}" alt="">
+            </div>
+            <x-carousel :project="$illustration"/>
+        </div>
     @endforeach
     @else
     <p>Nothing to show</p>
