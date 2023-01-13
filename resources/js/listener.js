@@ -38,7 +38,6 @@ export function listener() {
     }
 
     let buttonCarousel = document.getElementsByClassName("buttonCarousel");
-<<<<<<< HEAD
     let ModalCarousel = document.getElementsByClassName("ModalCarousel");
     for (const button of buttonCarousel) {
         button.addEventListener("click", (event) => {
@@ -63,35 +62,8 @@ export function listener() {
                     
                     
                 }
-=======
-    let Carousels = document.getElementsByClassName("Carousel");
-    for (const button of buttonCarousel) {
-        button.addEventListener("click", (event) => {
-            // carouselModal.style.display = "block";
-
-            let TitleName = event.path[2].children[1].children[0].textContent;
-            console.log(TitleName);
-
-            for (const carousel of Carousels) {
-                console.log(event);
->>>>>>> 5950cf5ffe872327d1e18381670c362046af1e16
             }
         });
     }
-
-<<<<<<< HEAD
-    // let closeCarousel = document.getElementById("closeCarousel");
-    // closeCarousel.addEventListener("click", (event) => {
-    //     let carousse = corousel[event.target.id-1];
-    //     carousse.style.display = "none";
-    //     console.log("close");
-    // });
-=======
-    let closeCarousel = document.getElementById("closeCarousel");
-    closeCarousel.addEventListener("click", (event) => {
-        // carouselModal.style.display = "none";
-        console.log("close");
-    });
->>>>>>> 5950cf5ffe872327d1e18381670c362046af1e16
 }
 listener();
