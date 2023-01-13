@@ -11,8 +11,9 @@
 
 <div class="flex flex-col mx-auto lg:flex-row flex-wrap justify-center">
 @if($sculptures->count())
-    @foreach($sculptures as $sculpture)
-        <x-project-card :project="$sculpture"/>
+    @foreach($sculptures as $key => $sculpture)
+        <x-project-card :id="$key" :project="$sculpture"/>
+        {{-- <x-modalCarousel :project="$sculpture"/> --}}
     @endforeach
 @else
 <p>Nothing to show</p>
