@@ -59,8 +59,8 @@
       .swiper-slide img {
         display: block;
         width: 100%;
-        height: 100%;
-        object-fit: cover;
+        height: 950px;
+        object-fit: contain;
       }
 
       .swiper {
@@ -75,7 +75,9 @@
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         @foreach($project->photo_list as $photo)
-        <div class="swiper-slide"><img src="{{asset('storage/' . $photo)}}" alt=""></div>
+        <div class="swiper-slide">
+          <img src="{{asset('storage/' . $photo)}}" alt="">
+        </div>
         @endforeach
       </div>
       <div class="swiper-button-next"></div>

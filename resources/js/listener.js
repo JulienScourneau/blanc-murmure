@@ -38,20 +38,39 @@ export function listener() {
     }
 
     let buttonCarousel = document.getElementsByClassName("buttonCarousel");
-    let carouselModal = document.getElementById("carouselModal");
+    let ModalCarousel = document.getElementsByClassName("ModalCarousel");
     for (const button of buttonCarousel) {
         button.addEventListener("click", (event) => {
-            carouselModal.style.display = "block";
+            // Id.style.display = "block";
 
             let TitleName = event.path[2].children[1].children[0].textContent;
-            console.log(TitleName);
-            console.log(event);
+            // console.log(TitleName);
+            for (const test of ModalCarousel) {
+                if (event.target.id === test.id) {
+                    console.log(event.target.id);
+                    console.log(ModalCarousel[event.target.id-1].children[0].children[0]);
+                    let carousse = ModalCarousel[event.target.id-1];
+                    let Close = ModalCarousel[event.target.id-1].children[0].children[0];
+
+                    carousse.style.display !== "none"
+                    ? (carousse.style.display = "none")
+                    : (carousse.style.display = "block");
+
+                    Close.addEventListener("click", (event) => {
+                        carousse.style.display = "none";
+                    });
+                    
+                    
+                }
+            }
         });
     }
 
-    let closeCarousel = document.getElementById("closeCarousel");
-    closeCarousel.addEventListener("click", (event) => {
-        carouselModal.style.display = "none";
-    });
+    // let closeCarousel = document.getElementById("closeCarousel");
+    // closeCarousel.addEventListener("click", (event) => {
+    //     let carousse = corousel[event.target.id-1];
+    //     carousse.style.display = "none";
+    //     console.log("close");
+    // });
 }
 listener();
