@@ -14,11 +14,12 @@
             </div>    
             @endforeach --}} 
     <div class="flex flex-col lg:flex-row">
-        <img class="lg:w-3/6" src="{{asset("storage/".$urbanSpace->thumbnail_portrait)}}" alt="">
-        <div>
-            <img src="{{asset("storage/".$urbanSpace->thumbnail_landscape)}}" alt="">
-            <div class=" ml-5 my-5 p-2.5 border-green border-l-2 text-secondaryText">
+        <img class="lg:w-3/6 HeightUrban object-cover" src="{{asset("storage/".$urbanSpace->thumbnail_portrait)}}" alt="">
+        <div class="w-full lg:w-3/6">
+            <img class="w-full h-96 lg:h-52 object-cover" src="{{asset("storage/".$urbanSpace->thumbnail_landscape)}}" alt="">
+            <div class="ml-5 my-5 p-2.5 border-green border-l-2 text-secondaryText">
                 <p>{{$urbanSpace->partnership}}</p>
+                <p>{{$urbanSpace->participant}}</p>
                 <p>{{$urbanSpace->author}}</p>
             </div>
         </div>

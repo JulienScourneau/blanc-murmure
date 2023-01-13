@@ -12,8 +12,9 @@ Mettre en oeuvre, donner une place à chacun, à sa mesure, pour le plaisir de t
     @foreach($projects as $project)
         @if ($loop->first)
             <x-urbanspace-card-first :project="$project" />
-        @endif
+        @else
             <x-urbanspace-card :project="$project" />
+        @endif
     @endforeach
 
 @endsection

@@ -3,11 +3,11 @@
 @section('content')
 
     <section class="shadow w-full lg:flex md:w-10/12 md:mx-auto md:my-10">
-        <img class="w-full lg:w-1/2" src="{{asset('storage/'.$newsPhoto[0]->path)}}" alt="">
+        <img class="w-full lg:w-1/2 object-cover" src="{{asset('storage/'.$newsPhoto[0]->path)}}" alt="">
         <div>
-            <div class="flex w-3/6 md:w-full xl:w-full">
-                <img class="w-full md:w-1/2 xl:w-1/2" src="{{asset('storage/'.$newsPhoto[1]->path)}}" alt="">
-                <img class="w-full md:w-1/2 xl:w-1/2" src="{{asset('storage/'.$newsPhoto[2]->path)}}" alt="">
+            <div class="flex w-full md:w-full xl:w-full">
+                <img class="w-full md:w-1/2 xl:w-1/2 h-96 object-cover" src="{{asset('storage/'.$newsPhoto[1]->path)}}" alt="">
+                <img class="w-full md:w-1/2 xl:w-1/2 h-96 object-cover" src="{{asset('storage/'.$newsPhoto[2]->path)}}" alt="">
             </div>
             <div class="p-2.5">
                 <h2 class="Title text-orange text-2xl font-black py-5">Mecredi s'éveille</h2>

@@ -4,7 +4,7 @@
     <div class="mx-auto my-6 h-52 w-full lg:w-8/12 group hover:shadow-lg">
         <a 
             class="gradient h-52 flex bg-right bg-no-repeat bg-cover" 
-            style="background-image: url('{{asset('assets/agenda_test.png')}}');" 
+            style="background-image: url('{{asset('storage/'. $project->thumbnail)}}');" 
             href="/nos-projets/espace-urbain/{{$project->slug}}"
         >
             <div class="h-full w-full flex flex-col items-left justify-center">
