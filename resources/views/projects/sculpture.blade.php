@@ -13,7 +13,7 @@
 @if($sculptures->count())
     @foreach($sculptures as $key => $sculpture)
         <x-project-card :id="$key" :project="$sculpture"/>
-        {{-- <x-modalCarousel :project="$sculpture"/> --}}
+        <x-modalCarousel :project="$sculpture"/>
     @endforeach
 @else
 <p>Nothing to show</p>

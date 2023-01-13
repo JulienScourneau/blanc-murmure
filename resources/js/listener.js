@@ -41,20 +41,13 @@ export function listener() {
     let ModalCarousel = document.getElementsByClassName("ModalCarousel");
     for (const button of buttonCarousel) {
         button.addEventListener("click", (event) => {
-            // Id.style.display = "block";
-
-            let TitleName = event.path[2].children[1].children[0].textContent;
-            // console.log(TitleName);
             for (const test of ModalCarousel) {
                 if (event.target.id === test.id) {
                     console.log(event.target.id);
                     console.log(ModalCarousel[event.target.id-1].children[0].children[0]);
                     let carousse = ModalCarousel[event.target.id-1];
                     let Close = ModalCarousel[event.target.id-1].children[0].children[0];
-
-                    carousse.style.display !== "none"
-                    ? (carousse.style.display = "none")
-                    : (carousse.style.display = "block");
+                    carousse.style.display = "block"
 
                     Close.addEventListener("click", (event) => {
                         carousse.style.display = "none";

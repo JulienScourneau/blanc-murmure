@@ -6,8 +6,9 @@
         <h2 class="Title font-bold text-xl">Sculpture</h2>
         <div class="flex flex-col mx-auto lg:flex-row flex-wrap">
             @if($sculptures->count())
-                @foreach($sculptures as $sculpture)
-                    <x-project-card :project="$sculpture"/>
+                @foreach($sculptures as $key => $sculpture)
+                    <x-project-card :id="$key" :project="$sculpture"/>
+                    <x-modalCarousel :project="$sculpture"/>
                 @endforeach
             @else
                 <p>Aucun projet</p>
@@ -15,13 +16,14 @@
         </div>
         <h2 class="Title font-bold text-xl mt-5 mb-2.">Illustration</h2>
         <div class="flex flex-col mx-auto lg:flex-row flex-wrap">
-{{--            @if($illustrations->count())--}}
-                @foreach($illustrations as $illustration)
-                    <x-project-card :project="$illustration"/>
+           @if($illustrations->count())
+                @foreach($illustrations as $key => $illustration)
+                    <x-project-card :id="$key" :project="$illustration"/>
+                    <x-modalCarousel :project="$illustration"/>
                 @endforeach
-{{--            @else--}}
-{{--                <p>Aucun projet</p>--}}
-{{--            @endif--}}
+           @else
+               <p>Aucun projet</p>
+           @endif
         </div>
 
         <h2 class="Title font-bold text-xl mt-5 mb-2.">Vidéo</h2>
@@ -34,7 +36,7 @@
                 <p>Aucun projet</p>
             @endif
         </div>
-        <h2 class="Title font-bold text-xl mt-5 mb-2.">Espace Urbain</h2>
+        <h2 class="Title fon t-bold text-xl mt-5 mb-2.">Espace Urbain</h2>
         <div class="flex flex-col mx-auto lg:flex-row flex-wrap">
             @if($urbanSpaces->count())
                 @foreach($urbanSpaces as $urbanSpace)

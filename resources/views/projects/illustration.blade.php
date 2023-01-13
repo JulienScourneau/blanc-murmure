@@ -9,13 +9,13 @@
 />
 
 <div class="flex flex-col mx-auto lg:flex-row flex-wrap justify-center">
-@if($illustrations->count())
-    @foreach($illustrations as $key=> $illustration)
-        <x-project-card :id="$key" :project="$illustration"/>
-        <x-modalCarousel :project="$illustration"/>
-    @endforeach
+    @if($illustrations->count())
+        @foreach($illustrations as $key=> $illustration)
+            <x-project-card :id="$key" :project="$illustration"/>
+            <x-modalCarousel :project="$illustration"/>
+        @endforeach
     @else
-    <p>Nothing to show</p>
+        <p>Nothing to show</p>
     @endif
 </div>
 @endsection
