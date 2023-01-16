@@ -9,13 +9,6 @@ use App\Models\Event;
 use App\Models\HomePhoto;
 use App\Models\Illustration;
 use App\Models\NewsPhoto;
-use App\Models\PhotoIllustration;
-use App\Models\PhotoProject;
-use App\Models\PhotoSculpture;
-use App\Models\PhotoUrbanspace;
-use App\Models\Project;
-use App\Models\ProjectCategory;
-use App\Models\ProjectPhoto;
 use App\Models\Sculpture;
 use App\Models\UrbanSpace;
 use App\Models\UrbanSpaceProject;
@@ -76,6 +69,24 @@ class DatabaseSeeder extends Seeder
         Illustration::factory(5)->create();
 
         Sculpture::factory(5)->create();
+        Attendees::factory()->create([
+            'internship_id'=>'1'
+        ]);
+        Attendees::factory()->create([
+            'internship_id'=>'2'
+        ]);
+        Attendees::factory()->create([
+            'internship_id'=>'3'
+        ]);
+        Attendees::factory()->create([
+            'internship_id'=>'4'
+        ]);
+        Attendees::factory()->create([
+            'internship_id'=>'5'
+        ]);
+        Attendees::factory()->create([
+            'internship_id'=>'1'
+        ]);
 
     }
 }

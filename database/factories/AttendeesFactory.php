@@ -29,7 +29,7 @@ class AttendeesFactory extends Factory
             'city' => $this->faker->city,
             'phone_number' => $this->faker->phoneNumber,
             'right_to_image' => "Oui/Non",
-            'stage_id' =>Internship::factory(),
+            'internship_id' =>Internship::factory(),
         ];
     }
 }

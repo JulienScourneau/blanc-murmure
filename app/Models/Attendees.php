@@ -22,4 +22,9 @@ class Attendees extends Model
         'phone_number',
         'right_to_image'
     ];
+
+    public function internship()
+    {
+        return $this->belongsTo(Internship::class);
+    }
 }

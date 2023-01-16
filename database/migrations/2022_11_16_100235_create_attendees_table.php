@@ -17,7 +17,7 @@ return new class extends Migration {
             $table->string('first_name');
             $table->string('last_name');
             $table->string('email');
-            $table->foreignId('stage_id');
+            $table->foreignId('internship_id');
             $table->date('date_birth');
             $table->string('parent_name')->nullable();
             $table->string('relationship')->nullable();
