@@ -5,7 +5,7 @@
     <section class="shadow w-full lg:flex md:w-10/12 md:mx-auto md:my-10">
         <img class="w-full lg:w-1/2 object-cover" src="{{asset('storage/'.$newsPhoto[0]->path)}}" alt="">
         <div>
-            <div class="flex w-full md:w-full xl:w-full">
+            <div class="flex w-full md:w-full xl:w-full flex-col md:flex-row">
                 <img class="w-full md:w-1/2 xl:w-1/2 h-96 object-cover" src="{{asset('storage/'.$newsPhoto[1]->path)}}" alt="">
                 <img class="w-full md:w-1/2 xl:w-1/2 h-96 object-cover" src="{{asset('storage/'.$newsPhoto[2]->path)}}" alt="">
             </div>

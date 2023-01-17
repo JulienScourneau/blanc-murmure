@@ -1,5 +1,5 @@
 <article class="bg-greenDuck mt-2.5 lg:m-2.5 shadow-md w-11/12 xl:w-3/12 2xl:w-2/12 mx-auto overflow-hidden">
-    <img class="w-full h-auto" src="{{asset('storage/'.$internship->thumbnail)}}" alt="">
+    <img class="w-full h-52 object-cover" src="{{asset('storage/'.$internship->thumbnail)}}" alt="">
     <div class="text-white p-2.5">
         <div class="mb-5">
             <h2 class="uppercase text-orange font-bold Title text-2xl">{{$internship->title}}</h2>
