@@ -16,7 +16,7 @@
             <input class="FooterInput border-placeHolder border-2 p-1.5 pl-4 rounded-3xl my-5 w-10/12 self-center" type="text"
                    placeholder="Email">
             <button
-                class="rounded-3xl p-1.5 bg-incativeElement text-placeHolder text-2xl font-bold w-10/12 self-center">
+                class="p-2.5 text-placeHolder text-2xl font-bold w-10/12 self-center bg-orange text-white text-center rounded-full border-2 border-orange hover:bg-white hover:text-orange">
                 S’inscrire
             </button>
         </div>
