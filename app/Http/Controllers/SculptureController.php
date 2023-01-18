@@ -10,7 +10,7 @@ class SculptureController extends Controller
     public function index()
     {
         return view('projects.sculpture',[
-            'sculptures' => Sculpture::all()
+            'sculptures' => Sculpture::latest()->get()
         ]);
     }
 }

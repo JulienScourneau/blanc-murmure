@@ -10,7 +10,7 @@ class UrbanSpaceController extends Controller
     public function index()
     {
         return view('projects.urbanspace', [
-            'projects' => UrbanSpaceProject::all()
+            'projects' => UrbanSpaceProject::latest()->get()
         ]);
     }
 

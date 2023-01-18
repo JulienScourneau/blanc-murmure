@@ -10,7 +10,7 @@ class IllustrationController extends Controller
     public function index()
     {
         return view('projects.illustration', [
-            'illustrations' => Illustration::all()
+            'illustrations' => Illustration::latest()->get()
         ]);
     }
 }

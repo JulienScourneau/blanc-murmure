@@ -9,7 +9,7 @@ class VideoController extends Controller
     public function index()
     {
         return view('projects.video', [
-            'videos' => Video::all()
+            'videos' => Video::latest()->get()
         ]);
     }
 
