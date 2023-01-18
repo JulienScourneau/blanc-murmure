@@ -2,7 +2,7 @@
 
 @section('content')
     <section class="w-full p-2.5">
-        <h1 class="Title font-black text-2xl mt-5 mb-2.">Project</h1>
+        <h1 class="Title font-black text-2xl mt-5 mb-2.">Nos projets</h1>
         <h2 class="Title font-bold text-xl">Sculpture</h2>
         <div class="flex flex-col mx-auto lg:flex-row flex-wrap">
             @if($sculptures->count())
@@ -36,7 +36,7 @@
                 <p>Aucun projet</p>
             @endif
         </div>
-        <h2 class="Title fon t-bold text-xl mt-5 mb-2.">Espace Urbain</h2>
+        <h2 class="Title font-bold text-xl mt-5 mb-2.5">Espace Urbain</h2>
         <div class="flex flex-col mx-auto lg:flex-row flex-wrap">
             @if($urbanSpaces->count())
                 @foreach($urbanSpaces as $urbanSpace)
@@ -46,7 +46,7 @@
                              height="100" width="100" alt="">
                         <div class="p-5 text-white">
                             <p class="font-black Title border-l-2 border-white pl-2.5">{{$urbanSpace->title}}</p>
-                            <p class="border-l-2 border-white pt-2.5 pl-2.5">{{$urbanSpace->description}}</p>
+                            <div class="border-l-2 border-white pt-2.5 pl-2.5">{!! $urbanSpace->description !!}</div>
                         </div>
                     </div>
                 @endforeach
