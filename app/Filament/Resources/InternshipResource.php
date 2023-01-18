@@ -55,12 +55,9 @@ class InternshipResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('title')->label('Titre')->color('primary')->wrap(),
                 Tables\Columns\TextColumn::make('subtitle')->label('Sous titre')->wrap()->disableClick(),
-                Tables\Columns\TextColumn::make('description')->wrap()->disableClick(),
                 Tables\Columns\TextColumn::make('price')->label('Prix')->suffix('€')->wrap()->disableClick(),
                 Tables\Columns\TextColumn::make('age')->label('Age')->disableClick(),
                 ImageColumn::make('thumbnail')->label('Photo')->size(150)->disableClick(),
-                Tables\Columns\TextColumn::make('begin_hour')->label('Heure de début')->date('H:i')->disableClick(),
-                Tables\Columns\TextColumn::make('end_hour')->label('Heure de fin')->date('H:i')->disableClick(),
                 Tables\Columns\TextColumn::make('begin_at')->label('Date de début')->disableClick()->date('d F Y'),
                 Tables\Columns\TextColumn::make('end_at')->label('Date de fin')->disableClick()->date('d F Y'),
 
