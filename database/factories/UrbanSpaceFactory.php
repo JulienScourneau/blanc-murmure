@@ -20,7 +20,7 @@ class UrbanSpaceFactory extends Factory
         return [
             'title' => $this->faker->sentence(2),
             'location' => $this->faker->streetAddress,
-            'description' => $this->faker->sentence(6),
+            'description' => '<p>' . $this->faker->sentence(5) . '</p>',
             'participant' => $this->faker->name() . ' ' . $this->faker->name(),
             'author' => $this->faker->name(),
             'partnership' => $this->faker->name(),

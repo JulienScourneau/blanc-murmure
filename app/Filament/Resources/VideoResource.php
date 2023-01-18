@@ -51,7 +51,7 @@ class VideoResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title')->label('Nom')->sortable()->wrap()->disableClick(),
-                Tables\Columns\TextColumn::make('description')->label('Description')->wrap()->disableClick(),
+                Tables\Columns\TextColumn::make('description')->label('Description')->wrap()->disableClick()->html(),
                 Tables\Columns\TextColumn::make('link')->label('Lien')->wrap()->disableClick(),
                 Tables\Columns\ImageColumn::make('thumbnail')->label('Photo')->size(150)->disableClick(),
             ])

@@ -19,7 +19,7 @@ class VideoFactory extends Factory
         return [
             'title' => $this->faker->sentence('2'),
             'slug' => $this->faker->slug,
-            'description' => $this->faker->sentence('12'),
+            'description' => '<p>' . $this->faker->sentence(10) . '</p>',
             'link' => $this->faker->url,
             'thumbnail' => 'images/project_illustration_banner.png',
             'author' => $this->faker->name,

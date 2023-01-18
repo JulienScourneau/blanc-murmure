@@ -57,7 +57,7 @@ class IllustrationResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('title')->label('Nom')->sortable()->wrap()->disableClick(),
                 Tables\Columns\TextColumn::make('subtitle')->label('Sous titre')->sortable()->wrap()->disableClick(),
-                Tables\Columns\TextColumn::make('description')->label('Description')->sortable()->wrap()->disableClick(),
+                Tables\Columns\TextColumn::make('description')->label('Description')->sortable()->wrap()->disableClick()->html(),
                 Tables\Columns\TextColumn::make('partnership')->label('Partenaire')->sortable()->wrap()->disableClick(),
                 Tables\Columns\TextColumn::make('date')->label('Période')->sortable()->wrap()->disableClick(),
                 Tables\Columns\ImageColumn::make('thumbnail')->label('Photo de couverture')->size(150),
