@@ -10,7 +10,7 @@ class InternshipController extends Controller
     public function index()
     {
         return view('news', [
-            'internships' => Internship::all(),
+            'internships' => Internship::latest()->get(),
             'newsPhoto' => NewsPhoto::all(),
         ]);
     }
