@@ -1,7 +1,7 @@
 @props(['photos', 'title', 'content'])
 <article class="mx-auto lg:mx-2.5 my-2.5 rounded-2xl items-center border-2 border-white w-full h-10/12 lg:w-10/12 group hover:bg-white">
                 <a class="w-full h-full" href="{{ Route ('news')}}">
-                    <div class="w-full h-52 bg-orange">
+                    <div class="w-full h-52 rounded-t-2xl">
                         <img class="w-full h-full object-cover" src="{{$photos}}" alt="">
                     </div>
                     <div class="p-2.5 h-2/12">

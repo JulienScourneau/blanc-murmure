@@ -39,8 +39,8 @@
             <h2 class="w-64 md:w-96 lg:w-72 xl:w-86 2xl:w-96 Title uppercase font-black text-xl lg:text-2xl text-white overflow-hidden overflow-ellipsis 2xl:overflow-none whitespace-nowrap group-hover:text-green">{{$event['title']}}</h2>
             <p class="text-sm font-normal leading-tight py-0.5 text-white group-hover:text-green">Projet de fresque avec La HELHA à La Louvière.</p>
         </div>
-        <div class="hidden sm:block w-6/12 overflow-hidden">
-            <img class="h-full lg:w-full " src="assets/agenda_test.png" alt="">
+        <div class="hidden sm:block w-6/12 h-20 overflow-hidden">
+            {{-- <img class="h-full lg:w-full " src="{{asset('storage/'. $event->thumbnail)}}" alt=""> --}}
         </div>
     </div>
 @endforeach
