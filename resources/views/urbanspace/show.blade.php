@@ -30,9 +30,11 @@
         <p>{{$urbanSpace->description}}</p>
     </div>
     <div class="flex justify-end">
-        <button class="m-5 highlightOrange">Diaporama ></button>
+        <button id={{ $urbanSpace->id }} class="buttonCarousel m-5 highlightOrange">Diaporama ></button>
     </div>
     </article>
+
+    <x-modalCarousel :project="$urbanSpace"/>
     @endforeach
     
 </section>

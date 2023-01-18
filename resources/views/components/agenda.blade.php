@@ -40,7 +40,7 @@
             <p class="text-sm font-normal leading-tight py-0.5 text-white group-hover:text-green">Projet de fresque avec La HELHA à La Louvière.</p>
         </div>
         <div class="hidden sm:block w-6/12 h-20 overflow-hidden">
-            {{-- <img class="h-full lg:w-full " src="{{asset('storage/'. $event->thumbnail)}}" alt=""> --}}
+            <img class="h-full lg:w-full object-cover" src="{{asset('storage/'. $event['thumbnail'])}}" alt="">
         </div>
     </div>
 @endforeach

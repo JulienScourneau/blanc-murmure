@@ -43,17 +43,17 @@ export function listener() {
         button.addEventListener("click", (event) => {
             for (const test of ModalCarousel) {
                 if (event.target.id === test.id) {
-                    console.log(event.target.id);
-                    console.log(ModalCarousel[event.target.id-1].children[0].children[0]);
-                    let carousse = ModalCarousel[event.target.id-1];
-                    let Close = ModalCarousel[event.target.id-1].children[0].children[0];
-                    carousse.style.display = "block"
+                    // console.log(event.target.id);
+                    // console.log(ModalCarousel[event.target.id-1].children[0].children[0]);
+                    let carousse = ModalCarousel[event.target.id - 1];
+                    let Close =
+                        ModalCarousel[event.target.id - 1].children[0]
+                            .children[0];
+                    carousse.style.display = "block";
 
                     Close.addEventListener("click", (event) => {
                         carousse.style.display = "none";
                     });
-                    
-                    
                 }
             }
         });
