@@ -2,7 +2,7 @@
 
 @section('content')
     <section class="w-full p-2.5">
-        <h1 class="Title font-black text-2xl mt-5 mb-2.">Project</h1>
+        <h1 class="Title font-black text-2xl mt-5 mb-2.">Nos projets</h1>
         <h2 class="Title font-bold text-xl">Sculpture</h2>
         <div class="flex flex-col mx-auto lg:flex-row flex-wrap">
             @if($sculptures->count())
