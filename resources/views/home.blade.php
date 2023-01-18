@@ -6,7 +6,7 @@
         @include('components.banner', ['internship'=>$internship])
     @else
         {{-- TODO: Always need to show something, Add message --}}
-        <p>Nothing to show</p>
+        <p class="mx-auto my-6 text-center">Aucun stage disponible pour le moment</p>
     @endif
     <!-- <hr class="mt-12 text-separator"/>
     <h2 class="font-black text-3xl py-2.5 text-green">Nos activités</h2>

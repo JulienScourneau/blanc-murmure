@@ -10,6 +10,6 @@
     @endif
     <div class="p-5 text-white">
         <p class="font-black Title border-l-2 border-white pl-2.5">{{$project->title}}</p>
-        <p class="border-l-2 border-white pt-2.5 pl-2.5">{{$project->description}}</p>
+        <div class="border-l-2 border-white pt-2.5 pl-2.5">{!! $project->description !!}</div>
     </div>
 </div>
