@@ -59,7 +59,7 @@ class UrbanSpaceResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('title')->label('Titre')->wrap()->disableClick(),
-                TextColumn::make('description')->label('Description')->wrap()->disableClick(),
+                TextColumn::make('description')->label('Description')->wrap()->disableClick()->html(),
                 TextColumn::make('location')->label('Adresse')->wrap()->disableClick(),
                 TextColumn::make('author')->label('Auteur')->wrap()->disableClick(),
                 TextColumn::make('partnership')->label('Partenaire')->wrap()->disableClick(),
