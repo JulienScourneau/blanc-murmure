@@ -15,7 +15,7 @@ class ContactController extends Controller
 
     public function submitContactForm(ContactRequest $request)
     {
-        Mail::to('julienscourneau@gmail.com')->send(new VisitorContact($request->name, $request->email, $request->reason, $request->message));
+        Mail::to(env('MAIL_USERNAME'))->send(new VisitorContact($request->name, $request->email, $request->reason, $request->message));
 
         return to_route('contact');
     }
