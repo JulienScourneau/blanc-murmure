@@ -37,18 +37,19 @@ export function listener() {
         });
     }
 
+
     let buttonCarousel = document.getElementsByClassName("buttonCarousel");
     let ModalCarousel = document.getElementsByClassName("ModalCarousel");
+    
     for (const button of buttonCarousel) {
         button.addEventListener("click", (event) => {
             for (const test of ModalCarousel) {
                 if (event.target.id === test.id) {
-                    // console.log(event.target.id);
-                    // console.log(ModalCarousel[event.target.id-1].children[0].children[0]);
+
+                    console.log(event.target.id);
+                    
                     let carousse = ModalCarousel[event.target.id - 1];
-                    let Close =
-                        ModalCarousel[event.target.id - 1].children[0]
-                            .children[0];
+                    let Close = ModalCarousel[event.target.id - 1].children[0].children[0];
                     carousse.style.display = "block";
 
                     Close.addEventListener("click", (event) => {
