@@ -21,7 +21,7 @@
                 <p>{{$urbanSpace->partnership}}</p>
                 <p>{{$urbanSpace->participant}}</p>
                 <p>{{$urbanSpace->author}}</p>
-            </div>
+            </div> 
         </div>
     </div>
     <div class="m-5">
@@ -30,7 +30,7 @@
         <p>{{$urbanSpace->description}}</p>
     </div>
     <div class="flex justify-end">
-        <button id={{ $urbanSpace->id }} class="buttonCarousel m-5 highlightOrange">Diaporama ></button>
+        <button id={{ $urbanSpace->id }} class="buttonCarouselUrban m-5 highlightOrange">Diaporama ></button>
     </div>
     </article>
 

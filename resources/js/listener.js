@@ -37,24 +37,53 @@ export function listener() {
         });
     }
 
-
+    // Affichage du carousel pour les illustrations et sculptures
     let buttonCarousel = document.getElementsByClassName("buttonCarousel");
     let ModalCarousel = document.getElementsByClassName("ModalCarousel");
-    
+
     for (const button of buttonCarousel) {
         button.addEventListener("click", (event) => {
             for (const test of ModalCarousel) {
                 if (event.target.id === test.id) {
-
                     console.log(event.target.id);
-                    
+                    console.log(test.id);
+
                     let carousse = ModalCarousel[event.target.id - 1];
-                    let Close = ModalCarousel[event.target.id - 1].children[0].children[0];
+                    let Close =
+                        ModalCarousel[event.target.id - 1].children[0]
+                            .children[0];
                     carousse.style.display = "block";
 
                     Close.addEventListener("click", (event) => {
                         carousse.style.display = "none";
                     });
+                }
+            }
+        });
+    }
+    // Affichage du carousel pour les espaces urbains
+    let buttonCarouselUrban = document.getElementsByClassName(
+        "buttonCarouselUrban"
+    );
+    // let ModalCarousel = document.getElementsByClassName("ModalCarousel");
+
+    for (const button of buttonCarouselUrban) {
+        button.addEventListener("click", (event) => {
+            for (const test of ModalCarousel) {
+                if (event.target.id === test.id) {
+                    test.style.display = "block";
+
+                    // let Close = ModalCarousel[event.target.id - 1].children[0].children[0];
+                    let Close = document.getElementsByClassName("closeCarousel");
+                    console.log(Close);
+
+                    for (const iterator of Close) {
+                        
+                        iterator.addEventListener("click", (event) => {
+                            console.log(event.target);
+                            test.style.display = "none";
+                        });
+                    }
                 }
             }
         });
