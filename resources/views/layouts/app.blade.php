@@ -28,7 +28,7 @@
 
     {{--    @vite('../resources/css/reset.css')--}}
     @vite('resources/css/app.css')
-    @vite('/resources/css/style.css')
+    @vite('resources/css/style.css')
     <title>Blanc Murmure</title>
 </head>
 
