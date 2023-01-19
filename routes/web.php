@@ -23,6 +23,32 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+Route::post('newsletter', function () {
+    request()->validate(['email' => 'required|email']);
+    $mailchimp = new \MailchimpMarketing\ApiClient();
+
+    $mailchimp->setConfig([
+        'apiKey' => config('services.mailchimp.key'),
+        'server' => 'us21'
+    ]);
+
+    try {
+        $mailchimp->lists->addListMember('0b80d5cc79', [
+            'email_address' => request('email'),
+            'status' => 'subscribed'
+        ]);
+    } catch (Exception $e) {
+        \Illuminate\Validation\ValidationException::withMessages([
+            'email' => "Une erreur est survenu lors de l'ajout à la newsletter"
+        ]);
+    }
+
+
+    return redirect('/')
+        ->with('success', 'inscription réussi');
+});
+
 Route::get('/', [Controller::class, 'index'])->name('home');
 
 Route::get('/en-ce-moment', [InternshipController::class, 'index'])->name('news');
@@ -51,6 +77,6 @@ Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::post('/contact', [ContactController::class, 'submitContactForm'])->name('contact.submit');
 
 Route::get('/inscription', [AttendeesController::class, 'index'])->name('inscription');
-Route::post('/inscription', [AttendeesController::class, 'store'])->name('inscription');
+Route::post('/inscription', [AttendeesController::class, 'store'])->name('postInscription');
 
 Route::redirect('/laravel/login', '/login')->name('login');

@@ -37,11 +37,12 @@
             <h2 class="Title text-2xl font-black">Les stages et ateliers</h2>
             <p>
                 <span class="font-black">Nous programmons des stages durant les <span class="text-2xl">vacances</span> scolaires.</span>
+            </p>
             <p>
                 Les enfants sont immergés durant une semaine dans le monde de la création. Les contraintes positives et
                 ludiques permettent de structurer l’atelier en vue de favoriser l’imaginaire.
             </p>
-            </p>
+
         </div>
         <div class="w-full lg:flex lg:flex-wrap lg:justify-center xl:w-12/12">
             @if($internships->count())
@@ -56,4 +57,3 @@
         </div>
     </section>
 @endsection
-<span></span>

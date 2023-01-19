@@ -8,7 +8,7 @@
         <div class="w-11/12">
             <div class="pb-1">
                 <h4 class="Title text-lg font-bold">Quoi ?</h4>
-                <p>{{$internship->description}}</p>
+                <div>{!! $internship->description !!}</div>
             </div>
             <div class="pb-1">
                 <h4 class="Title text-lg font-bold">Pour Qui ?</h4>
@@ -40,7 +40,8 @@
             </div>
         </div>
         <div class="flex justify-center">
-            <button class="bg-orange text-white font-black text-center text-xl rounded-full w-48 py-3 mt-7 mb-3 border-2 border-orange hover:bg-white hover:text-orange">
+            <button
+                class="bg-orange text-white font-black text-center text-xl rounded-full w-48 py-3 mt-7 mb-3 border-2 border-orange hover:bg-white hover:text-orange">
                 <a href="{{ Route('inscription') }}">
                     Inscrivez-vous !
                 </a>
