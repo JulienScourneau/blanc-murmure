@@ -9,21 +9,20 @@ Le projet de refonte du site web de l'ASBL Blanc murmure, souhaitant du renouvea
 ### Lien
 
 Démo du site: 
-[Blanc Murmure](https://blanc-murmure-production.up.railway.app)
+<a href="https://blanc-murmure-production.up.railway.app" target="_blank">Blanc Murmure</a>
 
 BackOffice:
-[Blanc Murmure Admin](https://blanc-murmure-production.up.railway.app/admin)
+<a href="https://blanc-murmure-production.up.railway.app/admin" target="_blank">Admin</a>
 
 ## Équipe du projet
 
-- [Titouan Moussiaux](https://github.com/Moustito) Design // Frontend
-- [Julien Scourneau](https://github.com/JulienScourneau) BackOffice // Backend
+- <a href="https://github.com/Moustito" target="_blank">Titouan Moussiaux</a> Design // Frontend
+- <a href="https://github.com/JulienScourneau" target="_blank">Julien Scourneau</a> BackOffice // Backend
 
 ### Technologie
 
-- [Laravel](https://laravel.com)
-- [Tailwind](https://tailwindcss.com)
-- [Swiper](https://swiperjs.com)
-- [FilamentPhp](https://filamentphp.com)
-- [Blade Template](https://laravel.com/docs/9.x/blade)
-
+- <a href="https://github.com/JulienScourneau" target="_blank">Laravel</a>
+- <a href="https://github.com/JulienScourneau" target="_blank">Tailwind</a>
+- <a href="https://github.com/JulienScourneau" target="_blank">Swiper</a>
+- <a href="https://github.com/JulienScourneau" target="_blank">FilamentPhp</a>
+- <a href="https://github.com/JulienScourneau" target="_blank">Blade Template</a>
