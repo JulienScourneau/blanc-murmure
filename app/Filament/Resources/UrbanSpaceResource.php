@@ -66,7 +66,7 @@ class UrbanSpaceResource extends Resource
                 TextColumn::make('urbanSpaceProject.title')->label('Projet Urbain')->wrap()->disableClick(),
                 ImageColumn::make('thumbnail_landscape')->label('Photo paysage')->size(150)->disableClick(),
                 ImageColumn::make('thumbnail_portrait')->label('Photo portrait')->size(150)->disableClick(),
-            ])
+            ])->defaultSort('created_at','desc')
             ->filters([
                 //
             ])

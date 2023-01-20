@@ -30,7 +30,7 @@ class CatalogResource extends Resource
         return $form
             ->schema([
                 Forms\Components\Card::make()->schema([
-                    Forms\Components\TextInput::make('title')->label('Nom')->unique()->required(),
+                    Forms\Components\TextInput::make('title')->label('Nom')->unique(ignoreRecord: true)->required(),
                     Forms\Components\TextInput::make('description')->label('Description')->required(),
                     Forms\Components\TextInput::make('link')->label('Lien')->required(),
                     Forms\Components\TextInput::make('page_number')->label('Nombre de page')->numeric()->required(),
@@ -50,7 +50,7 @@ class CatalogResource extends Resource
                 Tables\Columns\TextColumn::make('page_number')->label('Nombre de page')->wrap()->disableClick(),
                 Tables\Columns\TextColumn::make('size')->label('Taille')->disableClick(),
                 Tables\Columns\ImageColumn::make('thumbnail')->label('Photo')->size(150)->disableClick(),
-            ])
+            ])->defaultSort('created_at','desc')
             ->filters([
                 //
             ])
