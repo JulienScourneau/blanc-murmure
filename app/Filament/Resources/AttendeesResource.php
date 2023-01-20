@@ -42,8 +42,8 @@ class AttendeesResource extends Resource
                 TextColumn::make('first_name'),
                 TextColumn::make('last_name'),
                 TextColumn::make('email'),
-                TextColumn::make('internship.title')->limit(20),
-            ])
+                TextColumn::make('internship.title')->limit(20)->sortable(),
+            ])->defaultSort('created_at','desc')
             ->filters([
                 //
             ])

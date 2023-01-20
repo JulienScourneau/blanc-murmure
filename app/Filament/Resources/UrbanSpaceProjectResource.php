@@ -50,7 +50,7 @@ class UrbanSpaceProjectResource extends Resource
                 Tables\Columns\TextColumn::make('title')->label('Titre')->disableClick(),
                 Tables\Columns\TextColumn::make('description')->label('Description')->wrap()->disableClick()->html(),
                 Tables\Columns\ImageColumn::make('thumbnail')->label('Photo')->width(200)->height(150)->square()->disableClick(),
-            ])
+            ])->defaultSort('created_at','desc')
             ->filters([
                 //
             ])

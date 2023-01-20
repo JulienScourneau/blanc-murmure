@@ -38,7 +38,7 @@ class InternshipResource extends Resource
                     TextInput::make('subtitle')->label('Sous-Titre'),
                     TinyEditor::make('description')->profile('simple'),
                     TextInput::make('age')->required(),
-                    TextInput::make('price')->numeric()->suffix('€')->label('Prix')->required(),
+                    TextInput::make('price')->numeric()->prefix('€')->label('Prix')->required(),
                     DatePicker::make('begin_at')->label('Date de début')->required(),
                     DatePicker::make('end_at')->label('Date de fin')->required(),
                     TimePicker::make('begin_hour')->label('Heure de début')->required(),

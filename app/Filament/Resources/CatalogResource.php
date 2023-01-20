@@ -50,7 +50,7 @@ class CatalogResource extends Resource
                 Tables\Columns\TextColumn::make('page_number')->label('Nombre de page')->wrap()->disableClick(),
                 Tables\Columns\TextColumn::make('size')->label('Taille')->disableClick(),
                 Tables\Columns\ImageColumn::make('thumbnail')->label('Photo')->size(150)->disableClick(),
-            ])
+            ])->defaultSort('created_at','desc')
             ->filters([
                 //
             ])

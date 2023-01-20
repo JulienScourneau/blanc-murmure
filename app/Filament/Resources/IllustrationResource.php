@@ -61,7 +61,7 @@ class IllustrationResource extends Resource
                 Tables\Columns\TextColumn::make('partnership')->label('Partenaire')->sortable()->wrap()->disableClick(),
                 Tables\Columns\TextColumn::make('date')->label('Période')->sortable()->wrap()->disableClick(),
                 Tables\Columns\ImageColumn::make('thumbnail')->label('Photo de couverture')->size(150),
-            ])
+            ])->defaultSort('created_at', 'desc')
             ->filters([
                 //
             ])
