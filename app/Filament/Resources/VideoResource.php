@@ -54,7 +54,7 @@ class VideoResource extends Resource
                 Tables\Columns\TextColumn::make('description')->label('Description')->wrap()->disableClick()->html(),
                 Tables\Columns\TextColumn::make('link')->label('Lien')->wrap()->disableClick(),
                 Tables\Columns\ImageColumn::make('thumbnail')->label('Photo')->size(150)->disableClick(),
-            ])
+            ])->defaultSort('created_at', 'desc')
             ->filters([
                 //
             ])

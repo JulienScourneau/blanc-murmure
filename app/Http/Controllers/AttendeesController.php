@@ -21,7 +21,7 @@ class AttendeesController extends Controller
             'first_name' => ['required'],
             'email' => ['required', 'email'],
             'date_birth' => ['required', 'date'],
-            'stage_id' => ['required'],
+            'internship_id' => ['required'],
             'address' => ['required'],
             'postal_code' => ['required'],
             'city' => ['required'],
