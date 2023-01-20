@@ -42,7 +42,7 @@
                 @foreach($urbanSpaces as $urbanSpace)
                     <div
                         class="border-1 shadow-lg my-2.5 bg-greenDuck rounded-2xl lg:mx-2.5 w-full lg:w-4/12 xl:w-2/12">
-                        <div class="overflow-hidden group hover:cursor-pointer">
+                        <div class="overflow-hidden group hover:cursor-pointer rounded-2xl">
                             <img class="w-full h-64 rounded-t-2xl group group-hover:scale-125 group-hover:drop-shadow-md transition-all duration-500" src="{{asset('storage/'.$urbanSpace->thumbnail)}}" height="100" width="100" alt="">
                         </div>
                         <div class="p-5 text-white">
