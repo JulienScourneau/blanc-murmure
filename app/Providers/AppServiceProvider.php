@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Filament\Resources\AttendeesResource;
 use App\Filament\Resources\CatalogResource;
 use App\Filament\Resources\EventResource;
 use App\Filament\Resources\HomePhotoResource;
@@ -53,6 +54,7 @@ class AppServiceProvider extends ServiceProvider
                         ->items([
                             ...InternshipResource::getNavigationItems(),
                             ...EventResource::getNavigationItems(),
+                            ...AttendeesResource::getNavigationItems()
 
                         ]),
                     NavigationGroup::make('Photos')
