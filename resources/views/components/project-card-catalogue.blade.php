@@ -1,9 +1,9 @@
 @props(['project'])
 <div class="w-full mx-auto shadow-lg bg-greenDuck mb-5 rounded-2xl lg:m-5">
-    <img class="rounded-t-2xl" src="{{asset('storage/'.$project->thumbnail)}}" alt="">
+    <img class="rounded-t-2xl w-full object-cover h-96" src="{{asset('storage/'.$project->thumbnail)}}" alt="">
     <div class="text-white p-2.5">
         <h2 class="Title font-black size-2xl mb-2.5">{{$project->title}}</h2>
-        <p class="border-l-2 border-white pl-2.5 lg:h-20">{{$project->description}}</p>
+        <p class="border-l-2 border-white pl-2.5">{{$project->description}}</p>
         <div class="flex my-5">
             <p class="border-l-2 border-white pl-2.5">{{$project->page_number}} pages</p>
             <p class="border-l-2 border-white pl-2.5 ml-10">{{$project->size}}</p>
