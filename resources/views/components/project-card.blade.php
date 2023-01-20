@@ -12,4 +12,7 @@
         <p class="font-black Title border-l-2 border-white pl-2.5">{{$project->title}}</p>
         <div class="border-l-2 border-white pt-2.5 pl-2.5">{!! $project->description !!}</div>
     </div>
+    <div class="flex justify-end">
+        <button id={{ $project->id }} class="buttonCarousel m-5 highlightOrange">Voir plus ></button>
+    </div>
 </div>
