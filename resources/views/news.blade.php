@@ -6,8 +6,8 @@
         <img class="w-full lg:w-1/2 object-cover" src="{{asset('storage/'.$newsPhoto[0]->path)}}" alt="">
         <div>
             <div class="flex w-full md:w-full xl:w-full flex-col md:flex-row">
-                <img class="w-full md:w-1/2 xl:w-1/2 h-96 object-cover" src="{{asset('storage/'.$newsPhoto[1]->path)}}" alt="">
-                <img class="w-full md:w-1/2 xl:w-1/2 h-96 object-cover" src="{{asset('storage/'.$newsPhoto[2]->path)}}" alt="">
+                <img class="w-full md:w-1/2 xl:w-1/2 h-96 object-cover pl-1" src="{{asset('storage/'.$newsPhoto[1]->path)}}" alt="">
+                <img class="w-full md:w-1/2 xl:w-1/2 h-96 object-cover pl-1" src="{{asset('storage/'.$newsPhoto[2]->path)}}" alt="">
             </div>
             <div class="p-2.5">
                 <h2 class="Title text-orange text-2xl font-black py-5">Mecredi s'éveille</h2>

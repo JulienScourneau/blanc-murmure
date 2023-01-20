@@ -35,7 +35,7 @@
                       id="message"></textarea>
         </div>
         <div class="w-10/12 mx-auto">
-            <button class="bg-green text-white font-black text-center text-xl rounded-full w-full py-4 mt-9"
+            <button class="bg-green text-white font-black text-center text-xl rounded-full w-full py-4 mt-9 hover:text-green hover:bg-white active:border-2"
                     type="submit">
                 {{ucwords("envoyer")}}
             </button>

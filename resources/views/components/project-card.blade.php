@@ -1,8 +1,8 @@
 @props(['project', 'id'])
-<div class="border-1 shadow-lg my-2.5 bg-greenDuck rounded-2xl lg:mx-2.5 w-full lg:w-4/12 xl:w-2/12 group">
+<div class="border-1 shadow-lg my-2.5 bg-greenDuck rounded-2xl lg:mx-2.5 w-full lg:w-4/12 xl:w-2/12">
     @if($project->thumbnail !== null)
-        <div class="buttonCarousel w-full hover:cursor-pointer overflow-hidden rounded-t-2xl">
-            <img id={{$id+1}} class="w-full h-64 rounded-t-2xl object-cover group-hover:scale-125 group-hover:drop-shadow-md transition-all duration-500" src="{{asset('storage/'. $project->thumbnail)}}" height="100"
+        <div class="buttonCarousel w-full hover:cursor-pointer overflow-hidden rounded-t-2xl group">
+            <img id={{$project->id}} class="w-full h-64 rounded-t-2xl object-cover group-hover:scale-125 group-hover:drop-shadow-md transition-all duration-500" src="{{asset('storage/'. $project->thumbnail)}}" height="100"
                  width="100" alt="">
         </div>
     @else

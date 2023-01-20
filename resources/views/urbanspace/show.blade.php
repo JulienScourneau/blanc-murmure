@@ -30,7 +30,7 @@
         <p>{{$urbanSpace->description}}</p>
     </div>
     <div class="flex justify-end">
-        <button id={{ $urbanSpace->id }} class="buttonCarouselUrban m-5 highlightOrange">Diaporama ></button>
+        <button id={{ $urbanSpace->id }} class="buttonCarousel m-5 highlightOrange">Diaporama ></button>
     </div>
     </article>
 
