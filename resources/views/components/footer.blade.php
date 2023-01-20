@@ -11,14 +11,26 @@
                 </a>
             </div>
             <hr class="mt-5 mb-2.5 text-white"/>
-            <h2 class="Title uppercase text-orange text-2xl leading-7 font-black w-11/12 self-center">Restez au courant
-                de notre actualité !</h2>
-            <input class="FooterInput border-placeHolder border-2 p-1.5 pl-4 rounded-3xl my-5 w-10/12 self-center" type="text"
-                   placeholder="Email">
-            <button
-                class="p-2.5 text-placeHolder text-2xl font-bold w-10/12 self-center bg-orange text-white text-center rounded-full border-2 border-orange hover:bg-white hover:text-orange">
-                S’inscrire
-            </button>
+
+            <form action="/newsletter" method="POST">
+                @csrf
+                <h2 class="Title uppercase text-orange text-2xl leading-7 font-black w-11/12 self-center">Restez au
+                    courant
+                    de notre actualité !</h2>
+                <input class="FooterInput border-placeHolder border-2 p-1.5 pl-4 rounded-3xl my-5 w-10/12 self-center"
+                       type="text"
+                       placeholder="Email">
+                <button
+                    class="p-2.5 text-placeHolder text-2xl font-bold w-10/12 self-center bg-orange text-white text-center rounded-full border-2 border-orange hover:bg-white hover:text-orange">
+                    S’inscrire
+                </button>
+
+                @error('email')
+                <span class="text-xs text-red-500">{{ $message }}</span>
+                @enderror
+
+
+            </form>
         </div>
 
         <hr class="block my-6 text-separator xl:hidden"/>
@@ -49,15 +61,16 @@
             </div>
             <div class="flex flex-row items-center xl:my-2 text-sm lg:text-base">
                 <img src="{{asset('assets/icons/location_icon.png')}}" alt="">
-                <p class="ml-2.5 text-white">36 rue de la Boule, 7390 Quaregnon, Belgique</p>
+                <p class="ml-2.5 text-white">1255 S Inner Loop Rd, Charleroi, Belgique</p>
             </div>
             <div class="flex flex-row items-center xl:my-2 text-sm lg:text-base">
                 <img src="{{asset('assets/icons/phone_icon.png')}}" alt="">
-                <p class="ml-2.5 text-white">+32 (0)65 515 217</p>
+                <p class="ml-2.5 text-white">+32 (0)00 000 000</p>
             </div>
             <div class="flex flex-row items-center mb-4 xl:my-2 text-sm lg:text-base">
                 <img src="{{asset('assets/icons/mail_icon.png')}}" alt="">
-                <a class="ml-2.5 text-orange highlightOrange" href = "mailto: info@blancmurmure.be">info@blancmurmure.be</a>
+                <a class="ml-2.5 text-orange highlightOrange"
+                   href="mailto: info@blancmurmure.be">info@blancmurmure.be</a>
             </div>
         </div>
     </section>

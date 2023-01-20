@@ -14,14 +14,14 @@
             <div class="font-light text-center mt-5">
                 <p>Les inscriptions seront effectives dès réception du paiement sur notre compte :</p>
                 <div class="flex justify-center mt-2.5">
-                    <p class="mr-2.5">IBAN : BE25 0682 2499 7082</p>
-                    <p>BIC: GKCCBEBB</p>
+                    <p class="mr-2.5">IBAN : BE00 0000 0000 0000</p>
+                    <p>BIC: XXXXBEXX</p>
                 </div>
             </div>
         </div>
     </div>
     <div class="max-w-2xl mx-auto">
-        <form method="POST" action="{{ route('inscription') }}" class="text-center">
+        <form method="POST" action="{{ route('postInscription') }}" class="text-center">
             @csrf
             <x-input name="last_name" label="Nom"/>
             <x-input name="first_name" label="Prénom"/>
