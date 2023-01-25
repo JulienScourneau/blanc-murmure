@@ -64,9 +64,9 @@ class AppServiceProvider extends ServiceProvider
                         ]),
                     NavigationGroup::make('Projets')
                         ->items([
-                            ...CatalogResource::getNavigationItems(),
                             ...IllustrationResource::getNavigationItems(),
                             ...SculptureResource::getNavigationItems(),
+                            ...CatalogResource::getNavigationItems(),
                             ...VideoResource::getNavigationItems(),
                             NavigationGroup::make('Espace Urbain')
                                 ->items([

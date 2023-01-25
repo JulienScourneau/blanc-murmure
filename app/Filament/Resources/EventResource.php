@@ -53,7 +53,7 @@ class EventResource extends Resource
                 ImageColumn::make('thumbnail')->label('Photo')->width(200)->square()->disableClick(),
                 Tables\Columns\TextColumn::make('begin_at')->label('Date de début')->date('d F Y')->disableClick(),
                 Tables\Columns\TextColumn::make('end_at')->label('Date de fin')->date('d F Y')->disableClick(),
-            ])
+            ])->defaultSort('created_at','desc')
             ->filters([
                 //
             ])
