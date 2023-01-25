@@ -11,8 +11,6 @@ use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class AttendeesResource extends Resource
 {
@@ -31,7 +29,24 @@ class AttendeesResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Forms\Components\Card::make([
+                    Forms\Components\TextInput::make('last_name')->label('Nom')->required(),
+                    Forms\Components\TextInput::make('first_name')->label('Prénom')->required(),
+                    Forms\Components\TextInput::make('email')->label('Adresse Email')->email()->required(),
+                    Forms\Components\Select::make('internship_id')->label('Stage')
+                        ->relationship('internship', 'title'),
+                    Forms\Components\DatePicker::make('date_birth')->label('Date de naissance')->required(),
+                    Forms\Components\TextInput::make('parent_name')->label('Nom du parent'),
+                    Forms\Components\TextInput::make('relationship')->label('Lien de parenté'),
+                    Forms\Components\TextInput::make('address')->label('Adresse')->required(),
+                    Forms\Components\TextInput::make('postal_code')->label('Code postal')->required(),
+                    Forms\Components\TextInput::make('city')->label('Ville')->required(),
+                    Forms\Components\TextInput::make('phone_number')->label('Numéro de téléphone')->required(),
+                    Forms\Components\Radio::make('right_to_image')->label("Droit à l'image")->options([
+                        'oui'=>'Oui',
+                        'non'=>'Non',
+                    ])->required()
+                ])
             ]);
     }
 
