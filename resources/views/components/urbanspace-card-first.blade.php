@@ -9,7 +9,7 @@
         >
             <div class="h-full w-full flex flex-col items-left justify-center">
                 <h2 class="pl-10 Title uppercase font-black text-white text-2xl relative z-50 opacity-0 group-hover:opacity-100 transition-all group-hover:duration-700">{{$project->title}}</h2>
-                <p class="pl-10 text-white text-xl relative z-50 opacity-0 group-hover:opacity-100 transition-all group-hover:duration-700">{{$project->description}}</p>
+                <div class="pl-10 text-white text-xl relative z-50 opacity-0 group-hover:opacity-100 transition-all group-hover:duration-700">{!! $project->description !!}</div>
             </div>
         </a>
     </div>

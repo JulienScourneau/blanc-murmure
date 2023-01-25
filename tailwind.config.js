@@ -20,6 +20,7 @@ module.exports = {
             separator: "#E4E4E4",
             incativeElement: "#ECECEC",
             placeHolder: "#F5F5F7",
+            red:"#CE2323"
         },
         extend: {},
     },
