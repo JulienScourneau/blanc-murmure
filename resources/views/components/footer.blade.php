@@ -25,11 +25,6 @@
                     S’inscrire
                 </button>
 
-                @error('email')
-                <span class="text-xs text-red-500">{{ $message }}</span>
-                @enderror
-
-
             </form>
         </div>
 
