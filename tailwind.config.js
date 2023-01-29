@@ -20,9 +20,14 @@ module.exports = {
             separator: "#E4E4E4",
             incativeElement: "#ECECEC",
             placeHolder: "#F5F5F7",
-            red:"#CE2323"
+            red:"#CE2323",
+            gray:"#d1d5db",
+            darkGray:"#374151",
+            hoverGray:"#6b7280"
         },
         extend: {},
     },
-    plugins: [],
+    plugins: [
+
+    ],
 };
