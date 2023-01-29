@@ -10,7 +10,7 @@ class SculptureController extends Controller
     public function index()
     {
         return view('projects.sculpture',[
-            'sculptures' => Sculpture::latest()->get()
+            'sculptures' => Sculpture::latest()->paginate(5)
         ]);
     }
 }
