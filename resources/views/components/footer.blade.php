@@ -2,7 +2,6 @@
     <section class="xl:flex justify-around w-11/12 md:w-6/12 xl:w-11/12 mx-auto">
         <div class="flex flex-col xl:w-3/12">
             <div class="flex flex-row pl-5">
-                {{-- TODO: Add link to social --}}
                 <a href="https://www.facebook.com/blancmurmure.be" target="_blank" rel="noopener noreferrer">
                     <img class="w-6" src="{{asset('assets/icons/facebook_logo.png')}}" alt="">
                 </a>
@@ -56,11 +55,11 @@
             </div>
             <div class="flex flex-row items-center xl:my-2 text-sm lg:text-base">
                 <img src="{{asset('assets/icons/location_icon.png')}}" alt="">
-                <p class="ml-2.5 text-white">1255 S Inner Loop Rd, Charleroi, Belgique</p>
+                <p class="ml-2.5 text-white">36 rue de la Boule, 7390 Quaregnon, Belgique</p>
             </div>
             <div class="flex flex-row items-center xl:my-2 text-sm lg:text-base">
                 <img src="{{asset('assets/icons/phone_icon.png')}}" alt="">
-                <p class="ml-2.5 text-white">+32 (0)00 000 000</p>
+                <p class="ml-2.5 text-white">+32 (0)65 515 217</p>
             </div>
             <div class="flex flex-row items-center mb-4 xl:my-2 text-sm lg:text-base">
                 <img src="{{asset('assets/icons/mail_icon.png')}}" alt="">
