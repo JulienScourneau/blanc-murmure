@@ -1,6 +1,6 @@
 @props(['project'])
 
-<div class="">
+<div class="mb-8">
     <div class="mx-auto my-6 h-52 w-full lg:w-8/12 group hover:shadow-lg">
         <a
             class="gradient h-52 flex bg-right bg-no-repeat bg-cover"
