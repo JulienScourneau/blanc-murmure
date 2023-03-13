@@ -1,4 +1,8 @@
-<p align="center"><a href="https://blanc-murmure-production.up.railway.app" target="_blank"><img src="https://blanc-murmure-production.up.railway.app/assets/blanc-murmure-logo.png" width="400" alt="Blanc Murmure Logo"></a></p>
+<p align="center">
+<a href="https://blanc-murmure-production.up.railway.app" target="_blank">
+![Logo Blanc Murmure](./public/assets/blanc-murmure-logo.png)
+</a>
+</p>
 
 # Blanc Murmure
 
