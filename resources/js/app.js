@@ -1,4 +1,5 @@
 import "./bootstrap";
-import "./addeventlistener";
-
-listener();
+import "./listener";
+import "./inputAnimated";
+import "./scroll";
+import "./swiper";
