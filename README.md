@@ -1,8 +1,7 @@
 ## Welcome to our Cogip project!
 
 ![HTML5](https://img.shields.io/badge/HTML5-blue)
-![CSS3](https://img.shields.io/badge/CSS3-red)
-![Tailwinds](https://img.shields.io/badge/Tailwinds-blue)
+![Tailwinds CSS](https://img.shields.io/badge/Tailwinds-blue)
 ![JavaScript](https://img.shields.io/badge/JavaScript-yellow)
 ![Laravel](https://img.shields.io/badge/Laravel-red)
 ![SQL](https://img.shields.io/badge/SQL-pink)
