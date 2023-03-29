@@ -1,6 +1,6 @@
 ## Welcome to our Cogip project!
 
-![HTML5](https://img.shields.io/badge/HTML5-blue)
+![HTML5](https://img.shields.io/badge/HTML5-orange)
 ![Tailwinds CSS](https://img.shields.io/badge/Tailwinds-blue)
 ![JavaScript](https://img.shields.io/badge/JavaScript-yellow)
 ![Laravel](https://img.shields.io/badge/Laravel-red)
