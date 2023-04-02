@@ -1,0 +1,20 @@
+.gradient {
+    display: block;
+    position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    width:0;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-image: linear-gradient(90deg,#92CDB9,#92cdb900);
+    opacity: 0;
+    transition: all 0.5s;
+  }
+  &:hover:after {
+    opacity: 1;
+    width:100%;
+  }
+}
