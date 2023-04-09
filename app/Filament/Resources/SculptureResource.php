@@ -37,7 +37,7 @@ class SculptureResource extends Resource
                     Forms\Components\TextInput::make('subtitle')->label('Sous titre'),
                     TinyEditor::make('description')->label('Description'),
                     Forms\Components\TextInput::make('partnership')->label('Partenaire'),
-                    Forms\Components\TextInput::make('date')->label('Date'),
+                    Forms\Components\TextInput::make('date')->label('Période'),
                     FileUpload::make('thumbnail')->label('Photo')
                         ->image()->directory('images')->imagePreviewHeight('300')->required(),
 
@@ -48,8 +48,7 @@ class SculptureResource extends Resource
                         ->enableReordering()
                         ->label('Photos')
                         ->image()
-                        ->directory('images')
-                        ->required(),
+                        ->directory('images'),
                 ])
             ]);
     }
@@ -62,7 +61,7 @@ class SculptureResource extends Resource
                 Tables\Columns\TextColumn::make('subtitle')->label('Sous titre')->sortable()->wrap()->disableClick(),
                 Tables\Columns\TextColumn::make('description')->label('Description')->sortable()->wrap()->disableClick()->html(),
                 Tables\Columns\TextColumn::make('partnership')->label('Partenaire')->sortable()->wrap()->disableClick(),
-                Tables\Columns\TextColumn::make('date')->label('Date')->sortable()->wrap()->disableClick(),
+                Tables\Columns\TextColumn::make('date')->label('Période')->sortable()->wrap()->disableClick(),
                 Tables\Columns\ImageColumn::make('thumbnail')->label('Photo de couverture')->size(150),
             ])->defaultSort('created_at','desc')
             ->filters([

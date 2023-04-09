@@ -14,6 +14,7 @@ use Filament\Resources\Table;
 use Filament\Tables;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
+use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class UrbanSpaceResource extends Resource
 {
@@ -31,14 +32,14 @@ class UrbanSpaceResource extends Resource
         return $form
             ->schema([
                 Forms\Components\Card::make()->schema([
-                    Forms\Components\TextInput::make('title'),
-                    Forms\Components\TextInput::make('description'),
-                    Forms\Components\TextInput::make('location'),
-                    Forms\Components\TextInput::make('participant'),
-                    Forms\Components\TextInput::make('author'),
-                    Forms\Components\TextInput::make('partnership'),
+                    Forms\Components\TextInput::make('title')->label("Nom de l'oeuvre")->required(),
+                    TinyEditor::make('description')->profile('simple')->label('Description')->required(),
+                    Forms\Components\TextInput::make('location')->label('Adresse')->required(),
+                    Forms\Components\TextInput::make('participant')->label('Participant'),
+                    Forms\Components\TextInput::make('author')->label('Auteur'),
+                    Forms\Components\TextInput::make('partnership')->label('Partenaire'),
                     Select::make('urban_space_project_id')->label('Projet')
-                        ->relationship('urbanSpaceProject', 'title'),
+                        ->relationship('urbanSpaceProject', 'title')->label('Espace urbain associé'),
                     Forms\Components\FileUpload::make('thumbnail_landscape')->label('Photo paysage')->image()->directory('images')->imagePreviewHeight('300')->required(),
                     Forms\Components\FileUpload::make('thumbnail_portrait')->label('Photo portrait')->image()->directory('images')->imagePreviewHeight('300')->required(),
                 ]),
@@ -58,15 +59,12 @@ class UrbanSpaceResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('title')->label('Titre')->wrap()->disableClick(),
-                TextColumn::make('description')->label('Description')->wrap()->disableClick()->html(),
+                TextColumn::make('title')->label("Nom de l'oeuvre")->wrap()->disableClick(),
                 TextColumn::make('location')->label('Adresse')->wrap()->disableClick(),
-                TextColumn::make('author')->label('Auteur')->wrap()->disableClick(),
-                TextColumn::make('partnership')->label('Partenaire')->wrap()->disableClick(),
-                TextColumn::make('urbanSpaceProject.title')->label('Projet Urbain')->wrap()->disableClick(),
+                TextColumn::make('urbanSpaceProject.title')->label('Espace urbain associé')->wrap()->sortable()->disableClick(),
                 ImageColumn::make('thumbnail_landscape')->label('Photo paysage')->size(150)->disableClick(),
                 ImageColumn::make('thumbnail_portrait')->label('Photo portrait')->size(150)->disableClick(),
-            ])->defaultSort('created_at','desc')
+            ])->defaultSort('created_at', 'desc')
             ->filters([
                 //
             ])

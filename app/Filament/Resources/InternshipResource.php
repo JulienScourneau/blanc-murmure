@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\InternshipResource\Pages;
 use App\Filament\Resources\InternshipResource\RelationManagers;
 use App\Models\Internship;
+use Carbon\Carbon;
 use Filament\Forms\Components\Card;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
@@ -40,11 +41,10 @@ class InternshipResource extends Resource
                     TextInput::make('age')->required(),
                     TextInput::make('price')->numeric()->prefix('€')->label('Prix')->required(),
                     DatePicker::make('begin_at')->label('Date de début')->required(),
-                    DatePicker::make('end_at')->label('Date de fin')->required(),
+                    DatePicker::make('end_at')->label('Date de fin')->after('begin_at')->required(),
                     TimePicker::make('begin_hour')->label('Heure de début')->required(),
                     TimePicker::make('end_hour')->label('Heure de fin')->required(),
                     FileUpload::make('thumbnail')->label('Photo')->image()->directory('images')->imagePreviewHeight('300')->required(),
-
                 ])
             ]);
     }
@@ -60,9 +60,7 @@ class InternshipResource extends Resource
                 ImageColumn::make('thumbnail')->label('Photo')->size(150)->disableClick(),
                 Tables\Columns\TextColumn::make('begin_at')->label('Date de début')->disableClick()->date('d F Y'),
                 Tables\Columns\TextColumn::make('end_at')->label('Date de fin')->disableClick()->date('d F Y'),
-
-
-            ])->defaultSort('created_at','desc')
+            ])->defaultSort('created_at', 'desc')
             ->filters([
                 //
             ])
@@ -72,8 +70,7 @@ class InternshipResource extends Resource
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
-            ])
-            ;
+            ]);
     }
 
     public static function getRelations(): array

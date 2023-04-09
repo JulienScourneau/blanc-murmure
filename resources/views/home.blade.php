@@ -5,7 +5,6 @@
     @if(isset($internship))
         @include('components.banner', ['internship'=>$internship])
     @else
-        {{-- TODO: Always need to show something, Add message --}}
         <p class="mx-auto my-6 text-center">Aucun stage disponible pour le moment</p>
     @endif
     <!-- <hr class="mt-12 text-separator"/>

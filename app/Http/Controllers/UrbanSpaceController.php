@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\UrbanSpace;
 use App\Models\UrbanSpaceProject;
 
 class UrbanSpaceController extends Controller
@@ -10,7 +9,8 @@ class UrbanSpaceController extends Controller
     public function index()
     {
         return view('projects.urbanspace', [
-            'projects' => UrbanSpaceProject::latest()->get()
+            'projects' => UrbanSpaceProject::latest()->paginate(5),
+            'last' => UrbanSpaceProject::latest()->first()
         ]);
     }
 

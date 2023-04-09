@@ -29,6 +29,8 @@
     {{--    @vite('../resources/css/reset.css')--}}
     @vite('resources/css/app.css')
     @vite('resources/css/style.css')
+
+    <link rel="shortcut icon" href="{{asset('./assets/icons/FavIcon_BlancMumure.png')}}" type="image/x-icon">
     <title>Blanc Murmure</title>
 </head>
 
