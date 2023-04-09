@@ -31,7 +31,7 @@
         <div class="hidden xl:flex">
             <nav class="flex flex-col mr-5">
                 <p class="Title font-light text-xl text-orange uppercase">Explorer</p>
-                <a class="py-1 highlightBlack" href="{{ Route ('home')}}">Acceuil</a>
+                <a class="py-1 highlightBlack" href="{{ Route ('home')}}">Accueil</a>
                 <a class="py-1 highlightBlack" href="{{ Route ('news')}}">En ce moment</a>
                 <a class="py-1 highlightBlack" href="{{ Route ('collaborater')}}">Envie de travailler avec nous ?</a>
                 <a class="py-1 highlightBlack" href="{{ Route ('about')}}">A propos</a>
@@ -65,6 +65,14 @@
                 <img src="{{asset('assets/icons/mail_icon.png')}}" alt="">
                 <a class="ml-2.5 text-orange highlightOrange"
                    href="mailto: info@blancmurmure.be">info@blancmurmure.be</a>
+            </div>
+            <div class="flex flex-row items-center text-sm lg:text-base">
+                <p class="ml-2.5 text-white">IBAN :</p>
+                <p class="ml-2.5 text-white">BE25 0682 2499 7082</p>
+            </div>
+            <div class="flex flex-row items-center text-sm lg:text-base">
+                <p class="ml-2.5 text-white">BIC :</p>
+                <p class="ml-2.5 text-white">GKCCBEBB</p>
             </div>
         </div>
     </section>
