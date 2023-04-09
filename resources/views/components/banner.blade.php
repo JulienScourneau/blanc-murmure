@@ -1,5 +1,5 @@
 <section class="mx-auto w-11/12 my-10 items-center text-center lg:flex flex-row justify-center">
-    <img class="w-full lg:w-8/12 HeightUrban object-cover mx-auto xl:w-6/12" src="{{asset('storage/'.$internship->thumbnail)}}"
+    <img class="w-full lg:w-8/12 HeightUrban object-cover mx-auto xl:w-7/12" src="{{asset('storage/'.$internship->thumbnail)}}"
          alt="">
     <div class="">
         <h1 class="Title uppercase text-center font-black text-3xl p-2.5 mt-6 mb-10">

@@ -39,14 +39,14 @@ class User extends Authenticatable implements FilamentUser
         'email_verified_at' => 'datetime',
     ];
 
-    protected function setPasswordAttribute($password)
-    {
-        $this->attributes['password'] = bcrypt($password);
-    }
+    // protected function setPasswordAttribute($password)
+    // {
+    //     $this->attributes['password'] = bcrypt($password);
+    // }
 
     public function canAccessFilament(): bool
     {
-        return str_ends_with($this->email, '@mail.com');
+        return true;
 
     }
 }
