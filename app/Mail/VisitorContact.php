@@ -30,8 +30,12 @@ class VisitorContact extends Mailable
      */
     public function envelope()
     {
+                dd($this->reason);
         return new Envelope(
-            subject: 'Contact pour ' . $this->reason,
+            subject: 'Contact pour ' . match ($this->reason) {
+                "" =>"",
+                "" =>"",
+            },
         );
     }
 

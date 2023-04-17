@@ -1,12 +1,9 @@
 <x-mail::message>
-# Introduction
 
-The body of your message.
+    # {{$reason}}
 
-<x-mail::button :url="''">
-Button Text
-</x-mail::button>
+    ##{{ $email." ".$name}}
 
-Thanks,<br>
-{{ config('app.name') }}
+    {{$message}}
+
 </x-mail::message>
