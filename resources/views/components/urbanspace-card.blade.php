@@ -7,8 +7,11 @@
             style="background-image: url('{{asset('storage/'. $project->thumbnail)}}');"
             href="/nos-projets/espace-urbain/{{$project->slug}}"
         >
-            <div class="h-full w-full flex items-center">
-                <h2 class="pl-10 Title uppercase font-black text-white text-2xl relative z-50 opacity-0 group-hover:opacity-100 transition-all group-hover:duration-700">{{$project->title}}</h2>
+            <!--<div class="h-full w-full flex items-center">-->
+            <!--    <h2 class="pl-10 Title uppercase font-black text-white text-2xl relative z-50 opacity-0 group-hover:opacity-100 transition-all group-hover:duration-700">{{$project->title}}</h2>-->
+            <!--</div>-->
+                        <div class="h-full w-full flex items-center">
+                <h2 class="pl-10 Title uppercase font-black text-white text-2xl relative z-50">{{$project->title}}</h2>
             </div>
         </a>
     </div>
