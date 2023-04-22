@@ -4,7 +4,7 @@
     <section class="my-10">
         <div class="flex flex-col lg:flex-row items-center justify-around md:w-11/12 lg:w-8/12 xl:w-6/12 mx-auto">
             <h1 class="text-3xl font-semibold text-center text-greenDuck lg:w-4/12">{{$urbanSpaceProject->title}}</h1>
-            <p class="text-greenDuck lg:w-8/12">{{$urbanSpaceProject->description}}</p>
+            <p class="text-greenDuck lg:w-8/12">{!! $urbanSpaceProject->description !!}</p>
         </div>
         @foreach($urbanSpaceProject->urbanSpace as $urbanSpace)
             <article class="shadow-lg my-10 md:mb-20 md:mx-auto md:w-11/12 lg:w-8/12 xl:w-6/12">

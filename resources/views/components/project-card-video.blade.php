@@ -13,7 +13,7 @@
         <div class="border-l-2 border-white pt-2.5 pl-2.5">{!! $project->description !!}</div>
         <div class="flex justify-around items-end mt-5">
             <a class="hover:underline" href="/nos-projets/video/{{$project->slug}}">Détails ></a>
-            <a class="hover:underline" target="_blank" rel="noopener noreferrer" href="{{$project->link}}">Vimeo ></a>
+            <a class="hover:underline" target="_blank" rel="noopener noreferrer" href="{{$project->link}}">Voir le film ></a>
         </div>
     </div>
 </div>

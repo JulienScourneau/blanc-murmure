@@ -15,7 +15,7 @@
                 <p>Les inscriptions seront effectives dès réception du paiement sur notre compte :</p>
                 <div class="flex justify-center mt-2.5">
                     <p class="mr-2.5">IBAN : BE25 0682 2499 7082</p>
-                    <p>BIC: GKCCBEBB</p>
+                    <p>BIC : GKCCBEBB</p>
                 </div>
             </div>
         </div>

@@ -9,7 +9,7 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class VisitorContact extends Mailable
+class ContactMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -30,11 +30,11 @@ class VisitorContact extends Mailable
      */
     public function envelope()
     {
-                dd($this->reason);
         return new Envelope(
+            from: new Address($this->email, $this->name),
             subject: 'Contact pour ' . match ($this->reason) {
-                "" =>"",
-                "" =>"",
+                'stage' => 'un stage.',
+                'collaboration' => 'une collaboration'
             },
         );
     }
@@ -47,7 +47,7 @@ class VisitorContact extends Mailable
     public function content()
     {
         return new Content(
-            view: 'emails.contact',
+            markdown: 'emails.contactTest',
         );
     }
 
