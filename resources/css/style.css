@@ -63,13 +63,13 @@
 .gradient:after {
   content: "";
   position: absolute;
-  width: 0;
+  width: 100%;
   left: 0px;
   top: 0px;
   right: 0px;
   bottom: 0px;
-  background-image: linear-gradient(90deg, #92CDB9, rgba(146, 205, 185, 0));
-  opacity: 0;
+  background-image: linear-gradient(90deg, #92cdb9, rgba(146, 205, 185, 0));
+  opacity: 1;
   transition: all 0.5s;
 }
 .gradient:hover:after {
