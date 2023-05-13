@@ -29,7 +29,8 @@
             <div class="flex flex-col mx-auto w-10/12">
                 <label class="text-primaryText flex self-start pl-8 my-2" for="stage_id">Stage</label>
                 <select class="rounded-full border-2 border-disableText p-5 hover:cursor-pointer" name="internship_id" id="stage_id">
-                    <option value=""></option>
+                    <option value="">Choisi ton stage</option>
+                    <option value="0">Mercredi s'éveille</option>
                     @foreach($internships as $internship)
                         <option
                             value="{{$internship->id}}"
