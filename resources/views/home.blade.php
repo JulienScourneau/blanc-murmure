@@ -3,7 +3,7 @@
 @section('content')
 
     @if(isset($internships))
-        @include('components.banner', ['internships'=>$internships,'internship'=>$internships[0]])
+        @include('components.banner', ['internships'=>$internships])
     @else
         <p class="mx-auto my-6 text-center">Aucun stage disponible pour le moment</p>
     @endif
