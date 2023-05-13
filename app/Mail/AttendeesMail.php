@@ -3,13 +3,14 @@
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class VisitorContact extends Mailable
+class AttendeesMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -18,9 +19,9 @@ class VisitorContact extends Mailable
      *
      * @return void
      */
-    public function __construct(public string $name, public string $email, public string $reason, public string $message)
+    public function __construct()
     {
-//
+        //
     }
 
     /**
@@ -30,12 +31,9 @@ class VisitorContact extends Mailable
      */
     public function envelope()
     {
-                dd($this->reason);
         return new Envelope(
-            subject: 'Contact pour ' . match ($this->reason) {
-                "" =>"",
-                "" =>"",
-            },
+            from: new Address(env('MAIL_USERNAME'),'Blanc Murmure'),
+            subject: 'Inscription BlancMurmure',
         );
     }
 
@@ -47,7 +45,7 @@ class VisitorContact extends Mailable
     public function content()
     {
         return new Content(
-            view: 'emails.contact',
+            markdown: 'mail.attendees-mail',
         );
     }
 

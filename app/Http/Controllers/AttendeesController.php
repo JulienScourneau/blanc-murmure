@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\AttendeesMail;
+use App\Mail\InfosMail;
 use App\Models\Attendees;
 use App\Models\Internship;
+use Illuminate\Support\Facades\Mail;
 
 class AttendeesController extends Controller
 {
@@ -28,7 +31,8 @@ class AttendeesController extends Controller
             'phone_number' => ['required'],
             'right_to_image' => ['required'],
         ]);
-
+        Mail::to(env('MAIL_USERNAME'))->send(new InfosMail());
+        Mail::to($attributes['email'])->send(new AttendeesMail());
         Attendees::create($attributes);
         return redirect('/');
     }
