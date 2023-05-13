@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\AttendeesRequest;
 use App\Mail\AttendeesMail;
 use App\Mail\InfosMail;
 use App\Models\Attendees;
@@ -12,12 +13,12 @@ class AttendeesController extends Controller
 {
     public function index()
     {
-        return view('attendees.form',[
-            'internships'=>Internship::all(),
+        return view('attendees.form', [
+            'internships' => Internship::all(),
         ]);
     }
 
-    public function store()
+    public function store(AttendeesRequest $request)
     {
         $attributes = request()->validate([
             'last_name' => ['required'],
@@ -31,9 +32,19 @@ class AttendeesController extends Controller
             'phone_number' => ['required'],
             'right_to_image' => ['required'],
         ]);
-        Mail::to(env('MAIL_USERNAME'))->send(new InfosMail());
-        Mail::to($attributes['email'])->send(new AttendeesMail());
-        Attendees::create($attributes);
+        $attendees = Attendees::create($attributes);
+        Mail::to(env('MAIL_USERNAME'))->send(new InfosMail(
+            $attendees->first_name,
+            $attendees->last_name,
+            $attendees->email,
+            $attendees->date_birth,
+            $attendees->internship->title,
+            $attendees->address,
+            $attendees->postal_code,
+            $attendees->city,
+            $attendees->phone_number,
+        ));
+        Mail::to($request['email'])->send(new AttendeesMail());
         return redirect('/');
     }
 }
