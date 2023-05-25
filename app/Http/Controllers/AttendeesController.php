@@ -38,13 +38,18 @@ class AttendeesController extends Controller
             $attendees->last_name,
             $attendees->email,
             $attendees->date_birth,
+            $attendees->parent_name,
+            $attendees->relationship,
             $attendees->internship->title,
             $attendees->address,
             $attendees->postal_code,
             $attendees->city,
             $attendees->phone_number,
+            $attendees->right_to_image
         ));
-        Mail::to($request['email'])->send(new AttendeesMail());
+        Mail::to($request['email'])->send(new AttendeesMail(
+            $attendees->internship->title,
+        ));
         return redirect('/');
     }
 }
