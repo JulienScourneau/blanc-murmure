@@ -3,7 +3,6 @@
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
@@ -19,8 +18,9 @@ class AttendeesMail extends Mailable
      *
      * @return void
      */
-    public function __construct()
-    {
+    public function __construct(
+        public string $internship,
+    ) {
         //
     }
 

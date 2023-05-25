@@ -10,4 +10,8 @@
     <p>Ville : {!! $city !!}</p>
     <p>Téléphone : {!! $phoneNumber !!}</p>
 
+    <p>Téléphone : {!! $right_to_image !!}</p>
+    <p>Téléphone : {!! $parent_name !!}</p>
+    <p>Téléphone : {!! $relationship !!}</p>
+
 </x-mail::message>

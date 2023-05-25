@@ -24,11 +24,14 @@ class InfosMail extends Mailable
         public string $lastname,
         public string $email,
         public string $date_birth,
+        public string $parent_name,
+        public string $relationship,
         public string $internship,
         public string $address,
         public string $postalCode,
         public string $city,
         public string $phoneNumber,
+        public string $right_to_image,
     ) {
         //
     }
