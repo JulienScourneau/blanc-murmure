@@ -28,6 +28,8 @@ class AttendeesRequest extends FormRequest
             'first_name' => ['required'],
             'email' => ['required', 'email'],
             'date_birth' => ['required', 'date'],
+            'parent_name' => ['required'],
+            'relationship' => ['required'],
             'internship_id' => ['required'],
             'address' => ['required'],
             'postal_code' => ['required'],
