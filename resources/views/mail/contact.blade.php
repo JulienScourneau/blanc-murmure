@@ -1,8 +1,6 @@
 <x-mail::message>
-
-    {!! $message !!}
-
     {!! $name !!}
     {!! $email !!}
 
+    {!! $message !!}
 </x-mail::message>
