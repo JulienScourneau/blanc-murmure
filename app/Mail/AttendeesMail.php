@@ -20,8 +20,7 @@ class AttendeesMail extends Mailable
      */
     public function __construct(
         public string $internship,
-    )
-    {
+    ) {
         //
     }
 
