@@ -9,9 +9,8 @@
     <p>Code postal : {!! $postalCode !!}</p>
     <p>Ville : {!! $city !!}</p>
     <p>Téléphone : {!! $phoneNumber !!}</p>
-
-    <p>Téléphone : {!! $right_to_image !!}</p>
-    <p>Téléphone : {!! $parent_name !!}</p>
-    <p>Téléphone : {!! $relationship !!}</p>
+    <p>Droit à l'image : {!! $right_to_image !!}</p>
+    <p>Nom du parent : {!! $parent_name !!}</p>
+    <p>Lien de parenté : {!! $relationship !!}</p>
 
 </x-mail::message>
