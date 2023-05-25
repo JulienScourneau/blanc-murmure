@@ -9,6 +9,7 @@ use App\Models\Attendees;
 use App\Models\Internship;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Mail;
+use function PHPUnit\Framework\isEmpty;
 
 class AttendeesController extends Controller
 {
@@ -26,8 +27,7 @@ class AttendeesController extends Controller
             'first_name' => ['required'],
             'email' => ['required', 'email'],
             'date_birth' => ['required', 'date'],
-            'parent_name' => ['required'],
-            'relationship' => ['required'],
+
             'internship_id' => ['required'],
             'address' => ['required'],
             'postal_code' => ['required'],
@@ -40,9 +40,9 @@ class AttendeesController extends Controller
             $attendees->first_name,
             $attendees->last_name,
             $attendees->email,
-            Carbon::createFromFormat('Y-m-d',$attendees->date_birth)->format('d/m/Y'),
-            $attendees->parent_name,
-            $attendees->relationship,
+            Carbon::createFromFormat('Y-m-d', $attendees->date_birth)->format('d/m/Y'),
+            !$request['parent_name'] ? '' : $request['parent_name'],
+            !$request['relationship'] ? '' : $request['relationship'],
             $attendees->internship->title,
             $attendees->address,
             $attendees->postal_code,
