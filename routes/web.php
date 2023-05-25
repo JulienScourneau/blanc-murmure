@@ -25,7 +25,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::post('newsletter', [NewsletterController::class, 'store'])->name('newsletter');
+Route::post('/newsletter', [NewsletterController::class, 'store'])->name('newsletter');
 
 Route::get('/', [Controller::class, 'index'])->name('home');
 

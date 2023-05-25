@@ -13,7 +13,8 @@
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
         "mailchimp/marketing": "^3.0",
-        "mohamedsabil83/filament-forms-tinyeditor": "^1.6"
+        "mohamedsabil83/filament-forms-tinyeditor": "^1.6",
+        "sendinblue/api-v3-sdk": "7.x.x"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

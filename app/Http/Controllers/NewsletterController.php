@@ -6,23 +6,24 @@ use Exception;
 use GuzzleHttp\Client;
 use SendinBlue\Client\Api\ContactsApi;
 use SendinBlue\Client\Configuration;
+use SendinBlue\Client\Model\CreateContact;
 
 class NewsletterController extends Controller
 {
     public function store()
     {
-        request()->validate(['email' => 'required|email']);
+        $attributes = request()->validate(['email' => 'required']);
 
-        $config = Configuration::getDefaultConfiguration()->setApiKey('api-key', 'YOUR_API_KEY');
+        $credentials = Configuration::getDefaultConfiguration()->setApiKey('api-key', config('newsletter.api_key'));
 
         $apiInstance = new ContactsApi(
-        // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-        // This is optional, `GuzzleHttp\Client` will be used as default.
             new Client(),
-            $config
+            $credentials
         );
-        $createContact = new \SendinBlue\Client\Model\CreateContact(); // \SendinBlue\Client\Model\CreateContact | Values to create a contact
-        $createContact['email'] = 'john@doe.com';
+        $createContact = new CreateContact([
+            'email' => $attributes['email'],
+        ]);
+
 
         try {
             $apiInstance->createContact($createContact);
@@ -32,7 +33,6 @@ class NewsletterController extends Controller
                 'email' => "Une erreur est survenu lors de l'ajout à la newsletter"
             ]);
         }
-
         return redirect('/')
             ->with('success', 'inscription réussi');
     }
