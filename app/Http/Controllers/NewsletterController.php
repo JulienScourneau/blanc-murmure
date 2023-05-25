@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Exception;
 use GuzzleHttp\Client;
 use SendinBlue\Client\Api\ContactsApi;
 use SendinBlue\Client\Configuration;
@@ -12,18 +13,16 @@ class NewsletterController extends Controller
     {
         request()->validate(['email' => 'required|email']);
 
-        $credentials = Configuration::getDefaultConfiguration()->setApiKey('api-key', env('SENDINBLUE_APIKEY'));
+        $config = Configuration::getDefaultConfiguration()->setApiKey('api-key', 'YOUR_API_KEY');
 
         $apiInstance = new ContactsApi(
+        // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+        // This is optional, `GuzzleHttp\Client` will be used as default.
             new Client(),
-            $credentials
+            $config
         );
-
-        $createContact = new \SendinBlue\Client\Model\CreateContact([
-            'email' => request('email'),
-            'updateEnabled' => true,
-            'listIds' => [[1, 12]]
-        ]);
+        $createContact = new \SendinBlue\Client\Model\CreateContact(); // \SendinBlue\Client\Model\CreateContact | Values to create a contact
+        $createContact['email'] = 'john@doe.com';
 
         try {
             $apiInstance->createContact($createContact);

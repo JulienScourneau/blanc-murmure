@@ -7,6 +7,7 @@ use App\Mail\AttendeesMail;
 use App\Mail\InfosMail;
 use App\Models\Attendees;
 use App\Models\Internship;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Mail;
 
 class AttendeesController extends Controller
@@ -25,6 +26,8 @@ class AttendeesController extends Controller
             'first_name' => ['required'],
             'email' => ['required', 'email'],
             'date_birth' => ['required', 'date'],
+            'parent_name' => ['required'],
+            'relationship' => ['required'],
             'internship_id' => ['required'],
             'address' => ['required'],
             'postal_code' => ['required'],
@@ -37,7 +40,7 @@ class AttendeesController extends Controller
             $attendees->first_name,
             $attendees->last_name,
             $attendees->email,
-            $attendees->date_birth,
+            Carbon::createFromFormat('Y-m-d',$attendees->date_birth)->format('d/m/Y'),
             $attendees->parent_name,
             $attendees->relationship,
             $attendees->internship->title,
