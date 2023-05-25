@@ -3,7 +3,6 @@
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
@@ -19,7 +18,9 @@ class AttendeesMail extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(
+        public string $internship,
+    )
     {
         //
     }
@@ -32,7 +33,7 @@ class AttendeesMail extends Mailable
     public function envelope()
     {
         return new Envelope(
-            from: new Address(env('MAIL_USERNAME'),'Blanc Murmure'),
+            from: new Address(env('MAIL_USERNAME'), 'Blanc Murmure'),
             subject: 'Inscription BlancMurmure',
         );
     }
