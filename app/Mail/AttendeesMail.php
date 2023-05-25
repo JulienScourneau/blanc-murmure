@@ -32,7 +32,7 @@ class AttendeesMail extends Mailable
     public function envelope()
     {
         return new Envelope(
-            from: new Address(env('MAIL_USERNAME'),'Blanc Murmure'),
+            from: new Address(env('MAIL_USERNAME'), 'Blanc Murmure'),
             subject: 'Inscription BlancMurmure',
         );
     }

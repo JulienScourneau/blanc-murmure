@@ -19,17 +19,17 @@ class InfosMail extends Mailable
      *
      * @return void
      */
-    public function __construct(public string $firstname,
-                                public string $lastname,
-                                public string $email,
-                                public string $date_birth,
-                                public string $internship,
-                                public string $address,
-                                public string $postalCode,
-                                public string $city,
-                                public string $phoneNumber,
-    )
-    {
+    public function __construct(
+        public string $firstname,
+        public string $lastname,
+        public string $email,
+        public string $date_birth,
+        public string $internship,
+        public string $address,
+        public string $postalCode,
+        public string $city,
+        public string $phoneNumber,
+    ) {
         //
     }
 
