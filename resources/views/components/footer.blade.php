@@ -13,6 +13,7 @@
 
             <form action="{{route('newsletter')}}" method="POST">
                 @csrf
+                @honeypot
                 <h2 class="Title uppercase text-orange text-2xl leading-7 font-black w-11/12 self-center">Restez au
                     courant
                     de notre actualité !</h2>
@@ -21,7 +22,7 @@
                        name="email"
                        placeholder="Email">
                 <button type="submit"
-                    class="p-2.5 text-placeHolder text-2xl font-bold w-10/12 self-center bg-orange text-white text-center rounded-full border-2 border-orange hover:bg-white hover:text-orange">
+                        class="p-2.5 text-placeHolder text-2xl font-bold w-10/12 self-center bg-orange text-white text-center rounded-full border-2 border-orange hover:bg-white hover:text-orange">
                     S’inscrire
                 </button>
 
