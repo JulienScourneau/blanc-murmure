@@ -9,7 +9,7 @@ class CatalogController extends Controller
     public function index()
     {
         return view('projects.catalog', [
-            'catalogs' => Catalog::latest()->get()
+            'catalogs' => Catalog::latest()->paginate(3)
         ]);
     }
 }

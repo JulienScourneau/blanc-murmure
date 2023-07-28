@@ -35,9 +35,9 @@ class UrbanSpaceResource extends Resource
                     Forms\Components\TextInput::make('title')->label("Nom de l'oeuvre")->required(),
                     TinyEditor::make('description')->profile('simple')->label('Description')->required(),
                     Forms\Components\TextInput::make('location')->label('Adresse')->required(),
-                    Forms\Components\TextInput::make('participant')->label('Participant'),
+                    TinyEditor::make('participant')->profile('simple')->label('Participant'),
                     Forms\Components\TextInput::make('author')->label('Auteur'),
-                    Forms\Components\TextInput::make('partnership')->label('Partenaire'),
+                    TinyEditor::make('partnership')->profile('simple')->label('Partenaire'),
                     Select::make('urban_space_project_id')->label('Projet')
                         ->relationship('urbanSpaceProject', 'title')->label('Espace urbain associé'),
                     Forms\Components\FileUpload::make('thumbnail_landscape')->label('Photo paysage')->image()->directory('images')->imagePreviewHeight('300')->required(),

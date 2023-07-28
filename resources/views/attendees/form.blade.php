@@ -15,7 +15,7 @@
                 <p>Les inscriptions seront effectives dès réception du paiement sur notre compte :</p>
                 <div class="flex justify-center mt-2.5">
                     <p class="mr-2.5">IBAN : BE25 0682 2499 7082</p>
-                    <p>BIC: GKCCBEBB</p>
+                    <p>BIC : GKCCBEBB</p>
                 </div>
             </div>
         </div>
@@ -23,13 +23,15 @@
     <div class="max-w-2xl mx-auto">
         <form method="POST" action="{{ route('postInscription') }}" class="text-center">
             @csrf
+            @honeypot
             <x-input name="last_name" label="Nom"/>
             <x-input name="first_name" label="Prénom"/>
             <x-input name="email" type="email" label="Adresse email"/>
             <div class="flex flex-col mx-auto w-10/12">
                 <label class="text-primaryText flex self-start pl-8 my-2" for="stage_id">Stage</label>
                 <select class="rounded-full border-2 border-disableText p-5 hover:cursor-pointer" name="internship_id" id="stage_id">
-                    <option value=""></option>
+                    <option value="">Choisi ton stage</option>
+                    <option value="0">Mercredi s'éveille</option>
                     @foreach($internships as $internship)
                         <option
                             value="{{$internship->id}}"

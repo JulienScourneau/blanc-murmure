@@ -17,9 +17,9 @@ return new class extends Migration {
             $table->string('title');
             $table->string('location');
             $table->text('description');
-            $table->string('participant')->nullable();
+            $table->text('participant')->nullable();
             $table->string('author')->nullable();
-            $table->string('partnership')->nullable();
+            $table->text('partnership')->nullable();
             $table->foreignId('urban_space_project_id');
             $table->string('thumbnail_landscape');
             $table->string('thumbnail_portrait');

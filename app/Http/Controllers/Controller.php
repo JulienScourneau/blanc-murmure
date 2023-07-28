@@ -18,7 +18,7 @@ class Controller extends BaseController
     public function index()
     {
         return view('home', [
-            "internship" => $this->getNearestUpcomingInternship(Internship::all()),
+            "internships" => Internship::all()->where('begin_at', '>', Carbon::now()),
             "photos" => HomePhoto::all(),
             "agendas" => $this->getAgendaList(),
         ]);
@@ -38,17 +38,4 @@ class Controller extends BaseController
 
     }
 
-    public function getNearestUpcomingInternship($internships)
-    {
-        $nextInternship = null;
-        foreach ($internships as $internship) {
-            if ($internship->begin_at < Carbon::now()) {
-                continue;
-            }
-            if (!$nextInternship || $internship->begin_at < $nextInternship->begin_at) {
-                $nextInternship = $internship;
-            }
-        }
-        return $nextInternship;
-    }
 }
