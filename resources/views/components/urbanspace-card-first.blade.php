@@ -6,8 +6,8 @@
            style="background-image: url('{{ asset('storage/' . $project->thumbnail) }}');"
            href="/nos-projets/espace-urbain/{{ $project->slug }}">
             <div class="h-full w-full flex flex-col items-left justify-center">
-                <h2 class="pl-10 Title uppercase font-black text-white text-2xl relative z-50">{{ $project->title }}</h2>
-                <div class="pl-10 text-white text-xl relative z-50">{!! $project->description !!}</div>
+                <h2 class="pl-10 Title uppercase font-black text-white text-lg lg:text-2xl relative z-50">{{ $project->title }}</h2>
+                <div class="pl-10 text-white text-sm lg:text-xl relative z-50">{!! $project->description !!}</div>
             </div>
         </a>
     </div>
