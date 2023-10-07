@@ -26,7 +26,7 @@ use Spatie\Honeypot\ProtectAgainstSpam;
 */
 
 
-Route::post('/newsletter', [NewsletterController::class, 'store'])->name('newsletter')->middleware(ProtectAgainstSpam::class);
+Route::post('/newsletter', [NewsletterController::class, 'submitNewsletter'])->name('newsletter')->middleware(ProtectAgainstSpam::class);
 
 Route::get('/', [Controller::class, 'index'])->name('home');
 
