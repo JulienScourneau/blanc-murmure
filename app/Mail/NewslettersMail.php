@@ -32,7 +32,7 @@ class NewslettersMail extends Mailable
     {
         return new Envelope(
             from: new Address(env('MAIL_USERNAME'), 'Blanc Murmure'),
-            subject: 'Inscripton Newsletters',
+            subject: 'Inscription Newsletters',
         );
     }
 

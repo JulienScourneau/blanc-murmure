@@ -2,18 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use Exception;
-use GuzzleHttp\Client;
+use App\Http\Requests\NewslettersRequest;
+use App\Mail\NewslettersMail;
 use Illuminate\Support\Facades\Mail;
-use SendinBlue\Client\Api\ContactsApi;
-use SendinBlue\Client\Configuration;
-use SendinBlue\Client\Model\CreateContact;
 
 class NewsletterController extends Controller
 {
-    public function submitNewsletter()
+    public function submitNewsletter(NewslettersRequest $request)
     {
-        Mail::to(env('MAIL_USERNAME'))->send(new NewsletterController());
+        Mail::to(env('MAIL_USERNAME'))->send(new NewslettersMail($request['email']));
+
+        return url()->previous();
     }
 
 }
