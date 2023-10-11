@@ -47,9 +47,9 @@ export function listener() {
                 if (event.target.id === test.id) {
                     test.style.display = "block";
 
-                    let Close = document.getElementsByClassName("closeCarousel");
+                    let Close =
+                        document.getElementsByClassName("closeCarousel");
                     for (const iterator of Close) {
-                        
                         iterator.addEventListener("click", (event) => {
                             test.style.display = "none";
                         });

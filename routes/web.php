@@ -6,11 +6,13 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\IllustrationController;
 use App\Http\Controllers\InternshipController;
+use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\SculptureController;
 use App\Http\Controllers\UrbanSpaceController;
 use App\Http\Controllers\VideoController;
 use Illuminate\Support\Facades\Route;
+use Spatie\Honeypot\ProtectAgainstSpam;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,30 +26,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::post('newsletter', function () {
-    request()->validate(['email' => 'required|email']);
-    $mailchimp = new \MailchimpMarketing\ApiClient();
-
-    $mailchimp->setConfig([
-        'apiKey' => config('services.mailchimp.key'),
-        'server' => 'us21'
-    ]);
-
-    try {
-        $mailchimp->lists->addListMember('0b80d5cc79', [
-            'email_address' => request('email'),
-            'status' => 'subscribed'
-        ]);
-    } catch (Exception $e) {
-        \Illuminate\Validation\ValidationException::withMessages([
-            'email' => "Une erreur est survenu lors de l'ajout à la newsletter"
-        ]);
-    }
-
-
-    return redirect('/')
-        ->with('success', 'inscription réussi');
-});
+Route::post('/newsletter', [NewsletterController::class, 'submitNewsletter'])->name('newsletter')->middleware(ProtectAgainstSpam::class);
 
 Route::get('/', [Controller::class, 'index'])->name('home');
 
@@ -74,9 +53,9 @@ Route::get('/à-propos', function () {
 })->name('about');
 
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
-Route::post('/contact', [ContactController::class, 'submitContactForm'])->name('contact.submit');
+Route::post('/contact', [ContactController::class, 'submitContactForm'])->name('contact.submit')->middleware(ProtectAgainstSpam::class);
 
 Route::get('/inscription', [AttendeesController::class, 'index'])->name('inscription');
-Route::post('/inscription', [AttendeesController::class, 'store'])->name('postInscription');
+Route::post('/inscription', [AttendeesController::class, 'store'])->name('postInscription')->middleware(ProtectAgainstSpam::class);
 
 Route::redirect('/laravel/login', '/login')->name('login');

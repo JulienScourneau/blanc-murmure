@@ -9,7 +9,7 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class VisitorContact extends Mailable
+class NewslettersMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -18,9 +18,9 @@ class VisitorContact extends Mailable
      *
      * @return void
      */
-    public function __construct(public string $name, public string $email, public string $reason, public string $message)
+    public function __construct(public string $mail)
     {
-//
+        //
     }
 
     /**
@@ -31,8 +31,8 @@ class VisitorContact extends Mailable
     public function envelope()
     {
         return new Envelope(
-//            from: new Address($this->email),
-            subject: 'Contact pour ' . $this->reason,
+            from: new Address(env('MAIL_USERNAME'), 'Blanc Murmure'),
+            subject: 'Inscription Newsletters',
         );
     }
 
@@ -44,7 +44,7 @@ class VisitorContact extends Mailable
     public function content()
     {
         return new Content(
-            view: 'emails.contact',
+            markdown: 'mail.newsletters-mail',
         );
     }
 

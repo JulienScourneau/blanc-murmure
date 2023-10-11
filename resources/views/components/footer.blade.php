@@ -11,15 +11,17 @@
             </div>
             <hr class="mt-5 mb-2.5 text-white"/>
 
-            <form action="/newsletter" method="POST">
+            <form action="{{route('newsletter')}}" method="POST">
                 @csrf
+                @honeypot
                 <h2 class="Title uppercase text-orange text-2xl leading-7 font-black w-11/12 self-center">Restez au
                     courant
                     de notre actualité !</h2>
                 <input class="FooterInput border-placeHolder border-2 p-1.5 pl-4 rounded-3xl my-5 w-10/12 self-center"
                        type="text"
+                       name="email"
                        placeholder="Email">
-                <button
+                <button type="submit"
                     class="p-2.5 text-placeHolder text-2xl font-bold w-10/12 self-center bg-orange text-white text-center rounded-full border-2 border-orange hover:bg-white hover:text-orange">
                     S’inscrire
                 </button>
@@ -31,7 +33,7 @@
         <div class="hidden xl:flex">
             <nav class="flex flex-col mr-5">
                 <p class="Title font-light text-xl text-orange uppercase">Explorer</p>
-                <a class="py-1 highlightBlack" href="{{ Route ('home')}}">Acceuil</a>
+                <a class="py-1 highlightBlack" href="{{ Route ('home')}}">Accueil</a>
                 <a class="py-1 highlightBlack" href="{{ Route ('news')}}">En ce moment</a>
                 <a class="py-1 highlightBlack" href="{{ Route ('collaborater')}}">Envie de travailler avec nous ?</a>
                 <a class="py-1 highlightBlack" href="{{ Route ('about')}}">A propos</a>
@@ -65,6 +67,14 @@
                 <img src="{{asset('assets/icons/mail_icon.png')}}" alt="">
                 <a class="ml-2.5 text-orange highlightOrange"
                    href="mailto: info@blancmurmure.be">info@blancmurmure.be</a>
+            </div>
+            <div class="flex flex-row items-center text-sm lg:text-base">
+                <p class="ml-2.5 text-white">IBAN :</p>
+                <p class="ml-2.5 text-white">BE25 0682 2499 7082</p>
+            </div>
+            <div class="flex flex-row items-center text-sm lg:text-base">
+                <p class="ml-2.5 text-white">BIC :</p>
+                <p class="ml-2.5 text-white">GKCCBEBB</p>
             </div>
         </div>
     </section>

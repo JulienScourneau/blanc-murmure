@@ -1,6 +1,6 @@
-@props(['photos', 'title', 'content'])
+@props(['photos', 'title', 'content', 'link'])
 <article class="mx-auto lg:mx-2.5 my-2.5 rounded-2xl items-center border-2 border-white w-full h-10/12 lg:w-10/12 group hover:bg-white overflow-hidden">
-                <a class="w-full h-full" href="{{ Route ('news')}}">
+                <a class="w-full h-full" href="{{$link}}">
                     <div class="w-full h-52 bg-white">
                         <img class="w-full h-full object-cover" src="{{$photos}}" alt="">
                     </div>

@@ -15,6 +15,8 @@ class Attendees extends Model
         'first_name',
         'email',
         'date_birth',
+        'parent_name',
+        'relationship',
         'internship_id',
         'address',
         'postal_code',
