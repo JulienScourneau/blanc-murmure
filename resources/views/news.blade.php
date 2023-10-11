@@ -10,7 +10,7 @@
                 <img class="w-full md:w-1/2 xl:w-1/2 h-96 object-cover pl-1" src="{{asset('storage/'.$newsPhoto[2]->path)}}" alt="">
             </div>
             <div class="p-2.5">
-                <h2 class="Title text-orange text-2xl font-black py-5">Mecredi s'éveille</h2>
+                <h2 class="Title text-orange text-2xl font-black py-5">Mercredi s'éveille</h2>
                 <p class="font-normal">
                     <span class="Title text-base font-semibold">L’atelier se déroule de
                     <span class="Title text-orange text-2xl font-black">fin septembre à début juin</span> à raison d’une fois par semaine.</span>

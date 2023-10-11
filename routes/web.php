@@ -12,6 +12,7 @@ use App\Http\Controllers\SculptureController;
 use App\Http\Controllers\UrbanSpaceController;
 use App\Http\Controllers\VideoController;
 use Illuminate\Support\Facades\Route;
+use Spatie\Honeypot\ProtectAgainstSpam;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +26,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::post('/newsletter', [NewsletterController::class, 'store'])->name('newsletter');
+Route::post('/newsletter', [NewsletterController::class, 'submitNewsletter'])->name('newsletter')->middleware(ProtectAgainstSpam::class);
 
 Route::get('/', [Controller::class, 'index'])->name('home');
 
@@ -52,9 +53,9 @@ Route::get('/à-propos', function () {
 })->name('about');
 
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
-Route::post('/contact', [ContactController::class, 'submitContactForm'])->name('contact.submit');
+Route::post('/contact', [ContactController::class, 'submitContactForm'])->name('contact.submit')->middleware(ProtectAgainstSpam::class);
 
 Route::get('/inscription', [AttendeesController::class, 'index'])->name('inscription');
-Route::post('/inscription', [AttendeesController::class, 'store'])->name('postInscription');
+Route::post('/inscription', [AttendeesController::class, 'store'])->name('postInscription')->middleware(ProtectAgainstSpam::class);
 
 Route::redirect('/laravel/login', '/login')->name('login');

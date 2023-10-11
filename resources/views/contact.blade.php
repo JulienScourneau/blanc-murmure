@@ -6,6 +6,7 @@
 
     <form class="lg:w-10/12 xl:w-8/12 2xl:w-6/12 lg:mx-auto" method="POST" action="{{ route('contact') }}">
         @csrf
+        @honeypot
         <div class="w-10/12 mx-auto py-2.5">
             <label class="text-primaryText flex self-start pl-10 my-2" for="name">Nom</label>
             <input class="w-full rounded-full border-2 border-disableText p-5" name="name" type="text" id="name">

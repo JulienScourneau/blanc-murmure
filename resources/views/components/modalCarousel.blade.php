@@ -7,6 +7,7 @@
             src="{{ asset('assets/icons/close.svg') }}" alt="">
     </div>
     <div class="mx-auto">
+
         <x-carousel :project="$project" />
     </div>
 </div>

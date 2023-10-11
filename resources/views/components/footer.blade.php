@@ -13,6 +13,7 @@
 
             <form action="{{route('newsletter')}}" method="POST">
                 @csrf
+                @honeypot
                 <h2 class="Title uppercase text-orange text-2xl leading-7 font-black w-11/12 self-center">Restez au
                     courant
                     de notre actualité !</h2>

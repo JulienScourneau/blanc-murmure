@@ -4,6 +4,7 @@
     <div class="swiperProject mySwiper">
       <div class="swiper-wrapper">
         @foreach($project->photo_list as $photo)
+
         <div class="swiper-slide">
           <img class="object-fill xl:w-9/12" src="{{asset('storage/' . $photo)}}" alt="">
         </div>

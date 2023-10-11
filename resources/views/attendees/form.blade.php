@@ -23,6 +23,7 @@
     <div class="max-w-2xl mx-auto">
         <form method="POST" action="{{ route('postInscription') }}" class="text-center">
             @csrf
+            @honeypot
             <x-input name="last_name" label="Nom"/>
             <x-input name="first_name" label="Prénom"/>
             <x-input name="email" type="email" label="Adresse email"/>
