@@ -1,30 +1,29 @@
-## Welcome to our Cogip project!
+![Logo Blanc Murmure](./public/assets/blanc-murmure-logo.png)
 
-![HTML5](https://img.shields.io/badge/HTML5-orange)
-![Tailwinds CSS](https://img.shields.io/badge/Tailwinds-blue)
-![JavaScript](https://img.shields.io/badge/JavaScript-yellow)
-![Laravel](https://img.shields.io/badge/Laravel-red)
-![SQL](https://img.shields.io/badge/SQL-pink)
 
-# ASBL - Blanc Murmure
+# Blanc Murmure
 
-### Description
-Ce projet consiste en la création d'un nouveau site web pour l'ASBL Blanc Murmure, qui permettra à l'organisation de publier des actualités, de gérer les inscriptions à leurs stages et ateliers, et de présenter leurs projets passés sous forme de portfolio. Le site a été développé en utilisant Laravel et Tailwind CSS, et a été conçu à l'aide de Blade et de Figma.
+## Description
 
-####Fonctionnalités du site
-- Accueil : Cette page présente une bannière affichant le prochain événement ou atelier à venir, ainsi qu'un agenda des activités de l'ASBL.
-- En ce moment : Cette page regroupe tous les ateliers et stages à venir organisés par l'ASBL.
-- Construire un projet ensemble : Cette page explique comment l'ASBL travaille avec des institutions telles que des écoles pour développer des projets.
-- Nos projets : Cette page présente l'ensemble des projets passés réalisés par l'ASBL, ainsi que leurs projets artistiques réalisés pour des institutions, villes, etc.
-- A propos : Cette page donne une présentation de l'ASBL et de son équipe.
-- Une page Contact pour permettre aux visiteurs de contacter directement l'ASBL.
-- Un formulaire d'inscription pour les ateliers, qui permet aux utilisateurs de sélectionner l'atelier de leur choix et de s'inscrire facilement.
+Le projet de refonte du site web de l'ASBL Blanc murmure, souhaitant du renouveau pour leur site, ils nous ont fait confiance pour le réaliser. Ce site permet d'afficher les différents stages créatifs qu'ils réalisent ainsi que leurs projets d'art. Vous pouvez vous inscrire pour l'un des stages proposé, contacter l'ASBL, vous inscrire à leur newsletter ou encore consulter leur projet.
 
-Le site web a été développé en étroite collaboration avec l'ASBL Blanc Murmure, afin de s'assurer que toutes leurs exigences ont été satisfaites. Le résultat final est un site web élégant, facile à utiliser et efficace pour la gestion des ateliers et de l'actualité de l'ASBL.
+### Lien
 
-### Team :
-- Developpeur Backend : [Julien Scourneau](https://github.com/JulienScourneau)
-- Développeur Frontend : [Titouan Moussiaux](https://github.com/Moustito)
-- Designer web : [Titouan Moussiaux](https://github.com/Moustito)
+Démo du site: 
+<a href="https://blanc-murmure-production.up.railway.app" target="_blank">Blanc Murmure</a>
 
-Lien vers le site : [Blanc murmure]()
+BackOffice:
+<a href="https://blanc-murmure-production.up.railway.app/admin" target="_blank">Admin</a>
+
+## Équipe du projet
+
+- <a href="https://github.com/Moustito" target="_blank">Titouan Moussiaux</a> Design // Frontend
+- <a href="https://github.com/JulienScourneau" target="_blank">Julien Scourneau</a> BackOffice // Backend
+
+### Technologie
+
+- <a href="https://github.com/JulienScourneau" target="_blank">Laravel</a>
+- <a href="https://github.com/JulienScourneau" target="_blank">Tailwind</a>
+- <a href="https://github.com/JulienScourneau" target="_blank">Swiper</a>
+- <a href="https://github.com/JulienScourneau" target="_blank">FilamentPhp</a>
+- <a href="https://github.com/JulienScourneau" target="_blank">Blade Template</a>
